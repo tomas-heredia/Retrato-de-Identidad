@@ -46,7 +46,7 @@ shape = SubResource("SphereShape3D_v0iea")
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 60
-text = "Interactuar"
+text = "Interactuar \"E\""
 
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]

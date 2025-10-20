@@ -8,9 +8,10 @@ const JUMP_VELOCITY = 4.5
 @onready var modelo = $Modelo
 @onready var interaccion_label = $Interaccion_label
 
-
+var interactuando_portal: bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var nombre_portal : String
 
 func _ready():
 	interaccion_label.hide()
@@ -66,27 +67,20 @@ func rotar(direction):
 	stairs_colision.rotation.y = lerp_angle(modelo.rotation.y,dir,0.2)
 	modelo.rotation.y = lerp_angle(modelo.rotation.y,dir,0.2)
 
-
-func _on_interaccion_area_entered(area):
-	var objeto = area.get_paren()
-	if objeto.is_in_group("Portal"):
-		interaccion_label.show()
-
-
-func _on_interaccion_area_exited(area):
-	var objeto = area.get_paren()
-	print("entra")
-	if objeto.is_in_group("Portal"):
-		interaccion_label.hide()
-
-
-
+func _unhandled_input(event):
+	
+	
+	if event.is_action_pressed("Interact") and interactuando_portal:
+		ManejoNiveles.cambiar(nombre_portal)
 
 func _on_interaccion_body_entered(objeto):
 	if objeto.is_in_group("Portal"):
+		interactuando_portal = true
 		interaccion_label.show()
-
+		nombre_portal = objeto.name.replace("Portal_", "")
+		
 
 func _on_interaccion_body_exited(objeto):
 	if objeto.is_in_group("Portal"):
+		interactuando_portal = false
 		interaccion_label.hide()
