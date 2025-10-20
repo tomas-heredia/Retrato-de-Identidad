@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://2t7876y24x50"]
+
+[ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_qkmes"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_gm2ak"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_1bsl4"]
+
+[sub_resource type="Resource" id="Resource_fmmsx"]
+script = ExtResource("3_gm2ak")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gm2ak"]
+size = Vector3(1, 1, 1.97949)
+
+[sub_resource type="PrismMesh" id="PrismMesh_qkmes"]
+left_to_right = 1.0
+size = Vector3(5, 3, 3)
+
+[node name="Level_test" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_vflva")]
+
+[node name="PhantomCamera3D" type="Node3D" parent="Player"]
+transform = Transform3D(-1, -5.61943e-08, 6.69697e-08, 0, 0.766044, 0.642788, -8.74228e-08, 0.642788, -0.766044, 0.295092, 5.03094, -6.96245)
+script = ExtResource("2_qkmes")
+tween_resource = SubResource("Resource_fmmsx")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="Camara" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Camara"]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0.642788, -0.766044, 0, 0.766044, 0.642788, 1, 2.80971e-08, -3.34848e-08, -6.96245, 5.03094, -0.295092)
+
+[node name="PhantomCameraHost" type="Node" parent="Camara/Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_1bsl4")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
+
+[node name="Suelo" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo"]
+transform = Transform3D(38, 0, 0, 0, 38, 0, 0, 0, 38, 0, 0, 0)
+mesh = SubResource("PlaneMesh_qkmes")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo"]
+transform = Transform3D(76, 0, 0, 0, 1, 0, 0, 0, 38, 0, 0, 0)
+shape = SubResource("BoxShape3D_gm2ak")
+
+[node name="Rampa" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3821, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
+mesh = SubResource("PrismMesh_qkmes")
