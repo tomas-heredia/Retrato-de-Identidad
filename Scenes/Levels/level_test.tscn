@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=13 format=3 uid="uid://2t7876y24x50"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_qkmes"]
@@ -19,6 +19,17 @@ size = Vector3(1, 1, 1.97949)
 [sub_resource type="PrismMesh" id="PrismMesh_qkmes"]
 left_to_right = 1.0
 size = Vector3(5, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qkmes"]
+size = Vector3(5.73594, 0.0100098, 2.95496)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1bsl4"]
+size = Vector3(1, 2.29846, 3.02332)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qkmes"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fmmsx"]
+size = Vector3(1, 4.27301, 2.81891)
 
 [node name="Level_test" type="Node3D"]
 
@@ -56,9 +67,26 @@ transform = Transform3D(76, 0, 0, 0, 1, 0, 0, 0, 38, 0, 0, 0)
 shape = SubResource("BoxShape3D_gm2ak")
 
 [node name="Rampa" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3821, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3821, 1.70444, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
 mesh = SubResource("PrismMesh_qkmes")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(0.861629, -0.507538, 0, 0.507538, 0.861629, 0, 0, 0, 1, 0.00168324, -0.0110825, 0.00335693)
+shape = SubResource("BoxShape3D_qkmes")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)
+shape = SubResource("BoxShape3D_1bsl4")
+
+[node name="Portal" type="StaticBody3D" parent="." groups=["Portal"]]
+transform = Transform3D(0.854785, 0, 0.518982, 0, 1, 0, -0.518982, 0, 0.854785, 3.84691, 0, -7.80024)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 3.25773, 0, 0, 0, 2.69878, 0, 2.12997, 0)
+mesh = SubResource("BoxMesh_qkmes")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63651, -0.046051)
+shape = SubResource("BoxShape3D_fmmsx")

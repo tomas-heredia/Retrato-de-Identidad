@@ -6,10 +6,15 @@ var direction = Vector3(0,0,0)
 const JUMP_VELOCITY = 4.5
 @onready var stairs_colision = $StairsColision
 @onready var modelo = $Modelo
+@onready var interaccion_label = $Interaccion_label
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+func _ready():
+	interaccion_label.hide()
+
 
 func _physics_process(delta):
 	
@@ -60,3 +65,28 @@ func rotar(direction):
 	
 	stairs_colision.rotation.y = lerp_angle(modelo.rotation.y,dir,0.2)
 	modelo.rotation.y = lerp_angle(modelo.rotation.y,dir,0.2)
+
+
+func _on_interaccion_area_entered(area):
+	var objeto = area.get_paren()
+	if objeto.is_in_group("Portal"):
+		interaccion_label.show()
+
+
+func _on_interaccion_area_exited(area):
+	var objeto = area.get_paren()
+	print("entra")
+	if objeto.is_in_group("Portal"):
+		interaccion_label.hide()
+
+
+
+
+func _on_interaccion_body_entered(objeto):
+	if objeto.is_in_group("Portal"):
+		interaccion_label.show()
+
+
+func _on_interaccion_body_exited(objeto):
+	if objeto.is_in_group("Portal"):
+		interaccion_label.hide()
