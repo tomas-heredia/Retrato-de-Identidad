@@ -79,6 +79,7 @@ func _on_interaccion_body_entered(objeto):
 		interaccion_label.show()
 		nombre_portal = objeto.name.replace("Portal_", "")
 		
+		
 
 func _on_interaccion_body_exited(objeto):
 	if objeto.is_in_group("Portal"):
