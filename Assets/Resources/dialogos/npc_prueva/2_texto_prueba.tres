@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://c5ypy6k6f52d3"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_4jg83"]
+
+[resource]
+script = ExtResource("1_4jg83")
+texto = "\"2_Este texto es demasiado largo y \\ncontiene palabras como \\ndesoxirribonucleico que deben \\najustarse antes de mostrarse.\""
+metadata/_custom_type_script = "uid://cscq2a61ppime"

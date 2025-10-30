@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=3 uid="uid://ds7rgbbi5gv8o"]
+
+[ext_resource type="Texture2D" uid="uid://cnut7ygtyv36f" path="res://Assets/UI/Dialogo/shadedDark12.png" id="1_kmh77"]
+[ext_resource type="Script" uid="uid://bsubv6d143hb6" path="res://scripts/dialogo.gd" id="1_ugskr"]
+[ext_resource type="Resource" uid="uid://dcyx3ixmchk5h" path="res://Assets/Resources/dialogos/npc_prueva/1_texto_prueba.tres" id="2_f2gxp"]
+[ext_resource type="Resource" uid="uid://c5ypy6k6f52d3" path="res://Assets/Resources/dialogos/npc_prueva/2_texto_prueba.tres" id="3_kna6u"]
+[ext_resource type="Texture2D" uid="uid://dnbjvmp8gj508" path="res://icon.svg" id="3_wcd53"]
+[ext_resource type="Resource" uid="uid://dgmfqr8ufg25e" path="res://Assets/Resources/dialogos/npc_prueva/3_texto_prueba.tres" id="4_knnep"]
+
+[sub_resource type="Animation" id="Animation_wcd53"]
+resource_name = "Intro"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Caja:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(390, 1138.65), Vector2(390, 640)]
+}
+
+[sub_resource type="Animation" id="Animation_f2gxp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Caja:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, 1205)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_psuac"]
+_data = {
+&"Intro": SubResource("Animation_wcd53"),
+&"RESET": SubResource("Animation_f2gxp")
+}
+
+[node name="Dialogo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ugskr")
+textos = Array[Resource]([ExtResource("2_f2gxp"), ExtResource("3_kna6u"), ExtResource("4_knnep")])
+
+[node name="Caja" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -544.0
+offset_top = 125.0
+offset_right = 596.0
+offset_bottom = 473.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_kmh77")
+
+[node name="Rostro" type="TextureRect" parent="Caja"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 26.0
+offset_top = -121.0
+offset_right = 298.0
+offset_bottom = 134.0
+grow_vertical = 2
+texture = ExtResource("3_wcd53")
+
+[node name="text_box" type="Label" parent="Caja"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = -110.0
+offset_right = 463.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "sdddasdasdasdasdasd qsdasdasdasdasdasdasdasd asdasdasdasdasdasdasdasdasdasd asdasdasdasasd "
+autowrap_mode = 2
+
+[node name="Nombre" type="TextureRect" parent="Caja"]
+layout_mode = 1
+offset_right = 172.0
+offset_bottom = 48.0
+texture = ExtResource("1_kmh77")
+
+[node name="Label" type="Label" parent="Caja/Nombre"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Tomás"
+horizontal_alignment = 1
+
+[node name="Omitir" type="Label" parent="Caja"]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -60.0
+offset_right = -21.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "C: Omitir"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_psuac")
+}
+
+[node name="Espera" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Espera_letra" type="Timer" parent="."]
+wait_time = 0.02
+one_shot = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Espera" to="." method="_on_espera_timeout"]
