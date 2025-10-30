@@ -18,8 +18,8 @@ func _ready():
 
 
 func _physics_process(delta):
-	
-	movement(delta)
+	if !Global.interactuando:
+		movement(delta)
 
 
 func movement(delta):
