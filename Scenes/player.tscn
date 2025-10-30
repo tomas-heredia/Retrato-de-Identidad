@@ -14,7 +14,7 @@ length = 0.926975
 [sub_resource type="SphereShape3D" id="SphereShape3D_v0iea"]
 radius = 2.5809
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_v0iea")
 SPEED = 10.0

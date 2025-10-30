@@ -18,8 +18,8 @@ func _ready():
 
 
 func _physics_process(delta):
-	
-	movement(delta)
+	if !Global.interactuando:
+		movement(delta)
 
 
 func movement(delta):
@@ -74,13 +74,28 @@ func _unhandled_input(event):
 		ManejoNiveles.cambiar(nombre_portal)
 
 func _on_interaccion_body_entered(objeto):
-	if objeto.is_in_group("Portal"):
-		interactuando_portal = true
-		interaccion_label.show()
-		nombre_portal = objeto.name.replace("Portal_", "")
-		
+	var grupo
+	if objeto.get_groups().size() > 0:
+		grupo = objeto.get_groups()[0]
+		print(grupo)
+		match grupo:
+			"Portal":
+				interactuando_portal = true
+				interaccion_label.show()
+				nombre_portal = objeto.name.replace("Portal_", "")
+			"NPC":
+				interactuando_portal = true
+				interaccion_label.show()
+			
 
 func _on_interaccion_body_exited(objeto):
-	if objeto.is_in_group("Portal"):
-		interactuando_portal = false
-		interaccion_label.hide()
+	var grupo
+	if objeto.get_groups().size() > 0:
+		grupo = objeto.get_groups()[0]
+		match grupo:
+			"Portal":
+				interactuando_portal = false
+				interaccion_label.hide()
+			"NPC":
+				interactuando_portal = false
+				interaccion_label.hide()
