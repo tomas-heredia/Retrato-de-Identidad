@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://blbaceevpc4a0"]
+
+[ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="1_vqob3"]
+[ext_resource type="Resource" uid="uid://chshvr2y8cmnx" path="res://Assets/Resources/dialogos/Objeto especial/texto_objeto.tres" id="2_dvvhj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dvvhj"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_rd2qn"]
+
+[node name="Objeto_interactuable" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("SphereShape3D_dvvhj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_rd2qn")
+
+[node name="Dispara_Dialogo" parent="." instance=ExtResource("1_vqob3")]
+nombre = "Objeto"
+textos = Array[Resource]([ExtResource("2_dvvhj")])
+
+[node name="CollisionShape3D" parent="Dispara_Dialogo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0597153, 0.307401, 0.0357513)
+
+[editable path="Dispara_Dialogo"]

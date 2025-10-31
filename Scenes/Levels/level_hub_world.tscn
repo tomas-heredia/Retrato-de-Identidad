@@ -1,0 +1,123 @@
+[gd_scene load_steps=20 format=3 uid="uid://cncwfr8y5bgcp"]
+
+[ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_drxim"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_wq8m1"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_y31nf"]
+[ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_drxim"]
+[ext_resource type="Resource" uid="uid://dtkg5ocsch7a8" path="res://Assets/Resources/dialogos/NPC_Guia/texto_introduccion.tres" id="6_wq8m1"]
+[ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="7_y31nf"]
+[ext_resource type="Resource" uid="uid://ca1uby2ikkpbc" path="res://Assets/Resources/dialogos/NPC_Guia/texto_escalera.tres" id="8_vgp4s"]
+[ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="9_765tg"]
+[ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="10_1dxti"]
+[ext_resource type="AudioStream" uid="uid://cdqx2y50t8nj1" path="res://Assets/Musica/Portal/Big-Apple-Brass-NY-I-Love-You-Rare-Samples-_-Songs-Oleg-Tsoy.wav" id="11_fwm5r"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_765tg"]
+height = 1.51855
+radius = 0.497559
+
+[sub_resource type="PrismMesh" id="PrismMesh_1dxti"]
+left_to_right = 1.0
+size = Vector3(5, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fwm5r"]
+size = Vector3(5.73594, 0.0100098, 2.95496)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lcapk"]
+size = Vector3(1, 2.29846, 3.02332)
+
+[sub_resource type="Resource" id="Resource_b86fg"]
+script = ExtResource("3_wq8m1")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_wq8m1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y31nf"]
+
+[node name="HubWorld" type="Node3D"]
+
+[node name="Suelo1" type="StaticBody3D" parent="."]
+transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo1"]
+transform = Transform3D(8.53483, 0, 0, 0, 0.0694212, 0, 0, 0, 5.37962, 0, 0, 0)
+mesh = SubResource("CylinderMesh_vgp4s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo1"]
+transform = Transform3D(8.53483, 0, 0, 0, 0.0694212, 0, 0, 0, 5.37962, 0, 0, 0)
+shape = SubResource("CylinderShape3D_765tg")
+
+[node name="Rampa" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.321, 3.0258, -0.0630417)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
+mesh = SubResource("PrismMesh_1dxti")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(0.861629, -0.507538, 0, 0.507538, 0.861629, 0, 0, 0, 1, 0.00168324, -0.0110825, 0.00335693)
+shape = SubResource("BoxShape3D_fwm5r")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)
+shape = SubResource("BoxShape3D_lcapk")
+
+[node name="Player" parent="." instance=ExtResource("1_phe5c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.11218, 0.494704, 0)
+
+[node name="PhantomCamera3D" type="Node3D" parent="Player"]
+transform = Transform3D(-1, -5.61943e-08, 6.69697e-08, 0, 0.766044, 0.642788, -8.74228e-08, 0.642788, -0.766044, 0.295092, 5.03094, -6.96245)
+script = ExtResource("2_drxim")
+tween_resource = SubResource("Resource_b86fg")
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
+
+[node name="Camara" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Camara"]
+physics_interpolation_mode = 1
+transform = Transform3D(-4.37114e-08, 0.642788, -0.766044, 0, 0.766044, 0.642788, 1, 2.80971e-08, -3.34848e-08, -5.85027, 5.52564, -0.295092)
+
+[node name="PhantomCameraHost" type="Node" parent="Camara/Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_y31nf")
+metadata/_custom_type_script = "uid://bd046eokvcnu2"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
+
+[node name="NPC" parent="." instance=ExtResource("5_drxim")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17016, 1.12353, 5.73811)
+textos = Array[Resource]([ExtResource("6_wq8m1")])
+
+[node name="Dispara_Dialogo" parent="." instance=ExtResource("7_y31nf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.6954, 1.9057, -0.045408)
+textos = Array[Resource]([ExtResource("8_vgp4s")])
+One_shot = true
+
+[node name="CollisionShape3D" parent="Dispara_Dialogo" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08594, 0)
+
+[node name="Suelo2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6602, -0.142798, -0.00473595)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo2"]
+transform = Transform3D(52.6709, 0, 0, 0, 1, 0, 0, 0, 57.4819, 1.10134, 5.66404, 0)
+mesh = SubResource("BoxMesh_wq8m1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo2"]
+transform = Transform3D(52.6709, 0, 0, 0, 1, 0, 0, 0, 57.4819, 1.10134, 5.66404, 0)
+shape = SubResource("BoxShape3D_y31nf")
+
+[node name="Objeto_interactuable" parent="." instance=ExtResource("9_765tg")]
+transform = Transform3D(1.00176, 0, 0, 0, 1.00176, 0, 0, 0, 1.00176, 26.2738, 6.55805, -24.5461)
+
+[node name="Portal_level_test_2" parent="." instance=ExtResource("10_1dxti")]
+transform = Transform3D(0.726586, 0, -0.687075, 0, 1, 0, 0.687075, 0, 0.726586, 59.9418, 5.62837, 23.63)
+musica = ExtResource("11_fwm5r")
+
+[editable path="Dispara_Dialogo"]
+[editable path="Portal_level_test_2"]
