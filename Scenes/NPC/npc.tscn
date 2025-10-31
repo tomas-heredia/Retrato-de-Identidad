@@ -1,9 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://gxfo1idx7qd"]
+[gd_scene load_steps=7 format=4 uid="uid://gxfo1idx7qd"]
 
 [ext_resource type="Script" uid="uid://cvml4s3x1hel1" path="res://scripts/npc.gd" id="1_3am0f"]
-[ext_resource type="Resource" uid="uid://dcyx3ixmchk5h" path="res://Assets/Resources/dialogos/npc_prueva/1_texto_prueba.tres" id="3_fqw72"]
-[ext_resource type="Resource" uid="uid://c5ypy6k6f52d3" path="res://Assets/Resources/dialogos/npc_prueva/2_texto_prueba.tres" id="4_abh8q"]
-[ext_resource type="Resource" uid="uid://dgmfqr8ufg25e" path="res://Assets/Resources/dialogos/npc_prueva/3_texto_prueba.tres" id="5_eayks"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_dutk1"]
 
@@ -31,7 +28,6 @@ radius = 1.83748
 
 [node name="NPC" type="StaticBody3D" groups=["NPC"]]
 script = ExtResource("1_3am0f")
-textos = Array[Resource]([ExtResource("3_fqw72"), ExtResource("4_abh8q"), ExtResource("5_eayks")])
 
 [node name="Cuerpo" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_dutk1")
