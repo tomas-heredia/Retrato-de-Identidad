@@ -17,7 +17,7 @@ radius = 2.5809
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_v0iea")
-SPEED = 10.0
+JUMP_VELOCITY = 10
 
 [node name="Modelo" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.987057, 0)
@@ -48,5 +48,10 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 60
 text = "Interactuar \"E\""
 
+[node name="salto_timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]
+[connection signal="timeout" from="salto_timer" to="." method="_on_salto_timer_timeout"]

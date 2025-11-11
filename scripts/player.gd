@@ -1,17 +1,22 @@
 extends CharacterBody3D
 
 
-@export var SPEED = 5.0
+@export var SPEED := 5.0
+@export var Max_SPEED := 10
+@export var aceleracion := 20
+@export var desaceleracion := 0.2
+@export var JUMP_VELOCITY := 8
+@export var gravity := 9.8
 var direction = Vector3(0,0,0)
-const JUMP_VELOCITY = 4.5
 @onready var stairs_colision = $StairsColision
 @onready var modelo = $Modelo
 @onready var interaccion_label = $Interaccion_label
 
 var interactuando_portal: bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+#var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var nombre_portal : String
+var frenando := false
 
 func _ready():
 	interaccion_label.hide()
@@ -35,19 +40,31 @@ func movement(delta):
 	
 	
 	if direction:
+		frenando = false
+		##playback.travel("run")
+		#velocity.x = -direction.x * SPEED
+		#velocity.z = -direction.z * SPEED
 		
-		#playback.travel("run")
-		velocity.x = -direction.x * SPEED
-		velocity.z = -direction.z * SPEED
+		# Calcula velocidad objetivo y acelera suavemente hacia ella
+		var target_x = -direction.x * Max_SPEED
+		var target_z = -direction.z * Max_SPEED
+
+		velocity.x = move_toward(velocity.x, target_x, aceleracion * delta)
+		velocity.z = move_toward(velocity.z, target_z, aceleracion * delta)
 		rotar(direction)
 		
 		
 		
 	else:
-			
-		#playback.travel("idle")
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		if not frenando:
+			frenando = true
+			#playback.travel("idle")
+			#velocity.x = move_toward(velocity.x, 0, SPEED)
+			#velocity.z = move_toward(velocity.z, 0, SPEED)
+			var tween := create_tween()
+			tween.tween_property(self, "velocity:x", 0.0, desaceleracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+			tween.tween_property(self, "velocity:z", 0.0, desaceleracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
 			
 	move_and_slide()
 		
