@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://chiyeskrvoxk1"]
+
+[ext_resource type="Script" uid="uid://d37o156c7y88r" path="res://scripts/cuadro_interactuable.gd" id="1_wm4xc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ei4q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wm4xc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wm4xc"]
+radius = 2.26984
+
+[node name="CuadroInteractuable" type="StaticBody3D" groups=["Cuadro"]]
+script = ExtResource("1_wm4xc")
+texto = "Lorem ipsum dolor sit amet consectetur, adipiscing elit molestie cursus rhoncus commodo, faucibus inceptos conubia luctus."
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.24999, 0, 0, 0, 2.07718, 0, 0, 0, 0.180238, 0, 0, 0)
+mesh = SubResource("BoxMesh_5ei4q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.24999, 0, 0, 0, 2.07718, 0, 0, 0, 0.180238, 0, 0, 0)
+shape = SubResource("BoxShape3D_wm4xc")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = 26.0
+offset_right = -13.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "Interactuar"
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.16452, 1.98263, 0)
+font_size = 40
+autowrap_mode = 2
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_wm4xc")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

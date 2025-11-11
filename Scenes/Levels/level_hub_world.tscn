@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=21 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_drxim"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="9_765tg"]
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="10_1dxti"]
 [ext_resource type="AudioStream" uid="uid://cdqx2y50t8nj1" path="res://Assets/Musica/Portal/Big-Apple-Brass-NY-I-Love-You-Rare-Samples-_-Songs-Oleg-Tsoy.wav" id="11_fwm5r"]
+[ext_resource type="PackedScene" uid="uid://chiyeskrvoxk1" path="res://Scenes/Objetos/cuadro_interactuable.tscn" id="12_lcapk"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
 
@@ -118,6 +119,9 @@ transform = Transform3D(1.00176, 0, 0, 0, 1.00176, 0, 0, 0, 1.00176, 26.2738, 6.
 [node name="Portal_level_test_2" parent="." instance=ExtResource("10_1dxti")]
 transform = Transform3D(0.726586, 0, -0.687075, 0, 1, 0, 0.687075, 0, 0.726586, 59.9418, 5.62837, 23.63)
 musica = ExtResource("11_fwm5r")
+
+[node name="CuadroInteractuable" parent="." instance=ExtResource("12_lcapk")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73.7748, 7.05983, -2.88807)
 
 [editable path="Dispara_Dialogo"]
 [editable path="Portal_level_test_2"]
