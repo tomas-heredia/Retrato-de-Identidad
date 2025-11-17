@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://u1m0kcl66o30"]
+[gd_scene load_steps=10 format=3 uid="uid://u1m0kcl66o30"]
 
 [ext_resource type="Script" uid="uid://bsyte60sr0ow1" path="res://scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://bvsnf05yau30i" path="res://scripts/spring_arm_pivot.gd" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://bpi3qiai0b2k" path="res://scripts/camera_3d.gd" id="3_6t5aa"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f60y1"]
 
@@ -13,6 +15,8 @@ length = 0.926975
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_v0iea"]
 radius = 2.5809
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6t5aa"]
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -51,6 +55,22 @@ text = "Interactuar \"E\""
 [node name="salto_timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="SpringArmPivot" type="Node3D" parent="."]
+transform = Transform3D(-0.987688, 0, -0.156434, 0, 1, 0, 0.156434, 0, -0.987688, 0, 1.61306, 0)
+script = ExtResource("2_cvnsp")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="SpringArmPivot"]
+collision_mask = 2
+shape = SubResource("SphereShape3D_6t5aa")
+spring_length = 6.0
+
+[node name="SpringArmPosition" type="Node3D" parent="SpringArmPivot/SpringArm3D"]
+
+[node name="Camera3D" type="Camera3D" parent="SpringArmPivot" node_paths=PackedStringArray("spring_arm")]
+script = ExtResource("3_6t5aa")
+spring_arm = NodePath("../SpringArm3D/SpringArmPosition")
+lerp_power = 6.0
 
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]

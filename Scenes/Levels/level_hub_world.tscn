@@ -1,9 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=17 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
-[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_drxim"]
-[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_wq8m1"]
-[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_y31nf"]
 [ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_drxim"]
 [ext_resource type="Resource" uid="uid://dtkg5ocsch7a8" path="res://Assets/Resources/dialogos/NPC_Guia/texto_introduccion.tres" id="6_wq8m1"]
 [ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="7_y31nf"]
@@ -28,12 +25,6 @@ size = Vector3(5.73594, 0.0100098, 2.95496)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lcapk"]
 size = Vector3(1, 2.29846, 3.02332)
-
-[sub_resource type="Resource" id="Resource_b86fg"]
-script = ExtResource("3_wq8m1")
-duration = 1.0
-transition = 0
-ease = 2
 
 [sub_resource type="BoxMesh" id="BoxMesh_wq8m1"]
 
@@ -68,24 +59,6 @@ shape = SubResource("BoxShape3D_lcapk")
 
 [node name="Player" parent="." instance=ExtResource("1_phe5c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.11218, 0.494704, 0)
-
-[node name="PhantomCamera3D" type="Node3D" parent="Player"]
-transform = Transform3D(-1, -5.61943e-08, 6.69697e-08, 0, 0.766044, 0.642788, -8.74228e-08, 0.642788, -0.766044, 0.295092, 5.03094, -6.96245)
-script = ExtResource("2_drxim")
-tween_resource = SubResource("Resource_b86fg")
-metadata/_custom_type_script = "uid://csjccrhj5wnx7"
-
-[node name="Camara" type="Node" parent="."]
-
-[node name="Camera3D" type="Camera3D" parent="Camara"]
-physics_interpolation_mode = 1
-transform = Transform3D(-4.37114e-08, 0.642788, -0.766044, 0, 0.766044, 0.642788, 1, 2.80971e-08, -3.34848e-08, -5.85027, 5.52564, -0.295092)
-
-[node name="PhantomCameraHost" type="Node" parent="Camara/Camera3D"]
-process_priority = 300
-process_physics_priority = 300
-script = ExtResource("4_y31nf")
-metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)

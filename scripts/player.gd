@@ -11,6 +11,7 @@ var direction = Vector3(0,0,0)
 @onready var stairs_colision = $StairsColision
 @onready var modelo = $Modelo
 @onready var interaccion_label = $Interaccion_label
+@onready var camera = $SpringArmPivot/Camera3D
 
 var interactuando_portal: bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -36,9 +37,19 @@ func movement(delta):
 	
 	
 	var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
-	direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
-	
+	var cam_forward = -camera.global_transform.basis.z
+	cam_forward.y = 0
+	cam_forward = cam_forward.normalized()
+
+	var cam_right =- camera.global_transform.basis.x
+	cam_right.y = 0
+	cam_right = cam_right.normalized()
+
+	direction = (cam_right * input_dir.x + cam_forward * input_dir.y).normalized()
+	#direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	#
+	#
+	#direction =  direction.rotated(Vector3.UP, camera.global_rotation.y)
 	if direction:
 		frenando = false
 		##playback.travel("run")
