@@ -21,7 +21,11 @@ radius = 2.5809
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_v0iea")
-JUMP_VELOCITY = 10
+SPEED = 8.0
+aceleracion = 40
+desaceleracion = 0.13
+JUMP_VELOCITY = 15
+gravity = 38.0
 
 [node name="Modelo" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.987057, 0)
@@ -68,6 +72,7 @@ spring_length = 6.0
 [node name="SpringArmPosition" type="Node3D" parent="SpringArmPivot/SpringArm3D"]
 
 [node name="Camera3D" type="Camera3D" parent="SpringArmPivot" node_paths=PackedStringArray("spring_arm")]
+current = true
 script = ExtResource("3_6t5aa")
 spring_arm = NodePath("../SpringArm3D/SpringArmPosition")
 lerp_power = 6.0
