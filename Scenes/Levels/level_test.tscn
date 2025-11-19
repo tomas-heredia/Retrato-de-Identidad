@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=14 format=3 uid="uid://2t7876y24x50"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
+[ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="3_ojicq"]
+[ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="4_qkmes"]
 [ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_gm2ak"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
@@ -110,3 +112,11 @@ skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Muro3"]
 shape = SubResource("BoxShape3D_c3dre")
+
+[node name="objeto_interactuable" parent="." instance=ExtResource("3_ojicq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.8698, 0.671244, 9.90681)
+
+[node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("4_qkmes")]
+camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
+
+[editable path="Player"]

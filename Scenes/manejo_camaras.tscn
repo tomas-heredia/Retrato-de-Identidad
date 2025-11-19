@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmf8aosw2jxo7"]
+
+[ext_resource type="Script" uid="uid://i6k76vjt1mh8" path="res://scripts/manejo_camaras.gd" id="1_ftrap"]
+
+[node name="Manejo_camaras" type="Node3D"]
+script = ExtResource("1_ftrap")
+
+[node name="Camera_transicion" type="Camera3D" parent="."]

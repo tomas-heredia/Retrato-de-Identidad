@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 ManejoNiveles="*res://scripts/Manejo_niveles.gd"
 Global="*res://scripts/Global.gd"
+Mensajero="*res://scripts/Mensajero.gd"
 
 [display]
 

@@ -21,6 +21,7 @@ var frenando := false
 
 func _ready():
 	interaccion_label.hide()
+	
 
 
 func _physics_process(delta):
@@ -114,6 +115,9 @@ func _on_interaccion_body_entered(objeto):
 			"NPC":
 				interactuando_portal = true
 				interaccion_label.show()
+			"Objeto":
+				interactuando_portal = true
+				interaccion_label.show()
 			
 
 func _on_interaccion_body_exited(objeto):
@@ -125,5 +129,8 @@ func _on_interaccion_body_exited(objeto):
 				interactuando_portal = false
 				interaccion_label.hide()
 			"NPC":
+				interactuando_portal = false
+				interaccion_label.hide()
+			"Objeto":
 				interactuando_portal = false
 				interaccion_label.hide()
