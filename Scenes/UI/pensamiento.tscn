@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb2cvpewr66ba"]
+
+[ext_resource type="Script" uid="uid://hpy6iaxowvfx" path="res://scripts/pensamiento.gd" id="1_emokg"]
+
+[sub_resource type="Animation" id="Animation_emokg"]
+resource_name = "In"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 185), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6q4n6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 185)]
+}
+
+[sub_resource type="Animation" id="Animation_t8kkw"]
+resource_name = "Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 185)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t8kkw"]
+_data = {
+&"In": SubResource("Animation_emokg"),
+&"Out": SubResource("Animation_t8kkw"),
+&"RESET": SubResource("Animation_6q4n6")
+}
+
+[node name="Pensamiento" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 162.0
+offset_top = 198.0
+offset_right = -1408.0
+offset_bottom = -726.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_emokg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -175.0
+offset_top = 185.0
+offset_right = 152.0
+offset_bottom = 362.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "este es un pensamiento tipo
+! AMOORR!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t8kkw")
+}
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
