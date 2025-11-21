@@ -9,6 +9,7 @@ func _ready():
 	pass
 
 func Crear_pensamieto(texto: String):
+	print("pensamiento")
 	print(texto)
 	label.text = texto
 	self.size = label.size

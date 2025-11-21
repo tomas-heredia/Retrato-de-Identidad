@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://dhkyeytfaje6o"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_off03"]
+
+[resource]
+script = ExtResource("1_off03")
+texto = "Recolecta las huellas de luz…"
+metadata/_custom_type_script = "uid://cscq2a61ppime"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://cj5et4rys65kx"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_aesr6"]
+
+[resource]
+script = ExtResource("1_aesr6")
+texto = "ellas fortalecen tu esencia\\ny te darán una mejor performance en tu partida."
+metadata/_custom_type_script = "uid://cscq2a61ppime"
