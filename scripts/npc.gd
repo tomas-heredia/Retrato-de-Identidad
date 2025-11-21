@@ -1,15 +1,19 @@
 extends StaticBody3D
-
+class_name NPC
 @onready var contorno = $Cuerpo/Contorno
 @export var nombre:= "Tomás"
 @export var textos: Array[Resource] = []
+@onready var cuerpo = $Cuerpo
 
 var Dialogo = load("res://Scenes/UI/dialogo.tscn")
 var interactuable: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	contorno.hide()
+	necesaria()
 
+func necesaria():
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -30,6 +34,7 @@ func _on_area_body_exited(objeto):
 func _unhandled_input(event):
 	if interactuable and event.is_action_pressed("Interact") and ! Global.interactuando:
 		var dialogo = Dialogo.instantiate()
+		
 		dialogo.nombre = nombre
 		dialogo.textos = textos
 		add_child(dialogo)

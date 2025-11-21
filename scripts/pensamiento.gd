@@ -17,6 +17,7 @@ func Crear_pensamieto(texto: String):
 
 
 func _on_timer_timeout():
+	Mensajero.pensamiento_fin.emit()
 	animation_player.play("Out")
 
 

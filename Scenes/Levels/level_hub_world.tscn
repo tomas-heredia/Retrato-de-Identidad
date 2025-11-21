@@ -1,16 +1,20 @@
-[gd_scene load_steps=19 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=23 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
-[ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_drxim"]
-[ext_resource type="Resource" uid="uid://dtkg5ocsch7a8" path="res://Assets/Resources/dialogos/NPC_Guia/texto_introduccion.tres" id="6_wq8m1"]
 [ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="7_y31nf"]
 [ext_resource type="Resource" uid="uid://ca1uby2ikkpbc" path="res://Assets/Resources/dialogos/NPC_Guia/texto_escalera.tres" id="8_vgp4s"]
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="9_765tg"]
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="10_1dxti"]
 [ext_resource type="AudioStream" uid="uid://cdqx2y50t8nj1" path="res://Assets/Musica/Portal/Big-Apple-Brass-NY-I-Love-You-Rare-Samples-_-Songs-Oleg-Tsoy.wav" id="11_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="11_lcapk"]
+[ext_resource type="PackedScene" uid="uid://curhcy1klacia" path="res://Scenes/NPC/guia.tscn" id="12_b86fg"]
 [ext_resource type="PackedScene" uid="uid://chiyeskrvoxk1" path="res://Scenes/Objetos/cuadro_interactuable.tscn" id="12_lcapk"]
+[ext_resource type="Resource" uid="uid://h1tg2w00nfji" path="res://Assets/Resources/dialogos/NPC_Guia/1_introduccion.tres" id="13_7ycrl"]
+[ext_resource type="Resource" uid="uid://upmp5q560jfd" path="res://Assets/Resources/dialogos/NPC_Guia/2_introduccion.tres" id="14_poiwq"]
+[ext_resource type="Resource" uid="uid://0fafyuegfqh6" path="res://Assets/Resources/dialogos/Narrador/1_narrador.tres" id="14_xlops"]
+[ext_resource type="Resource" uid="uid://beb3m31lbxagu" path="res://Assets/Resources/dialogos/Narrador/2_narrador.tres" id="15_g1eig"]
+[ext_resource type="Resource" uid="uid://byqm42qkwogs5" path="res://Assets/Resources/dialogos/NPC_Guia/3_introduccion.tres" id="15_xlops"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
 
@@ -34,6 +38,7 @@ size = Vector3(1, 2.29846, 3.02332)
 
 [node name="HubWorld" type="Node3D"]
 script = ExtResource("1_fwm5r")
+textos = Array[Resource]([ExtResource("14_xlops"), ExtResource("15_g1eig")])
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
 transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
@@ -66,10 +71,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.1121
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
 
-[node name="NPC" parent="." instance=ExtResource("5_drxim")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17016, 1.12353, 5.73811)
-textos = Array[Resource]([ExtResource("6_wq8m1")])
-
 [node name="Dispara_Dialogo" parent="." instance=ExtResource("7_y31nf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.6954, 1.9057, -0.045408)
 textos = Array[Resource]([ExtResource("8_vgp4s")])
@@ -101,6 +102,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73.774
 
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
+
+[node name="Guia" parent="." instance=ExtResource("12_b86fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5564, 1.12353, -3.62872)
+textos = Array[Resource]([ExtResource("13_7ycrl"), ExtResource("14_poiwq"), ExtResource("15_xlops")])
 
 [editable path="Player"]
 [editable path="Dispara_Dialogo"]

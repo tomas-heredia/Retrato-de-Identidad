@@ -7,3 +7,12 @@ signal regresar_camara()
 
 @warning_ignore("unused_signal")
 signal Crear_pensamiento(Texto: String)
+
+@warning_ignore("unused_signal")
+signal fin_dialogo()
+
+@warning_ignore("unused_signal")
+signal pensamiento_fin()
+
+@warning_ignore("unused_signal")
+signal recolectable()

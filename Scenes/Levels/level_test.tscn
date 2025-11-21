@@ -1,9 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=17 format=3 uid="uid://2t7876y24x50"]
 
+[ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="3_ojicq"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="4_qkmes"]
+[ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="5_1bsl4"]
 [ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_gm2ak"]
+[ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="6_1bsl4"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -31,8 +34,7 @@ size = Vector3(1, 4.27301, 2.81891)
 size = Vector3(9.69052, 6.1235, 1)
 
 [node name="Level_test" type="Node3D"]
-
-[node name="Player" parent="." instance=ExtResource("1_vflva")]
+script = ExtResource("1_fmmsx")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
@@ -118,5 +120,15 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.869
 
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("4_qkmes")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
+
+[node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
+
+[node name="Recolectable2" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
+
+[node name="Player" parent="." instance=ExtResource("1_vflva")]
+
+[node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
 [editable path="Player"]

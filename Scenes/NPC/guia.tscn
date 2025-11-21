@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://curhcy1klacia"]
+
+[ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="1_ooq6e"]
+[ext_resource type="Script" uid="uid://b5le7xlf0r10" path="res://scripts/guia.gd" id="2_r6vb4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r6vb4"]
+size = Vector3(4.91162, 3.1665, 9.42383)
+
+[node name="Guia" instance=ExtResource("1_ooq6e")]
+script = ExtResource("2_r6vb4")
+nombre = "Guia"
+
+[node name="triger" type="Area3D" parent="." index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="triger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.496338, 1.08325, 1.8125)
+shape = SubResource("BoxShape3D_r6vb4")
+debug_fill = false
+
+[connection signal="body_entered" from="triger" to="." method="_on_area_3d_body_entered"]
