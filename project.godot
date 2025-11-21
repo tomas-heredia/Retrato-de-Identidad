@@ -20,6 +20,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 ManejoNiveles="*res://scripts/Manejo_niveles.gd"
 Global="*res://scripts/Global.gd"
 Mensajero="*res://scripts/Mensajero.gd"
+ManejoPensamientos="*res://scripts/Manejo_pensamientos.gd"
 
 [display]
 

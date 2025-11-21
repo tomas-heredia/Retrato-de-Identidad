@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=19 format=3 uid="uid://cncwfr8y5bgcp"]
 
+[ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
 [ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_drxim"]
 [ext_resource type="Resource" uid="uid://dtkg5ocsch7a8" path="res://Assets/Resources/dialogos/NPC_Guia/texto_introduccion.tres" id="6_wq8m1"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="9_765tg"]
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="10_1dxti"]
 [ext_resource type="AudioStream" uid="uid://cdqx2y50t8nj1" path="res://Assets/Musica/Portal/Big-Apple-Brass-NY-I-Love-You-Rare-Samples-_-Songs-Oleg-Tsoy.wav" id="11_fwm5r"]
+[ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="11_lcapk"]
 [ext_resource type="PackedScene" uid="uid://chiyeskrvoxk1" path="res://Scenes/Objetos/cuadro_interactuable.tscn" id="12_lcapk"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
@@ -31,6 +33,7 @@ size = Vector3(1, 2.29846, 3.02332)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y31nf"]
 
 [node name="HubWorld" type="Node3D"]
+script = ExtResource("1_fwm5r")
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
 transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
@@ -96,5 +99,9 @@ musica = ExtResource("11_fwm5r")
 [node name="CuadroInteractuable" parent="." instance=ExtResource("12_lcapk")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73.7748, 7.05983, -2.88807)
 
+[node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
+camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
+
+[editable path="Player"]
 [editable path="Dispara_Dialogo"]
 [editable path="Portal_level_test_2"]
