@@ -1,11 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=20 format=3 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="3_ojicq"]
+[ext_resource type="Resource" uid="uid://dcyx3ixmchk5h" path="res://Assets/Resources/dialogos/npc_prueva/1_texto_prueba.tres" id="3_qrn0q"]
+[ext_resource type="Resource" uid="uid://c5ypy6k6f52d3" path="res://Assets/Resources/dialogos/npc_prueva/2_texto_prueba.tres" id="4_jp6fi"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="4_qkmes"]
 [ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="5_1bsl4"]
 [ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_gm2ak"]
+[ext_resource type="Resource" uid="uid://dgmfqr8ufg25e" path="res://Assets/Resources/dialogos/npc_prueva/3_texto_prueba.tres" id="5_v7c2p"]
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="6_1bsl4"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
@@ -78,6 +81,7 @@ shape = SubResource("BoxShape3D_fmmsx")
 
 [node name="NPC" parent="." instance=ExtResource("5_gm2ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71659, 1.57081, 4.69874)
+textos = Array[Resource]([ExtResource("3_qrn0q"), ExtResource("4_jp6fi"), ExtResource("5_v7c2p")])
 
 [node name="Muro" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18.669)
