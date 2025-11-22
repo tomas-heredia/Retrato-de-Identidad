@@ -12,7 +12,9 @@ func _ready():
 
 
 func _unhandled_input(event : InputEvent) -> void:
-	if event is InputEventMouseMotion:
+
+	if event is InputEventMouseMotion and !Global.interactuando:
+		
 		rotation.y -= event.relative.x * sensibilidad_mouse
 		rotation.y = wrapf(rotation.y, 0.0, TAU)
 		

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://btb2jgift6vjt" path="res://scripts/dispara_dialogo.gd" id="1_ellch"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_msu6t"]
-size = Vector3(2.3772, 1.82764, 2.72168)
+size = Vector3(2.3772, 1.82764, 5.03534)
 
 [node name="Dispara_Dialogo" type="Area3D"]
 script = ExtResource("1_ellch")

@@ -1,16 +1,25 @@
-[gd_scene load_steps=19 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=28 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
-[ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_drxim"]
-[ext_resource type="Resource" uid="uid://dtkg5ocsch7a8" path="res://Assets/Resources/dialogos/NPC_Guia/texto_introduccion.tres" id="6_wq8m1"]
 [ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="7_y31nf"]
 [ext_resource type="Resource" uid="uid://ca1uby2ikkpbc" path="res://Assets/Resources/dialogos/NPC_Guia/texto_escalera.tres" id="8_vgp4s"]
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="9_765tg"]
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="10_1dxti"]
 [ext_resource type="AudioStream" uid="uid://cdqx2y50t8nj1" path="res://Assets/Musica/Portal/Big-Apple-Brass-NY-I-Love-You-Rare-Samples-_-Songs-Oleg-Tsoy.wav" id="11_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="11_lcapk"]
+[ext_resource type="PackedScene" uid="uid://curhcy1klacia" path="res://Scenes/NPC/guia.tscn" id="12_b86fg"]
 [ext_resource type="PackedScene" uid="uid://chiyeskrvoxk1" path="res://Scenes/Objetos/cuadro_interactuable.tscn" id="12_lcapk"]
+[ext_resource type="Resource" uid="uid://h1tg2w00nfji" path="res://Assets/Resources/dialogos/NPC_Guia/1_introduccion.tres" id="13_7ycrl"]
+[ext_resource type="Resource" uid="uid://upmp5q560jfd" path="res://Assets/Resources/dialogos/NPC_Guia/2_introduccion.tres" id="14_poiwq"]
+[ext_resource type="Resource" uid="uid://0fafyuegfqh6" path="res://Assets/Resources/dialogos/Narrador/1_narrador.tres" id="14_xlops"]
+[ext_resource type="Resource" uid="uid://beb3m31lbxagu" path="res://Assets/Resources/dialogos/Narrador/2_narrador.tres" id="15_g1eig"]
+[ext_resource type="Resource" uid="uid://byqm42qkwogs5" path="res://Assets/Resources/dialogos/NPC_Guia/3_introduccion.tres" id="15_xlops"]
+[ext_resource type="Resource" uid="uid://dhkyeytfaje6o" path="res://Assets/Resources/dialogos/tuto_huellas/1_tuto_huellas.tres" id="16_jxnjb"]
+[ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="16_xlops"]
+[ext_resource type="Resource" uid="uid://cj5et4rys65kx" path="res://Assets/Resources/dialogos/tuto_huellas/2_tuto_huellas.tres" id="17_bxv71"]
+[ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="17_g1eig"]
+[ext_resource type="Resource" uid="uid://buuk4rqgcg4si" path="res://Assets/Resources/dialogos/tuto_salto/tutorial_salto.tres" id="20_bxv71"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
 
@@ -34,6 +43,11 @@ size = Vector3(1, 2.29846, 3.02332)
 
 [node name="HubWorld" type="Node3D"]
 script = ExtResource("1_fwm5r")
+textos = Array[Resource]([ExtResource("14_xlops"), ExtResource("15_g1eig")])
+
+[node name="Guia" parent="." instance=ExtResource("12_b86fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74272, 1.12786, -4.77612)
+textos = Array[Resource]([ExtResource("13_7ycrl"), ExtResource("14_poiwq"), ExtResource("15_xlops")])
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
 transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
@@ -65,10 +79,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.1121
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
-
-[node name="NPC" parent="." instance=ExtResource("5_drxim")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17016, 1.12353, 5.73811)
-textos = Array[Resource]([ExtResource("6_wq8m1")])
 
 [node name="Dispara_Dialogo" parent="." instance=ExtResource("7_y31nf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.6954, 1.9057, -0.045408)
@@ -102,6 +112,40 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73.774
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 
+[node name="Dialogo_huellas" parent="." instance=ExtResource("7_y31nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9259, 6.68935, -0.127055)
+textos = Array[Resource]([ExtResource("16_jxnjb"), ExtResource("17_bxv71")])
+One_shot = true
+
+[node name="CollisionShape3D" parent="Dialogo_huellas" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0947838, 0.677427, -0.65477)
+
+[node name="Recolectable" parent="Dialogo_huellas" instance=ExtResource("16_xlops")]
+
+[node name="Recolectable" parent="." instance=ExtResource("16_xlops")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9695, 6.58969, -17.1902)
+
+[node name="Recolectable2" parent="." instance=ExtResource("16_xlops")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8407, 6.58969, -5.24858)
+
+[node name="Recolectable3" parent="." instance=ExtResource("16_xlops")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.4664, 6.58969, 9.65252)
+
+[node name="Recolectable4" parent="." instance=ExtResource("16_xlops")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.2638, 6.58969, -20.7151)
+
+[node name="Ui" parent="." instance=ExtResource("17_g1eig")]
+
+[node name="Dispara_Dialogo2" parent="." instance=ExtResource("7_y31nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9434, 0.0527097, -0.127726)
+textos = Array[Resource]([ExtResource("20_bxv71")])
+One_shot = true
+
+[node name="CollisionShape3D" parent="Dispara_Dialogo2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.83926, 0.0613782)
+
 [editable path="Player"]
 [editable path="Dispara_Dialogo"]
 [editable path="Portal_level_test_2"]
+[editable path="Dialogo_huellas"]
+[editable path="Dispara_Dialogo2"]

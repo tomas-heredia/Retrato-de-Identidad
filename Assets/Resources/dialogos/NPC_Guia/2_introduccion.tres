@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://upmp5q560jfd"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_b4n8q"]
+
+[resource]
+script = ExtResource("1_b4n8q")
+texto = "He sentido tu llegada. \\nSoy tu guía espiritual."
+metadata/_custom_type_script = "uid://cscq2a61ppime"

@@ -9,7 +9,7 @@ func _ready():
 	pass
 
 func Crear_pensamieto(texto: String):
-	print(texto)
+	
 	label.text = texto
 	self.size = label.size
 	animation_player.play("In")
@@ -17,6 +17,7 @@ func Crear_pensamieto(texto: String):
 
 
 func _on_timer_timeout():
+	Mensajero.pensamiento_fin.emit()
 	animation_player.play("Out")
 
 

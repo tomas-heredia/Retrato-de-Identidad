@@ -99,7 +99,7 @@ func rotar(direction):
 func _unhandled_input(event):
 	
 	
-	if event.is_action_pressed("Interact") and interactuando_portal:
+	if event.is_action_pressed("Interact") and interactuando_portal and Global.puede_continuar:
 		ManejoNiveles.cambiar(nombre_portal)
 
 func _on_interaccion_body_entered(objeto):

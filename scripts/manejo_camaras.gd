@@ -16,9 +16,7 @@ func _ready():
 		print("Falta la camara actual")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
 
 func cambio_camara(camara_objetivo: Camera3D):
 	camara_actual.current = false

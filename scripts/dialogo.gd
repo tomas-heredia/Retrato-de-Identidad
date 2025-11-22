@@ -26,7 +26,7 @@ func iniciar_dialogo():
 	show()
 	Global.interactuando = true
 	cant_dialogos = textos.size()
-	label_nombre = nombre
+	label_nombre.text = nombre
 	animation_player.play("Intro")
 
 
@@ -39,6 +39,7 @@ func _on_animation_player_animation_finished(anim_name):
 			dialogo_actual += 1
 			espera.start()
 		"Salida":
+			Mensajero.fin_dialogo.emit()
 			Global.interactuando = false
 			self.queue_free()
 
