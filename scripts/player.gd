@@ -18,7 +18,7 @@ var interactuando_portal: bool = false
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var nombre_portal : String
 var frenando := false
-
+var doble_salto := true
 func _ready():
 	interaccion_label.hide()
 	
@@ -32,10 +32,15 @@ func _physics_process(delta):
 func movement(delta):
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		if Input.is_action_just_pressed("Jump") and doble_salto:
+			velocity.y = JUMP_VELOCITY
+			doble_salto = false
 		
-	
+	if is_on_floor():
+		doble_salto = true
 	
 	var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
 	var cam_forward = -camera.global_transform.basis.z
