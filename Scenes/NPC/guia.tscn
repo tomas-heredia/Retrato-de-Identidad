@@ -15,6 +15,5 @@ nombre = "Guia"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="triger" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.496338, 1.08325, 1.8125)
 shape = SubResource("BoxShape3D_r6vb4")
-debug_fill = false
 
-[connection signal="body_entered" from="triger" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="triger" to="." method="_on_triger_body_entered"]

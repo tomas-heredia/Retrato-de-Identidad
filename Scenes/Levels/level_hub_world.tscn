@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=28 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="16_xlops"]
 [ext_resource type="Resource" uid="uid://cj5et4rys65kx" path="res://Assets/Resources/dialogos/tuto_huellas/2_tuto_huellas.tres" id="17_bxv71"]
 [ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="17_g1eig"]
+[ext_resource type="Resource" uid="uid://buuk4rqgcg4si" path="res://Assets/Resources/dialogos/tuto_salto/tutorial_salto.tres" id="20_bxv71"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
 
@@ -43,6 +44,10 @@ size = Vector3(1, 2.29846, 3.02332)
 [node name="HubWorld" type="Node3D"]
 script = ExtResource("1_fwm5r")
 textos = Array[Resource]([ExtResource("14_xlops"), ExtResource("15_g1eig")])
+
+[node name="Guia" parent="." instance=ExtResource("12_b86fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.74272, 1.12786, -4.77612)
+textos = Array[Resource]([ExtResource("13_7ycrl"), ExtResource("14_poiwq"), ExtResource("15_xlops")])
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
 transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
@@ -107,13 +112,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73.774
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 
-[node name="Guia" parent="." instance=ExtResource("12_b86fg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5564, 1.12353, -3.62872)
-textos = Array[Resource]([ExtResource("13_7ycrl"), ExtResource("14_poiwq"), ExtResource("15_xlops")])
-
 [node name="Dialogo_huellas" parent="." instance=ExtResource("7_y31nf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9259, 6.68935, -0.127055)
 textos = Array[Resource]([ExtResource("16_jxnjb"), ExtResource("17_bxv71")])
+One_shot = true
 
 [node name="CollisionShape3D" parent="Dialogo_huellas" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0947838, 0.677427, -0.65477)
@@ -134,7 +136,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.2638, 6.58969, -20.7151)
 
 [node name="Ui" parent="." instance=ExtResource("17_g1eig")]
 
+[node name="Dispara_Dialogo2" parent="." instance=ExtResource("7_y31nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9434, 0.0527097, -0.127726)
+textos = Array[Resource]([ExtResource("20_bxv71")])
+One_shot = true
+
+[node name="CollisionShape3D" parent="Dispara_Dialogo2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.83926, 0.0613782)
+
 [editable path="Player"]
 [editable path="Dispara_Dialogo"]
 [editable path="Portal_level_test_2"]
 [editable path="Dialogo_huellas"]
+[editable path="Dispara_Dialogo2"]
