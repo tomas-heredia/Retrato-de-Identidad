@@ -11,7 +11,10 @@ func _ready():
 func Crear_pensamieto(texto: String):
 	
 	label.text = texto
+	await get_tree().process_frame 
 	self.size = label.size
+	
+	
 	animation_player.play("In")
 	timer.start()
 

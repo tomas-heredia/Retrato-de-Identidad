@@ -1,28 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://blbaceevpc4a0"]
+[gd_scene load_steps=5 format=3 uid="uid://blbaceevpc4a0"]
 
 [ext_resource type="Script" uid="uid://dlpux2wxadi4i" path="res://scripts/objeto_interactuable.gd" id="1_vqob3"]
+[ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="2_dvvhj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q5ah2"]
 size = Vector3(1, 2.1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_vqob3"]
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_vqob3"]
-_surfaces = [{
-"aabb": AABB(-0.557735, -0.557735, -0.557735, 1.11547, 1.11547, 1.11547),
-"attribute_data": PackedByteArray("AAAAAAAAAACrqio/AAAAAKuqqj4AAAAAAACAPwAAAAAAAAAAAAAAP6uqKj8AAAA/q6qqPgAAAD8AAIA/AAAAP6uqqj4AAAAAAAAAAAAAAD+rqio/AAAAAKuqqj4AAAA/q6qqPgAAAD8AAAAAAACAP6uqKj8AAAA/q6qqPgAAgD+rqqo+AAAAP6uqKj8AAAA/q6oqPwAAAD8AAIA/AAAAP6uqqj4AAIA/q6oqPwAAgD+rqio/AACAPwAAgD8AAIA/"),
-"format": 34359742487,
-"index_count": 36,
-"index_data": PackedByteArray("AAAEAAIAAgAEAAYAAQAFAAMAAwAFAAcACAAMAAoACgAMAA4ACQANAAsACwANAA8AEAAUABIAEgAUABYAEQAVABMAEwAVABcA"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("uccOv7nHDj+5xw4/uccOP7nHDj+5xw6/uccOP7nHDj+5xw4/uccOv7nHDj+5xw6/uccOv7nHDr+5xw4/uccOP7nHDr+5xw6/uccOP7nHDr+5xw4/uccOv7nHDr+5xw6/uccOP7nHDj+5xw4/uccOv7nHDj+5xw6/uccOP7nHDj+5xw6/uccOv7nHDj+5xw4/uccOP7nHDr+5xw4/uccOv7nHDr+5xw6/uccOP7nHDr+5xw6/uccOv7nHDr+5xw4/uccOP7nHDj+5xw4/uccOv7nHDr+5xw4/uccOv7nHDj+5xw4/uccOP7nHDr+5xw4/uccOP7nHDj+5xw6/uccOv7nHDr+5xw6/uccOv7nHDj+5xw6/uccOP7nHDr+5xw6//3//f////7//////AAD/v/9//3////+//////wAA/7//f/9/////v/////8AAP+//3//f////7//////AAD/v///AID/////AAAAgP9//7///wCA/////wAAAID/f/+///8AgP////8AAACA/3//v///AID/////AAAAgP9//78AgP//AAD/vwCAAAD///+/AID//wAA/78AgAAA////vwCA//8AAP+/AIAAAP///78AgP//AAD/vwCAAAD///+/")
-}]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvvhj"]
-shading_mode = 0
-albedo_color = Color(0.0627451, 1, 1, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dvvhj"]
 radius = 2.69051
@@ -34,14 +16,12 @@ script = ExtResource("1_vqob3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_q5ah2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Cuerpo" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("BoxMesh_vqob3")
+mesh = ExtResource("2_dvvhj")
 skeleton = NodePath("../..")
 
-[node name="Contorno" type="MeshInstance3D" parent="MeshInstance3D"]
-mesh = SubResource("ArrayMesh_vqob3")
-surface_material_override/0 = SubResource("StandardMaterial3D_dvvhj")
+[node name="Contorno" type="MeshInstance3D" parent="Cuerpo"]
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.865576, 0)
@@ -58,6 +38,14 @@ autowrap_mode = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.776888, 1.61998, 3.00653)
+
+[node name="Interaccion_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 60
+text = "Interactuar \"E\""
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
