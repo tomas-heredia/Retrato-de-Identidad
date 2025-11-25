@@ -52,9 +52,9 @@ func set_mesh_dinamico(new_mesh: Mesh):
 	contorno.mesh = new_mesh
 
 	# Aplica el material de contorno
-	var outline_mat := ShaderMaterial.new()
-	outline_mat.shader = load("res://Assets/Materiales/Contornos/contorno_objeto_interactuable.tres")
-	contorno.material_override = outline_mat
+	
+	contorno.material_override = load("res://Assets/Materiales/Contornos/contorno_objeto_interactuable.tres")
+	#contorno.material_override = outline_mat
 
 	# Escala suavemente hacia afuera para simular el contorno
 	contorno.scale = Vector3(1.1, 1.1, 1.1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=27 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://cdqx2y50t8nj1" path="res://Assets/Musica/Portal/Big-Apple-Brass-NY-I-Love-You-Rare-Samples-_-Songs-Oleg-Tsoy.wav" id="11_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="11_lcapk"]
 [ext_resource type="PackedScene" uid="uid://curhcy1klacia" path="res://Scenes/NPC/guia.tscn" id="12_b86fg"]
-[ext_resource type="PackedScene" uid="uid://chiyeskrvoxk1" path="res://Scenes/Objetos/cuadro_interactuable.tscn" id="12_lcapk"]
 [ext_resource type="Resource" uid="uid://h1tg2w00nfji" path="res://Assets/Resources/dialogos/NPC_Guia/1_introduccion.tres" id="13_7ycrl"]
 [ext_resource type="Resource" uid="uid://upmp5q560jfd" path="res://Assets/Resources/dialogos/NPC_Guia/2_introduccion.tres" id="14_poiwq"]
 [ext_resource type="Resource" uid="uid://0fafyuegfqh6" path="res://Assets/Resources/dialogos/Narrador/1_narrador.tres" id="14_xlops"]
@@ -99,15 +98,9 @@ mesh = SubResource("BoxMesh_wq8m1")
 transform = Transform3D(52.6709, 0, 0, 0, 1, 0, 0, 0, 57.4819, 1.10134, 5.66404, 0)
 shape = SubResource("BoxShape3D_y31nf")
 
-[node name="Objeto_interactuable" parent="." instance=ExtResource("9_765tg")]
-transform = Transform3D(1.00176, 0, 0, 0, 1.00176, 0, 0, 0, 1.00176, 26.2738, 6.55805, -24.5461)
-
 [node name="Portal_level_test_2" parent="." instance=ExtResource("10_1dxti")]
 transform = Transform3D(0.726586, 0, -0.687075, 0, 1, 0, 0.687075, 0, 0.726586, 59.9418, 5.62837, 23.63)
 musica = ExtResource("11_fwm5r")
-
-[node name="CuadroInteractuable" parent="." instance=ExtResource("12_lcapk")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 73.7748, 7.05983, -2.88807)
 
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
@@ -126,10 +119,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0947838, 0.677427, -0.65477
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9695, 6.58969, -17.1902)
 
 [node name="Recolectable2" parent="." instance=ExtResource("16_xlops")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8407, 6.58969, -5.24858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.600822, -5.034958, 24.377682)
 
 [node name="Recolectable3" parent="." instance=ExtResource("16_xlops")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.4664, 6.58969, 9.65252)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.696846, 6.4807863, 19.709583)
 
 [node name="Recolectable4" parent="." instance=ExtResource("16_xlops")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.2638, 6.58969, -20.7151)
@@ -143,6 +136,26 @@ One_shot = true
 
 [node name="CollisionShape3D" parent="Dispara_Dialogo2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.83926, 0.0613782)
+
+[node name="Objetos" type="Node" parent="."]
+
+[node name="Objeto_interactuable1" parent="Objetos" instance=ExtResource("9_765tg")]
+transform = Transform3D(1.00176, 0, 0, 0, 1.00176, 0, 0, 0, 1.00176, 26.2738, 6.55805, -24.5461)
+
+[node name="Objeto_interactuable2" parent="Objetos" instance=ExtResource("9_765tg")]
+transform = Transform3D(-7.9860705e-08, 0, -1.827, 0, 1.827, 0, 1.827, 0, -7.9860705e-08, 44.27031, 6.55805, 1.7029824)
+
+[node name="Objeto_interactuable3" parent="Objetos" instance=ExtResource("9_765tg")]
+transform = Transform3D(-0.5912218, 0, -0.80869025, 0, 1.00176, 0, 0.80869025, 0, -0.5912218, 48.37835, 6.55805, 18.802498)
+
+[node name="Objeto_interactuable4" parent="Objetos" instance=ExtResource("9_765tg")]
+transform = Transform3D(-4.3788322e-08, 0, -1.00176, 0, 1.00176, 0, 1.00176, 0, -4.3788322e-08, 72.33945, 6.55805, -14.099249)
+
+[node name="Objeto_interactuable5" parent="Objetos" instance=ExtResource("9_765tg")]
+transform = Transform3D(-4.3788322e-08, 0, -1.00176, 0, 1.00176, 0, 1.00176, 0, -4.3788322e-08, 72.33945, 6.55805, 16.591143)
+
+[node name="Objeto_interactuable6" parent="Objetos" instance=ExtResource("9_765tg")]
+transform = Transform3D(-4.3788322e-08, 0, -1.00176, 0, 1.00176, 0, 1.00176, 0, -4.3788322e-08, 72.33945, 6.55805, 26.299997)
 
 [editable path="Player"]
 [editable path="Dispara_Dialogo"]

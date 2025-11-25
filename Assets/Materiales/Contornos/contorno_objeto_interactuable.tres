@@ -1,5 +1,17 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://bjnlrt478waqa"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bjnlrt478waqa"]
+
+[sub_resource type="Shader" id="Shader_4ea0n"]
+code = "shader_type spatial;
+render_mode cull_front, unshaded;
+
+uniform vec4 outline_color = vec4(0.0, 1.0, 1.0, 1.0);
+
+void fragment() {
+    ALBEDO = outline_color.rgb;
+    ALPHA = outline_color.a;
+}"
 
 [resource]
-shading_mode = 0
-albedo_color = Color(0.0627451, 1, 1, 1)
+render_priority = 0
+shader = SubResource("Shader_4ea0n")
+shader_parameter/outline_color = Vector4(0, 1, 1, 1)
