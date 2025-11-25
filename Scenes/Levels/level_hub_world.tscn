@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=30 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
@@ -18,7 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="16_xlops"]
 [ext_resource type="Resource" uid="uid://cj5et4rys65kx" path="res://Assets/Resources/dialogos/tuto_huellas/2_tuto_huellas.tres" id="17_bxv71"]
 [ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="17_g1eig"]
+[ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="20_8mo2d"]
 [ext_resource type="Resource" uid="uid://buuk4rqgcg4si" path="res://Assets/Resources/dialogos/tuto_salto/tutorial_salto.tres" id="20_bxv71"]
+[ext_resource type="PackedScene" uid="uid://erqudcwfx0dt" path="res://Scenes/Objetos/cristo.tscn" id="20_v14cr"]
+[ext_resource type="AudioStream" uid="uid://ulgda1f725xq" path="res://Assets/Musica/efecto_objetos/shine-8-268901.mp3" id="21_xa3qt"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
 
@@ -119,7 +122,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0947838, 0.677427, -0.65477
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9695, 6.58969, -17.1902)
 
 [node name="Recolectable2" parent="." instance=ExtResource("16_xlops")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.600822, -5.034958, 24.377682)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.760437, 7.4153147, 24.377682)
 
 [node name="Recolectable3" parent="." instance=ExtResource("16_xlops")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.696846, 6.4807863, 19.709583)
@@ -141,21 +144,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.83926, 0.0613782)
 
 [node name="Objeto_interactuable1" parent="Objetos" instance=ExtResource("9_765tg")]
 transform = Transform3D(1.00176, 0, 0, 0, 1.00176, 0, 0, 0, 1.00176, 26.2738, 6.55805, -24.5461)
-
-[node name="Objeto_interactuable2" parent="Objetos" instance=ExtResource("9_765tg")]
-transform = Transform3D(-7.9860705e-08, 0, -1.827, 0, 1.827, 0, 1.827, 0, -7.9860705e-08, 44.27031, 6.55805, 1.7029824)
+Texto = "hola manola"
+modelo = ExtResource("20_8mo2d")
+efecto = ExtResource("21_xa3qt")
 
 [node name="Objeto_interactuable3" parent="Objetos" instance=ExtResource("9_765tg")]
 transform = Transform3D(-0.5912218, 0, -0.80869025, 0, 1.00176, 0, 0.80869025, 0, -0.5912218, 48.37835, 6.55805, 18.802498)
+modelo = ExtResource("20_8mo2d")
+efecto = ExtResource("21_xa3qt")
 
 [node name="Objeto_interactuable4" parent="Objetos" instance=ExtResource("9_765tg")]
 transform = Transform3D(-4.3788322e-08, 0, -1.00176, 0, 1.00176, 0, 1.00176, 0, -4.3788322e-08, 72.33945, 6.55805, -14.099249)
+modelo = ExtResource("20_8mo2d")
+efecto = ExtResource("21_xa3qt")
 
 [node name="Objeto_interactuable5" parent="Objetos" instance=ExtResource("9_765tg")]
 transform = Transform3D(-4.3788322e-08, 0, -1.00176, 0, 1.00176, 0, 1.00176, 0, -4.3788322e-08, 72.33945, 6.55805, 16.591143)
+modelo = ExtResource("20_8mo2d")
+efecto = ExtResource("21_xa3qt")
 
 [node name="Objeto_interactuable6" parent="Objetos" instance=ExtResource("9_765tg")]
 transform = Transform3D(-4.3788322e-08, 0, -1.00176, 0, 1.00176, 0, 1.00176, 0, -4.3788322e-08, 72.33945, 6.55805, 26.299997)
+modelo = ExtResource("20_8mo2d")
+efecto = ExtResource("21_xa3qt")
+
+[node name="Cristo" parent="Objetos" instance=ExtResource("20_v14cr")]
+transform = Transform3D(-9.2231026e-08, 0, -2.11, 0, 2.11, 0, 2.11, 0, -9.2231026e-08, 51.73584, 6.377846, 0)
+efecto = ExtResource("21_xa3qt")
 
 [editable path="Player"]
 [editable path="Dispara_Dialogo"]

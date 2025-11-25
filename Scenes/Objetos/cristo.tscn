@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://erqudcwfx0dt"]
+
+[ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_06ewu"]
+[ext_resource type="Script" uid="uid://8xxdcoc4ldgr" path="res://scripts/cristo.gd" id="2_cnt71"]
+[ext_resource type="SphereMesh" uid="uid://ltqbg3klyj4l" path="res://Assets/Materiales/Contornos/objeto_interactuable_esfera.tres" id="3_tubc4"]
+[ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="4_ygpvv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tubc4"]
+radius = 5.013027
+
+[node name="Cristo" instance=ExtResource("1_06ewu")]
+script = ExtResource("2_cnt71")
+achilata = ExtResource("3_tubc4")
+modelo = ExtResource("4_ygpvv")
+
+[node name="Pensamiento" type="Area3D" parent="." index="7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pensamiento" index="0"]
+shape = SubResource("SphereShape3D_tubc4")
+
+[connection signal="body_entered" from="Pensamiento" to="." method="_on_pensamiento_body_entered"]

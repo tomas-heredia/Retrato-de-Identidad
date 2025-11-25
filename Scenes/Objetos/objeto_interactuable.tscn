@@ -11,7 +11,6 @@ radius = 2.69051
 
 [node name="objeto_interactuable" type="StaticBody3D" groups=["Objeto"]]
 script = ExtResource("1_vqob3")
-modelo = ExtResource("2_dvvhj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -45,6 +44,8 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme_override_font_sizes/font_size = 60
 text = "Interactuar \"E\""
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

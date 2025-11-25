@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=23 format=3 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -10,7 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://gxfo1idx7qd" path="res://Scenes/NPC/npc.tscn" id="5_gm2ak"]
 [ext_resource type="Resource" uid="uid://dgmfqr8ufg25e" path="res://Assets/Resources/dialogos/npc_prueva/3_texto_prueba.tres" id="5_v7c2p"]
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="6_1bsl4"]
+[ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="7_0m88k"]
 [ext_resource type="Resource" uid="uid://c5yal558s5kj" path="res://Assets/Resources/dialogos/npc_prueva/prueba_dialogo.tres" id="11_jp6fi"]
+[ext_resource type="PackedScene" uid="uid://erqudcwfx0dt" path="res://Scenes/Objetos/cristo.tscn" id="12_v7c2p"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -122,6 +124,7 @@ shape = SubResource("BoxShape3D_c3dre")
 
 [node name="objeto_interactuable" parent="." instance=ExtResource("3_ojicq")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.8698, 0.671244, 9.90681)
+modelo = ExtResource("7_0m88k")
 
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("4_qkmes")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
@@ -139,5 +142,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="NPC2" parent="." instance=ExtResource("5_gm2ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17249, 1.57082, 4.16488)
 textos = Array[Resource]([ExtResource("11_jp6fi")])
+
+[node name="Cristo" parent="." instance=ExtResource("12_v7c2p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.014906, 0.54999995, -4.717147)
 
 [editable path="Player"]

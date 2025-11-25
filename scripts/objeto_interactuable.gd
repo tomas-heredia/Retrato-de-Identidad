@@ -1,15 +1,20 @@
 extends StaticBody3D
+class_name objeto_interactuable
+@export var Texto := ""
+@export var modelo : Mesh
+@export var efecto : AudioStream
 @onready var label_3d = $Label3D
 @onready var contorno = $Cuerpo/Contorno
-@export var Texto := ""
+@onready var cuerpo = $Cuerpo
 var interactuable := false
 @onready var camera_3d = $Camera3D
 var interactuado := false
 @onready var interaccion_label = $Interaccion_label
-@onready var cuerpo = $Cuerpo
-@export var modelo : Mesh
+@onready var audio_player = $AudioStreamPlayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	audio_player.stream = efecto
 	set_mesh_dinamico(modelo)
 	interaccion_label.hide()
 	label_3d.hide()
@@ -21,6 +26,8 @@ func _ready():
 func _unhandled_input(event):
 	if interactuable:
 		if  event.is_action_pressed("Interact") and ! Global.interactuando:
+			cambio()
+			audio_player.play()
 			interaccion_label.hide()
 			Global.interactuando = true
 			label_3d.show()
@@ -58,3 +65,6 @@ func set_mesh_dinamico(new_mesh: Mesh):
 
 	# Escala suavemente hacia afuera para simular el contorno
 	contorno.scale = Vector3(1.1, 1.1, 1.1)
+
+func cambio():
+	pass
