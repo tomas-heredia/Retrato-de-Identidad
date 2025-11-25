@@ -4,9 +4,13 @@ extends StaticBody3D
 @export var Texto := ""
 var interactuable := false
 @onready var camera_3d = $Camera3D
+var interactuado := false
+@onready var interaccion_label = $Interaccion_label
+@onready var cuerpo = $Cuerpo
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	interaccion_label.hide()
 	label_3d.hide()
 	contorno.hide()
 	if Texto != "":
@@ -16,9 +20,11 @@ func _ready():
 func _unhandled_input(event):
 	if interactuable:
 		if  event.is_action_pressed("Interact") and ! Global.interactuando:
+			interaccion_label.hide()
 			Global.interactuando = true
 			label_3d.show()
 			Mensajero.Cambio_Camara.emit(camera_3d)
+			interactuado = true
 		else:
 			if event.is_action_pressed("Interact") and  Global.interactuando:
 				
@@ -27,7 +33,8 @@ func _unhandled_input(event):
 				
 
 func _on_area_3d_body_entered(objeto):
-	if objeto.is_in_group("Player"):
+	if objeto.is_in_group("Player") and !interactuado:
+		interaccion_label.show()
 		contorno.show()
 		interactuable = true
 

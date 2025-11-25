@@ -34,12 +34,12 @@ script = ExtResource("1_vqob3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_q5ah2")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Cuerpo" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("BoxMesh_vqob3")
 skeleton = NodePath("../..")
 
-[node name="Contorno" type="MeshInstance3D" parent="MeshInstance3D"]
+[node name="Contorno" type="MeshInstance3D" parent="Cuerpo"]
 mesh = SubResource("ArrayMesh_vqob3")
 surface_material_override/0 = SubResource("StandardMaterial3D_dvvhj")
 
@@ -58,6 +58,12 @@ autowrap_mode = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.776888, 1.61998, 3.00653)
+
+[node name="Interaccion_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 60
+text = "Interactuar \"E\""
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
