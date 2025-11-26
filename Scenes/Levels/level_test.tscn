@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=24 format=3 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -13,6 +13,7 @@
 [ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="7_0m88k"]
 [ext_resource type="Resource" uid="uid://c5yal558s5kj" path="res://Assets/Resources/dialogos/npc_prueva/prueba_dialogo.tres" id="11_jp6fi"]
 [ext_resource type="PackedScene" uid="uid://erqudcwfx0dt" path="res://Scenes/Objetos/cristo.tscn" id="12_v7c2p"]
+[ext_resource type="PackedScene" uid="uid://dfm3thbhsgnfo" path="res://Scenes/Objetos/baldosa.tscn" id="14_fjvvq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -145,5 +146,8 @@ textos = Array[Resource]([ExtResource("11_jp6fi")])
 
 [node name="Cristo" parent="." instance=ExtResource("12_v7c2p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.014906, 0.54999995, -4.717147)
+
+[node name="Baldosa" parent="." instance=ExtResource("14_fjvvq")]
+transform = Transform3D(0.9162649, 0, -0.40057293, 0, 1, 0, 0.40057293, 0, 0.9162649, 9.823518, 0.5738675, -7.5506897)
 
 [editable path="Player"]

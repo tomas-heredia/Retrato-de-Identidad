@@ -51,6 +51,7 @@ func _on_area_3d_body_exited(objeto):
 	if objeto.is_in_group("Player"):
 		contorno.hide()
 		interactuable = false
+
 func set_mesh_dinamico(new_mesh: Mesh):
 	# Asigna el mesh al cuerpo
 	cuerpo.mesh = new_mesh

@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=4 uid="uid://dfm3thbhsgnfo"]
+
+[ext_resource type="Script" uid="uid://broj10jahrqfi" path="res://scripts/baldosa.gd" id="1_1ja8q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1ja8q"]
+size = Vector3(2, 0.09, 2)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1ja8q"]
+radius = 1.9717406
+
+[sub_resource type="BoxMesh" id="BoxMesh_o85w7"]
+
+[sub_resource type="Animation" id="Animation_ldrdr"]
+resource_name = "Caida"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cielo_razo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cielo_razo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.76666665),
+"transitions": PackedFloat32Array(3.482201, 1),
+"update": 0,
+"values": [Vector3(0, 8.672826, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fl8ma"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cielo_razo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cielo_razo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 8.672826, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_87wl6"]
+_data = {
+&"Caida": SubResource("Animation_ldrdr"),
+&"RESET": SubResource("Animation_fl8ma")
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o85w7"]
+_surfaces = [{
+"aabb": AABB(-1.0288675, -0.073867515, -1.0288675, 2.057735, 0.14773503, 2.057735),
+"attribute_data": PackedByteArray("AAAAAAAAAACrqio/AAAAAKuqqj4AAAAAAACAPwAAAAAAAAAAAAAAP6uqKj8AAAA/q6qqPgAAAD8AAIA/AAAAP6uqqj4AAAAAAAAAAAAAAD+rqio/AAAAAKuqqj4AAAA/q6qqPgAAAD8AAAAAAACAP6uqKj8AAAA/q6qqPgAAgD+rqqo+AAAAP6uqKj8AAAA/q6oqPwAAAD8AAIA/AAAAP6uqqj4AAIA/q6oqPwAAgD+rqio/AACAPwAAgD8AAIA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAAEAAIAAgAEAAYAAQAFAAMAAwAFAAcACAAMAAoACgAMAA4ACQANAAsACwANAA8AEAAUABIAEgAUABYAEQAVABMAEwAVABcA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("7rGDv9pHlz3usYM/7rGDP9pHlz3usYO/7rGDP9pHlz3usYM/7rGDv9pHlz3usYO/7rGDv9pHl73usYM/7rGDP9pHl73usYO/7rGDP9pHl73usYM/7rGDv9pHl73usYO/7rGDP9pHlz3usYM/7rGDv9pHlz3usYO/7rGDP9pHlz3usYO/7rGDv9pHlz3usYM/7rGDP9pHl73usYM/7rGDv9pHl73usYO/7rGDP9pHl73usYO/7rGDv9pHl73usYM/7rGDP9pHlz3usYM/7rGDv9pHl73usYM/7rGDv9pHlz3usYM/7rGDP9pHl73usYM/7rGDP9pHlz3usYO/7rGDv9pHl73usYO/7rGDv9pHlz3usYO/7rGDP9pHl73usYO//3//f////7//////AAD/v/9//3////+//////wAA/7//f/9/////v/////8AAP+//3//f////7//////AAD/v///AID/////AAAAgP9//7///wCA/////wAAAID/f/+///8AgP////8AAACA/3//v///AID/////AAAAgP9//78AgP//AAD/vwCAAAD///+/AID//wAA/78AgAAA////vwCA//8AAP+/AIAAAP///78AgP//AAD/vwCAAAD///+/")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldrdr"]
+shading_mode = 0
+albedo_color = Color(0.3254902, 1, 1, 1)
+
+[node name="Baldosa" type="MeshInstance3D"]
+transform = Transform3D(0.9162649, 0, -0.40057293, 0, 1, 0, 0.40057293, 0, 0.9162649, 0, 0, 0)
+mesh = SubResource("BoxMesh_1ja8q")
+script = ExtResource("1_1ja8q")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_1ja8q")
+
+[node name="Cielo_razo" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.8418806, 0, 1.7862566, 0, 0.08722663, 0, -1.241587, 0, 4.0885797, 0, 8.672826, 0)
+visible = false
+mesh = SubResource("BoxMesh_o85w7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_87wl6")
+}
+
+[node name="Interaccion_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 60
+text = "Interactuar \"E\""
+
+[node name="Contorno" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("ArrayMesh_o85w7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ldrdr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
