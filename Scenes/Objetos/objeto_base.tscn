@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://bdgukxgw3fhay"]
+
+[ext_resource type="Script" uid="uid://drv3xcg6xor66" path="res://scripts/objeto.gd" id="1_7mv2o"]
+[ext_resource type="SphereMesh" uid="uid://ltqbg3klyj4l" path="res://Assets/Materiales/Contornos/objeto_interactuable_esfera.tres" id="2_rj6jn"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rj6jn"]
+radius = 1.9717406
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_n3s3p"]
+_surfaces = [{
+"aabb": AABB(-1.0288675, -0.073867515, -1.0288675, 2.057735, 0.14773503, 2.057735),
+"attribute_data": PackedByteArray("AAAAAAAAAACrqio/AAAAAKuqqj4AAAAAAACAPwAAAAAAAAAAAAAAP6uqKj8AAAA/q6qqPgAAAD8AAIA/AAAAP6uqqj4AAAAAAAAAAAAAAD+rqio/AAAAAKuqqj4AAAA/q6qqPgAAAD8AAAAAAACAP6uqKj8AAAA/q6qqPgAAgD+rqqo+AAAAP6uqKj8AAAA/q6oqPwAAAD8AAIA/AAAAP6uqqj4AAIA/q6oqPwAAgD+rqio/AACAPwAAgD8AAIA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAAEAAIAAgAEAAYAAQAFAAMAAwAFAAcACAAMAAoACgAMAA4ACQANAAsACwANAA8AEAAUABIAEgAUABYAEQAVABMAEwAVABcA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("7rGDv9pHlz3usYM/7rGDP9pHlz3usYO/7rGDP9pHlz3usYM/7rGDv9pHlz3usYO/7rGDv9pHl73usYM/7rGDP9pHl73usYO/7rGDP9pHl73usYM/7rGDv9pHl73usYO/7rGDP9pHlz3usYM/7rGDv9pHlz3usYO/7rGDP9pHlz3usYO/7rGDv9pHlz3usYM/7rGDP9pHl73usYM/7rGDv9pHl73usYO/7rGDP9pHl73usYO/7rGDv9pHl73usYM/7rGDP9pHlz3usYM/7rGDv9pHl73usYM/7rGDv9pHlz3usYM/7rGDP9pHl73usYM/7rGDP9pHlz3usYO/7rGDv9pHl73usYO/7rGDv9pHlz3usYO/7rGDP9pHl73usYO//3//f////7//////AAD/v/9//3////+//////wAA/7//f/9/////v/////8AAP+//3//f////7//////AAD/v///AID/////AAAAgP9//7///wCA/////wAAAID/f/+///8AgP////8AAACA/3//v///AID/////AAAAgP9//78AgP//AAD/vwCAAAD///+/AID//wAA/78AgAAA////vwCA//8AAP+/AIAAAP///78AgP//AAD/vwCAAAD///+/")
+}]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwi58"]
+shading_mode = 0
+albedo_color = Color(0.3254902, 1, 1, 1)
+
+[node name="Objeto_base" type="MeshInstance3D"]
+mesh = ExtResource("2_rj6jn")
+script = ExtResource("1_7mv2o")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_rj6jn")
+
+[node name="Interaccion_label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 60
+text = "Interactuar \"E\""
+
+[node name="Contorno" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("ArrayMesh_n3s3p")
+surface_material_override/0 = SubResource("StandardMaterial3D_iwi58")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

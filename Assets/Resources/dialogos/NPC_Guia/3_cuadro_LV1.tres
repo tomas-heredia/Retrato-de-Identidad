@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://5b3gs1ulapb8"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_q04dp"]
+
+[resource]
+script = ExtResource("1_q04dp")
+texto = "Cuando estés listo, salta y atrévete a recordar."
+metadata/_custom_type_script = "uid://cscq2a61ppime"

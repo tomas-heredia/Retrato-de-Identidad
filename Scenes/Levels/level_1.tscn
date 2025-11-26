@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://hkh756ni2jcm"]
+
+[ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="2_iixi8"]
+[ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="3_cyadu"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xgxfi"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5f3p6"]
+height = 1.51855
+radius = 0.497559
+
+[node name="Level_1" type="Node3D"]
+
+[node name="Suelo1" type="StaticBody3D" parent="."]
+transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
+collision_layer = 3
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo1"]
+transform = Transform3D(8.53483, 0, 0, 0, 0.0694212, 0, 0, 0, 5.37962, 0, 0, 0)
+mesh = SubResource("CylinderMesh_xgxfi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo1"]
+transform = Transform3D(8.53483, 0, 0, 0, 0.0694212, 0, 0, 0, 5.37962, 0, 0, 0)
+shape = SubResource("CylinderShape3D_5f3p6")
+
+[node name="Player" parent="." instance=ExtResource("1_3mqfk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.11218, 0.494704, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
+
+[node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("2_iixi8")]
+camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
+
+[node name="Ui" parent="." instance=ExtResource("3_cyadu")]
+
+[editable path="Player"]

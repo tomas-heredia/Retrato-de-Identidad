@@ -2,7 +2,8 @@ extends Node
 var niveles := {
 	"level_test": preload("res://Scenes/Levels/level_test.tscn"),
 	"level_test_2": preload("res://Scenes/Levels/level_test_2.tscn"),
-	"level_hub_world": preload("res://Scenes/Levels/level_hub_world.tscn")
+	"level_hub_world": preload("res://Scenes/Levels/level_hub_world.tscn"),
+	"level_1": preload("res://Scenes/Levels/level_1.tscn")
 }
 var proximo_nivel : String
 func cambiar(nombre :String):

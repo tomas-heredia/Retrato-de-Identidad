@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=34 format=3 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
@@ -23,6 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://erqudcwfx0dt" path="res://Scenes/Objetos/cristo.tscn" id="20_v14cr"]
 [ext_resource type="AudioStream" uid="uid://ulgda1f725xq" path="res://Assets/Musica/efecto_objetos/shine-8-268901.mp3" id="21_xa3qt"]
 [ext_resource type="PackedScene" uid="uid://dfm3thbhsgnfo" path="res://Scenes/Objetos/baldosa.tscn" id="23_xa3qt"]
+[ext_resource type="Resource" uid="uid://doam4c1ejbefw" path="res://Assets/Resources/dialogos/NPC_Guia/1_cuadro_LV1.tres" id="24_jno3b"]
+[ext_resource type="Resource" uid="uid://grftlu31qk7s" path="res://Assets/Resources/dialogos/NPC_Guia/2_cuadro_LV1.tres" id="25_pwq1d"]
+[ext_resource type="Resource" uid="uid://5b3gs1ulapb8" path="res://Assets/Resources/dialogos/NPC_Guia/3_cuadro_LV1.tres" id="26_q65nw"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vgp4s"]
 
@@ -54,6 +57,7 @@ textos = Array[Resource]([ExtResource("13_7ycrl"), ExtResource("14_poiwq"), ExtR
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
 transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
+collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo1"]
 transform = Transform3D(8.53483, 0, 0, 0, 0.0694212, 0, 0, 0, 5.37962, 0, 0, 0)
@@ -65,6 +69,7 @@ shape = SubResource("CylinderShape3D_765tg")
 
 [node name="Rampa" type="StaticBody3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.321, 3.0258, -0.0630417)
+collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
 mesh = SubResource("PrismMesh_1dxti")
@@ -93,6 +98,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08594, 0)
 
 [node name="Suelo2" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6602, -0.142798, -0.00473595)
+collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo2"]
 transform = Transform3D(52.6709, 0, 0, 0, 1, 0, 0, 0, 57.4819, 1.10134, 5.66404, 0)
@@ -103,7 +109,8 @@ transform = Transform3D(52.6709, 0, 0, 0, 1, 0, 0, 0, 57.4819, 1.10134, 5.66404,
 shape = SubResource("BoxShape3D_y31nf")
 
 [node name="Portal_level_test_2" parent="." instance=ExtResource("10_1dxti")]
-transform = Transform3D(0.726586, 0, -0.687075, 0, 1, 0, 0.687075, 0, 0.726586, 59.9418, 5.62837, 23.63)
+transform = Transform3D(0.726586, 0, -0.687075, 0, 1, 0, 0.687075, 0, 0.726586, 59.9418, 8.139202, 23.63)
+a_nivel = "level_1"
 musica = ExtResource("11_fwm5r")
 
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
@@ -176,8 +183,17 @@ efecto = ExtResource("21_xa3qt")
 [node name="Baldosa" parent="." instance=ExtResource("23_xa3qt")]
 transform = Transform3D(0.9162649, 0, -0.40057293, 0, 1, 0, 0.40057293, 0, 0.9162649, 32.621025, 6.0951095, 15.232479)
 
+[node name="Dispara_Dialogo3" parent="." instance=ExtResource("7_y31nf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.463306, 6.0212417, 22.84368)
+nombre = "Guia"
+textos = Array[Resource]([ExtResource("24_jno3b"), ExtResource("25_pwq1d"), ExtResource("26_q65nw")])
+One_shot = true
+
+[node name="CollisionShape3D" parent="Dispara_Dialogo3" index="0"]
+transform = Transform3D(0.7573029, 0, -0.6530638, 0, 1, 0, 0.6530638, 0, 0.7573029, -0.23823166, 0.6774268, -0.20543861)
+
 [editable path="Player"]
 [editable path="Dispara_Dialogo"]
-[editable path="Portal_level_test_2"]
 [editable path="Dialogo_huellas"]
 [editable path="Dispara_Dialogo2"]
+[editable path="Dispara_Dialogo3"]
