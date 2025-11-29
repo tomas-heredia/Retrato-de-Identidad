@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=27 format=3 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://erqudcwfx0dt" path="res://Scenes/Objetos/cristo.tscn" id="12_v7c2p"]
 [ext_resource type="PackedScene" uid="uid://dfm3thbhsgnfo" path="res://Scenes/Objetos/baldosa.tscn" id="14_fjvvq"]
 [ext_resource type="PackedScene" uid="uid://bjym15v7oo0q0" path="res://Scenes/Objetos/arte_contemporaneo.tscn" id="15_oerva"]
+[ext_resource type="Resource" uid="uid://dwb2eybx0y0yd" path="res://Assets/Resources/dialogos/npc_prueva/1_exto.tres" id="16_x7ba5"]
+[ext_resource type="Resource" uid="uid://bvxovxx0y77qr" path="res://Assets/Resources/dialogos/npc_prueva/texto5.tres" id="17_g1i77"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -153,5 +155,9 @@ transform = Transform3D(0.9162649, 0, -0.40057293, 0, 1, 0, 0.40057293, 0, 0.916
 
 [node name="Arte_contemporaneo" parent="." instance=ExtResource("15_oerva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.75354, 1, -13.683014)
+
+[node name="NPC3" parent="." instance=ExtResource("5_gm2ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.451979, 1.5708163, -10.993761)
+textos = Array[Resource]([ExtResource("16_x7ba5"), ExtResource("17_g1i77")])
 
 [editable path="Player"]
