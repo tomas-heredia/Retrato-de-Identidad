@@ -77,6 +77,10 @@ script = ExtResource("3_6t5aa")
 spring_arm = NodePath("../SpringArm3D/SpringArmPosition")
 lerp_power = 6.0
 
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.3
+
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]
 [connection signal="timeout" from="salto_timer" to="." method="_on_salto_timer_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
