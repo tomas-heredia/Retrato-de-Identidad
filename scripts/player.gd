@@ -12,13 +12,15 @@ var direction = Vector3(0,0,0)
 @onready var modelo = $Modelo
 @onready var interaccion_label = $Interaccion_label
 @onready var camera = $SpringArmPivot/Camera3D
+@onready var coyote_timer = $CoyoteTimer
 
+var coyote_timer_activado := true
 var interactuando_portal: bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var nombre_portal : String
 var frenando := false
-var doble_salto := true
+var doble_salto := false
 func _ready():
 	interaccion_label.hide()
 	
@@ -30,16 +32,24 @@ func _physics_process(delta):
 
 
 func movement(delta):
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if is_on_floor():
+		coyote_timer_activado = true
 		
-	if not is_on_floor():
+		coyote_timer.stop()
+		
+	else:
+		if coyote_timer.is_stopped():
+			coyote_timer.start()
 		velocity.y -= gravity * delta
-		if Input.is_action_just_pressed("Jump") and doble_salto:
+		
+		
+		
+	if Input.is_action_just_pressed("Jump") and doble_salto :
 			velocity.y = JUMP_VELOCITY
 			doble_salto = false
-		
-	if is_on_floor():
+	if Input.is_action_just_pressed("Jump") and coyote_timer_activado:
+		velocity.y = JUMP_VELOCITY
+		coyote_timer_activado = false
 		doble_salto = true
 	
 	var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
@@ -135,3 +145,8 @@ func _on_interaccion_body_exited(objeto):
 				interactuando_portal = false
 				interaccion_label.hide()
 			
+
+
+func _on_coyote_timer_timeout():
+	coyote_timer_activado = false
+	
