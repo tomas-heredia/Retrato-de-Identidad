@@ -64,18 +64,18 @@ color = Color(0, 12.444321, 14.202306, 1)
 
 [node name="Node3D" type="Node3D"]
 
-[node name="guia" type="Node3D" parent="."]
+[node name="huellitas" type="Node3D" parent="."]
 
-[node name="fire" type="CPUParticles3D" parent="guia"]
+[node name="fire" type="CPUParticles3D" parent="huellitas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31231546, 0, 0)
 sorting_offset = 2.0
 material_override = SubResource("ShaderMaterial_7bfis")
 amount = 1
 mesh = SubResource("QuadMesh_wymps")
 gravity = Vector3(0, 0, 0)
-color = Color(0.2295525, 5.2918406, 7.7003155, 1)
+color = Color(0, 1.0720356, 1.5790963, 1)
 
-[node name="smoke" type="GPUParticles3D" parent="guia"]
+[node name="smoke" type="GPUParticles3D" parent="huellitas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3001567, 0.038901597, -0.049786508)
 material_override = SubResource("ShaderMaterial_8ywho")
 amount = 15
@@ -84,7 +84,7 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_la4yc")
 draw_pass_1 = SubResource("QuadMesh_rq5bq")
 
-[node name="Ember" type="GPUParticles3D" parent="guia"]
+[node name="Ember" type="GPUParticles3D" parent="huellitas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2566793, 0.0426265, 0)
 sorting_offset = 2.0
 material_override = SubResource("ShaderMaterial_fub2g")
