@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=4 uid="uid://cncwfr8y5bgcp"]
+[gd_scene load_steps=94 format=4 uid="uid://cncwfr8y5bgcp"]
 
 [ext_resource type="Script" uid="uid://blytmw65dl0qt" path="res://scripts/level_hub_world.gd" id="1_fwm5r"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_phe5c"]
@@ -79,6 +79,14 @@ size = Vector3(5.73594, 0.0100098, 2.95496)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lcapk"]
 size = Vector3(1, 2.29846, 3.02332)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ogqvt"]
+albedo_texture = ExtResource("34_4h30y")
+orm_texture = ExtResource("35_j1d63")
+emission_enabled = true
+emission_texture = ExtResource("37_ogqvt")
+normal_enabled = true
+normal_texture = ExtResource("36_yamq1")
 
 [sub_resource type="BoxMesh" id="BoxMesh_wq8m1"]
 
@@ -1944,8 +1952,15 @@ shape = SubResource("BoxShape3D_lcapk")
 [node name="Player" parent="." instance=ExtResource("1_phe5c")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.11218, 1.8814566, 0)
 
+[node name="Modelo" parent="Player" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.1664968e-08, 0.987057, 0.75254583)
+surface_material_override/0 = SubResource("ORMMaterial3D_ogqvt")
+
 [node name="CollisionShape3D" parent="Player/Interaccion" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7500446, 0)
+
+[node name="Camera3D" parent="Player/SpringArmPivot" index="1"]
+transform = Transform3D(1.0000005, 0, -2.9802322e-08, 0, 1, 0, 1.4901161e-08, 0, 1.0000005, 0.11772388, 0, -0.7432811)
 
 [node name="Dispara_Dialogo" parent="." instance=ExtResource("7_y31nf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.6954, 1.9057, -0.045408)
@@ -1973,7 +1988,7 @@ a_nivel = "level_1"
 musica = ExtResource("11_fwm5r")
 
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_lcapk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3095858, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47290945, 2.3095858, 0)
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 
 [node name="Dialogo_huellas" parent="." instance=ExtResource("7_y31nf")]
