@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck8s04fauutfp"
-path.s3tc="res://.godot/imported/FIRE2.png-1e45a7ef9bfe67225931bfe8d5642520.s3tc.ctex"
+uid="uid://d1rg5uthbkg3h"
+path.s3tc="res://.godot/imported/embers.png-a479a423e46b1e28e3b6cf5ba0350399.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texturas/FIRE2.png"
-dest_files=["res://.godot/imported/FIRE2.png-1e45a7ef9bfe67225931bfe8d5642520.s3tc.ctex"]
+source_file="res://shader/texturas/embers.png"
+dest_files=["res://.godot/imported/embers.png-a479a423e46b1e28e3b6cf5ba0350399.s3tc.ctex"]
 
 [params]
 

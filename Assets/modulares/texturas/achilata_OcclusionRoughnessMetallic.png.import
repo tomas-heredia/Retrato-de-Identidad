@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1rg5uthbkg3h"
-path.s3tc="res://.godot/imported/embers.png-915c7e37c30c460c0b855049f95cffbb.s3tc.ctex"
+uid="uid://diywr72g4gkpr"
+path.s3tc="res://.godot/imported/achilata_OcclusionRoughnessMetallic.png-7a932fa9e371e95134d3c0fd958111cd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texturas/embers.png"
-dest_files=["res://.godot/imported/embers.png-915c7e37c30c460c0b855049f95cffbb.s3tc.ctex"]
+source_file="res://Assets/modulares/texturas/achilata_OcclusionRoughnessMetallic.png"
+dest_files=["res://.godot/imported/achilata_OcclusionRoughnessMetallic.png-7a932fa9e371e95134d3c0fd958111cd.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ttaqcaa8c0tp"
-path.s3tc="res://.godot/imported/GUtNiA9W8AEWy4Y.png-f59ba58d177a2a1fa0ed775d6a121e5b.s3tc.ctex"
+uid="uid://gs3e1pn1f0r"
+path.s3tc="res://.godot/imported/achilata_Normal.png-cfc4e849a2702a86e770a8c34255ef3d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texturas/GUtNiA9W8AEWy4Y.png"
-dest_files=["res://.godot/imported/GUtNiA9W8AEWy4Y.png-f59ba58d177a2a1fa0ed775d6a121e5b.s3tc.ctex"]
+source_file="res://Assets/modulares/texturas/achilata_Normal.png"
+dest_files=["res://.godot/imported/achilata_Normal.png-cfc4e849a2702a86e770a8c34255ef3d.s3tc.ctex"]
 
 [params]
 
@@ -22,12 +22,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Assets/modulares/texturas/achilata_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

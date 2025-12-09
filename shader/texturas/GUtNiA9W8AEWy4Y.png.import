@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfslavk5se37s"
-path.s3tc="res://.godot/imported/distortiontexture.png-344a81174d6e96581c107810a008f123.s3tc.ctex"
+uid="uid://ttaqcaa8c0tp"
+path.s3tc="res://.godot/imported/GUtNiA9W8AEWy4Y.png-5e2d256e83d42b5c0068b13cac1ae59d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://texturas/distortiontexture.png"
-dest_files=["res://.godot/imported/distortiontexture.png-344a81174d6e96581c107810a008f123.s3tc.ctex"]
+source_file="res://shader/texturas/GUtNiA9W8AEWy4Y.png"
+dest_files=["res://.godot/imported/GUtNiA9W8AEWy4Y.png-5e2d256e83d42b5c0068b13cac1ae59d.s3tc.ctex"]
 
 [params]
 

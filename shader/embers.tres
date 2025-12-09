@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://rc3vq5u5k3rw"]
 
-[ext_resource type="Texture2D" uid="uid://d1rg5uthbkg3h" path="res://texturas/embers.png" id="1_s3wkv"]
+[ext_resource type="Texture2D" uid="uid://d1rg5uthbkg3h" path="res://shader/texturas/embers.png" id="1_s3wkv"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_3m4gh"]
 input_name = "color"
