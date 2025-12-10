@@ -10,8 +10,10 @@ var direction = Vector3(0,0,0)
 
 @onready var stairs_ahead = $StairsAhead
 @onready var stairs_below = $StairsBehaind
+@onready var tukuy = $tukuy_2
+@onready var animation_tree = $tukuy_2/AnimationTree
+var animation : AnimationNodeStateMachinePlayback
 
-@onready var modelo = $Modelo
 @onready var interaccion_label = $Interaccion_label
 @onready var camera = $SpringArmPivot/Camera3D
 @onready var coyote_timer = $CoyoteTimer
@@ -29,6 +31,7 @@ var _snapped_to_stairs_last_frame := false
 var _last_frame_was_on_floor = -INF
 
 func _ready():
+	animation = animation_tree.get("parameters/playback")
 	interaccion_label.hide()
 	
 
@@ -53,14 +56,22 @@ func movement(delta):
 		
 		
 	if Input.is_action_just_pressed("Jump") and doble_salto :
-			velocity.y = JUMP_VELOCITY
-			doble_salto = false
+		animation.travel("doublejump")
+		#animation.travel("doublejump")
+		velocity.y = JUMP_VELOCITY
+		doble_salto = false
+	
 	if Input.is_action_just_pressed("Jump") and coyote_timer_activado:
+		animation.travel("simplejump")
 		velocity.y = JUMP_VELOCITY
 		coyote_timer_activado = false
 		doble_salto = true
 	
+	
 	var input_dir = Input.get_vector("Left", "Right", "Up", "Down")
+	
+	
+	
 	var cam_forward = -camera.global_transform.basis.z
 	cam_forward.y = 0
 	cam_forward = cam_forward.normalized()
@@ -75,6 +86,9 @@ func movement(delta):
 	#
 	#direction =  direction.rotated(Vector3.UP, camera.global_rotation.y)
 	if direction:
+		await get_tree().physics_frame
+		if is_on_floor() :
+			animation.travel("run")
 		frenando = false
 		##playback.travel("run")
 		#velocity.x = -direction.x * SPEED
@@ -91,7 +105,10 @@ func movement(delta):
 		
 		
 	else:
+		if animation.get_current_node() != "idle" and is_on_floor():
+			animation.travel("idle")
 		if not frenando:
+			
 			frenando = true
 			#playback.travel("idle")
 			#velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -117,8 +134,8 @@ func rotar(direction):
 	
 	var dir = x.angle_to_point(z)-1.5708
 	
-	stairs_ahead.rotation.y = lerp_angle(modelo.rotation.y,dir,0.2)
-	modelo.rotation.y = lerp_angle(modelo.rotation.y,dir,0.2)
+	stairs_ahead.rotation.y = lerp_angle(tukuy.rotation.y,dir,0.2)
+	tukuy.rotation.y = lerp_angle(tukuy.rotation.y,dir + PI/2,0.2)
 
 func _unhandled_input(event):
 	
