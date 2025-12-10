@@ -1,12 +1,109 @@
-[gd_scene load_steps=9 format=3 uid="uid://u1m0kcl66o30"]
+[gd_scene load_steps=29 format=3 uid="uid://u1m0kcl66o30"]
 
 [ext_resource type="Script" uid="uid://bsyte60sr0ow1" path="res://scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://bvsnf05yau30i" path="res://scripts/spring_arm_pivot.gd" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://b1nkskto4lhnf" path="res://Assets/Personaje/tukuy_2.glb" id="2_vgqql"]
 [ext_resource type="Script" uid="uid://bpi3qiai0b2k" path="res://scripts/camera_3d.gd" id="3_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://c1tsqwgetaeqf" path="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_BaseColor.png" id="3_8erm5"]
+[ext_resource type="Texture2D" uid="uid://dpwn60oh60sio" path="res://Assets/Personaje/fantasmita_DefaultMaterial_Emissive.png" id="4_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://b38tocnrfpdpg" path="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_Normal.png" id="5_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://b0b580vrjdqga" path="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_OcclusionRoughnessMetallic.png" id="6_gymyn"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_f60y1"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pu2lt"]
+albedo_texture = ExtResource("3_8erm5")
+orm_texture = ExtResource("6_gymyn")
+emission_enabled = true
+emission_texture = ExtResource("4_f1ek2")
+normal_enabled = true
+normal_texture = ExtResource("5_tx1dd")
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_v0iea"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tx1dd"]
+animation = &"Doublejump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8erm5"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f1ek2"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gymyn"]
+animation = &"simplejump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tx1dd"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gymyn"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pu2lt"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ukyrk"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"jump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8erm5"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"jump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f1ek2"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"jump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7dp3o"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h4iuc"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fd4e3"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"simpJump"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qqcod"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_igrcy"]
+xfade_time = 0.3
+switch_mode = 1
+advance_mode = 2
+advance_condition = &"run"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ukyrk"]
+states/Start/position = Vector2(183, 100)
+states/doublejump/node = SubResource("AnimationNodeAnimation_tx1dd")
+states/doublejump/position = Vector2(562, 186)
+states/idle/node = SubResource("AnimationNodeAnimation_8erm5")
+states/idle/position = Vector2(353, 100)
+states/run/node = SubResource("AnimationNodeAnimation_f1ek2")
+states/run/position = Vector2(353, 186)
+states/simplejump/node = SubResource("AnimationNodeAnimation_gymyn")
+states/simplejump/position = Vector2(553, 100)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_tx1dd"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_gymyn"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_pu2lt"), "simplejump", "doublejump", SubResource("AnimationNodeStateMachineTransition_ukyrk"), "idle", "simplejump", SubResource("AnimationNodeStateMachineTransition_8erm5"), "run", "simplejump", SubResource("AnimationNodeStateMachineTransition_f1ek2"), "simplejump", "idle", SubResource("AnimationNodeStateMachineTransition_7dp3o"), "simplejump", "run", SubResource("AnimationNodeStateMachineTransition_h4iuc"), "doublejump", "simplejump", SubResource("AnimationNodeStateMachineTransition_fd4e3"), "doublejump", "idle", SubResource("AnimationNodeStateMachineTransition_qqcod"), "doublejump", "run", SubResource("AnimationNodeStateMachineTransition_igrcy")]
+graph_offset = Vector2(-50, -13)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
 
@@ -24,14 +121,51 @@ desaceleracion = 0.13
 JUMP_VELOCITY = 15
 gravity = 38.0
 
-[node name="Modelo" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.987057, 0)
-mesh = SubResource("CapsuleMesh_f60y1")
+[node name="tukuy_2" parent="." instance=ExtResource("2_vgqql")]
 
-[node name="direccion" type="MeshInstance3D" parent="Modelo"]
-transform = Transform3D(0.0166137, -0.492021, 0, 1.00934, 0.00809865, 0, 0, 0, 1, 0.368861, 0.347121, 0)
-mesh = SubResource("CapsuleMesh_v0iea")
-skeleton = NodePath("../..")
+[node name="tukuy_armature" parent="tukuy_2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0014747777)
+
+[node name="Skeleton3D" parent="tukuy_2/tukuy_armature" index="0"]
+bones/0/position = Vector3(0.0048805973, 0.2913723, -0.008635718)
+bones/0/rotation = Quaternion(0.07257099, -0.0013868711, -0.028578393, 0.9969528)
+bones/0/scale = Vector3(1.0014988, 1.0014988, 1.0014992)
+bones/1/rotation = Quaternion(0.0062857363, 0.0009458453, 0.035853457, 0.99933684)
+bones/2/rotation = Quaternion(-0.03458294, -0.028073411, -0.07418639, 0.9962491)
+bones/3/rotation = Quaternion(0.0068240426, -0.00022377075, 0.018105075, 0.9998128)
+bones/4/rotation = Quaternion(-0.115218714, 0.14021945, 0.056791134, 0.9817525)
+bones/5/rotation = Quaternion(0.010125006, -0.10654676, 0.034639273, 0.9936526)
+bones/5/scale = Vector3(1.0067655, 1.0067655, 1.0067654)
+bones/7/rotation = Quaternion(1.1704002e-05, 7.031952e-05, -0.69341487, 0.7205386)
+bones/8/rotation = Quaternion(-0.40519673, -0.0016628564, 0.031123348, 0.9136982)
+bones/9/rotation = Quaternion(0.023645433, 0.09178363, -0.00281705, 0.9954942)
+bones/11/rotation = Quaternion(-4.624315e-08, 3.2699166e-08, 0.69363236, 0.72032917)
+bones/12/rotation = Quaternion(-0.4165442, 0.052124515, 0.04425366, 0.90654045)
+bones/12/scale = Vector3(1, 0.9999999, 1)
+bones/13/rotation = Quaternion(0.055093974, 0.15254946, 0.041485835, 0.9858865)
+bones/15/rotation = Quaternion(0.027789973, 0.044019178, -0.6395661, 0.7669714)
+bones/17/rotation = Quaternion(-0.02216699, 0.0010844455, 0.7173681, 0.6963408)
+bones/19/rotation = Quaternion(-0.036322158, -0.12273794, -0.6547216, 0.7449535)
+bones/21/rotation = Quaternion(-0.090734236, 0.19021346, 0.5974077, 0.7737508)
+bones/23/rotation = Quaternion(-0.117806025, 0.15197751, -0.6330894, 0.74981487)
+bones/25/rotation = Quaternion(-0.10509853, -0.065460555, 0.65940166, 0.74152464)
+bones/27/position = Vector3(0.0041881, 0.29344818, -0.005517116)
+bones/27/rotation = Quaternion(0.44798318, 0.50384814, 0.46378827, -0.57475954)
+bones/28/rotation = Quaternion(-0.44014654, -0.3921784, -0.26958776, 0.76143914)
+bones/30/position = Vector3(0.004536282, 0.29931322, -0.005382361)
+bones/30/rotation = Quaternion(0.534787, -0.4585264, -0.5510004, -0.447387)
+bones/31/rotation = Quaternion(-0.5894854, -0.23685902, -0.24406675, 0.73269105)
+
+[node name="tukuy" parent="tukuy_2/tukuy_armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("ORMMaterial3D_pu2lt")
+
+[node name="AnimationTree" type="AnimationTree" parent="tukuy_2"]
+tree_root = SubResource("AnimationNodeStateMachine_ukyrk")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/idle = false
+parameters/conditions/jump = false
+parameters/conditions/run = false
+parameters/conditions/simpJump = false
 
 [node name="Colision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -85,3 +219,5 @@ target_position = Vector3(0, -0.75, 0)
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]
 [connection signal="timeout" from="salto_timer" to="." method="_on_salto_timer_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
+
+[editable path="tukuy_2"]
