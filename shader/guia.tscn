@@ -76,7 +76,7 @@ gravity = Vector3(0, 0, 0)
 color = Color(0, 1.0720356, 1.5790963, 1)
 
 [node name="smoke" type="GPUParticles3D" parent="huellitas"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3001567, 0.038901597, -0.049786508)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1861276, 0.038901597, -0.049786508)
 material_override = SubResource("ShaderMaterial_8ywho")
 amount = 15
 randomness = 0.1
