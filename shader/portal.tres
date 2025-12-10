@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=16 format=3 uid="uid://c6bnxncas7ecu"]
 
-[ext_resource type="Texture2D" uid="uid://cfrfmyn0di4hy" path="res://shader/texturas/T_VFX_CircleFit1.png" id="2_ukug5"]
+[ext_resource type="Texture2D" uid="uid://cd82h27ts2uki" path="res://shader/texturas/PerlinNoise_Tiled.png" id="1_dy038"]
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_44pie"]
 default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(0, 0, 0, 0)]
@@ -45,7 +45,7 @@ operator = 2
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_nesbg"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_6lj4n"]
-texture = ExtResource("2_ukug5")
+texture = ExtResource("1_dy038")
 
 [sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_fk2lt"]
 parameter_name = "portalcolor"
@@ -145,7 +145,7 @@ nodes/fragment/6/position = Vector2(-900, 660)
 nodes/fragment/7/node = SubResource("VisualShaderNodeUVFunc_nesbg")
 nodes/fragment/7/position = Vector2(-480, 480)
 nodes/fragment/8/node = SubResource("VisualShaderNodeTexture_6lj4n")
-nodes/fragment/8/position = Vector2(-300, 1160)
+nodes/fragment/8/position = Vector2(-680, 1180)
 nodes/fragment/9/node = SubResource("VisualShaderNodeColorParameter_fk2lt")
 nodes/fragment/9/position = Vector2(-320, 20)
 nodes/fragment/10/node = SubResource("VisualShaderNodeVectorOp_44pie")
