@@ -2235,18 +2235,6 @@ draw_pass_1 = SubResource("QuadMesh_ogqvt")
 
 [node name="luces escena" type="Node3D" parent="."]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="luces escena"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.795616, 8.427074, -4.362216)
-light_energy = 0.14
-light_specular = 0.0
-omni_range = 25.365892
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="luces escena"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.39007, 8.427074, -0.31566668)
-light_energy = 0.253
-light_specular = 0.0
-omni_range = 25.365892
-
 [node name="tukuy_2" type="Node3D" parent="."]
 transform = Transform3D(-0.035876248, 0, -0.99935627, 0, 1, 0, 0.99935627, 0, -0.035876248, 45.898285, 5.9704123, -0.9605442)
 
