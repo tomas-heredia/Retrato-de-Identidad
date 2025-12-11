@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhpu7dwa2jgq3"
-path.s3tc="res://.godot/imported/texture_04.png-2f492dc1c2715a6401c9e209cd9097a5.s3tc.ctex"
+uid="uid://b0b580vrjdqga"
+path.s3tc="res://.godot/imported/tukuy_2_fantasmita_DefaultMaterial_OcclusionRoughnessMetallic.png-694e455ef291d9ada60419cbe497a84d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "7e033d53f873204c5d7e3de2b0e601a8"
+}
 
 [deps]
 
-source_file="res://Assets/kenney_prototype_textures/PNG/Purple/texture_04.png"
-dest_files=["res://.godot/imported/texture_04.png-2f492dc1c2715a6401c9e209cd9097a5.s3tc.ctex"]
+source_file="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_OcclusionRoughnessMetallic.png"
+dest_files=["res://.godot/imported/tukuy_2_fantasmita_DefaultMaterial_OcclusionRoughnessMetallic.png-694e455ef291d9ada60419cbe497a84d.s3tc.ctex"]
 
 [params]
 
