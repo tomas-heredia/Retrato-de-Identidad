@@ -1,6 +1,6 @@
 [gd_resource type="VisualShader" load_steps=23 format=3 uid="uid://ifqsjwua3ldp"]
 
-[ext_resource type="Texture2D" uid="uid://bhopecxgr2giu" path="res://shader/texturas/fire.png" id="1_5r26e"]
+[ext_resource type="Texture2D" uid="uid://ck8s04fauutfp" path="res://shader/texturas/FIRE2.png" id="1_5r26e"]
 [ext_resource type="Texture2D" uid="uid://dfslavk5se37s" path="res://shader/texturas/distortiontexture.png" id="2_3cbgj"]
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_bpksr"]
