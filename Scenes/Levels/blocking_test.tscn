@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=21 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://2rt3uy5clabc" path="res://Assets/kenney_prototype_textures/PNG/Orange/texture_10.png" id="1_kh06x"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_m7bmf"]
@@ -64,6 +64,9 @@ uv1_world_triplanar = true
 albedo_texture = ExtResource("5_mednc")
 uv1_triplanar = true
 uv1_world_triplanar = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yr14q"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Node3D" type="Node3D"]
 
@@ -449,3 +452,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 5, -29)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, -75)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(100, 32)
+
+[node name="Control" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="salto comun" type="Label" parent="SubViewport/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "salto comun"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0472636, 6.296412, -82.87361)
+texture = SubResource("ViewportTexture_yr14q")
