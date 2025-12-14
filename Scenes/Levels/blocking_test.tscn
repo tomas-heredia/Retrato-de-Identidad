@@ -1,9 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=21 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://2rt3uy5clabc" path="res://Assets/kenney_prototype_textures/PNG/Orange/texture_10.png" id="1_kh06x"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_m7bmf"]
 [ext_resource type="Texture2D" uid="uid://bhpu7dwa2jgq3" path="res://Assets/kenney_prototype_textures/PNG/Purple/texture_04.png" id="1_mednc"]
-[ext_resource type="Texture2D" uid="uid://csy5yky4ygiap" path="res://Assets/kenney_prototype_textures/PNG/Green/texture_04.png" id="2_yr14q"]
+[ext_resource type="Texture2D" uid="uid://cj81hio3gdvq4" path="res://Assets/kenney_prototype_textures/PNG/Orange/texture_04.png" id="2_yr14q"]
 [ext_resource type="Texture2D" uid="uid://hmhwj0lwalv0" path="res://Assets/kenney_prototype_textures/PNG/Green/texture_10.png" id="3_jxe66"]
 [ext_resource type="Texture2D" uid="uid://djl8hqyv38wxr" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_01.png" id="4_rlf4w"]
 [ext_resource type="Texture2D" uid="uid://dqq0anq1hlbwd" path="res://Assets/kenney_prototype_textures/PNG/Purple/texture_01.png" id="5_mednc"]
@@ -66,10 +66,7 @@ uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_yr14q"]
-viewport_path = NodePath("salto comun text")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_4pgcq"]
-viewport_path = NodePath("doble salto text")
+viewport_path = NodePath("SubViewport")
 
 [node name="Node3D" type="Node3D"]
 
@@ -162,9 +159,9 @@ material = SubResource("StandardMaterial3D_x2cq6")
 metadata/_edit_group_ = true
 
 [node name="wall12" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.48114, 9.042187, -85.54473)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.495178, 9.042187, -85.54473)
 use_collision = true
-size = Vector3(41.971924, 17, 1)
+size = Vector3(42, 17, 1)
 material = SubResource("StandardMaterial3D_rlf4w")
 metadata/_edit_group_ = true
 
@@ -204,16 +201,16 @@ material = SubResource("StandardMaterial3D_rlf4w")
 metadata/_edit_group_ = true
 
 [node name="wall11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0030193, 6.320944, -84.04473)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4916096, 6.320944, -84.04473)
 use_collision = true
-size = Vector3(9.97583, 1, 2)
+size = Vector3(6, 1, 2)
 material = SubResource("StandardMaterial3D_rlf4w")
 metadata/_edit_group_ = true
 
 [node name="wall14" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.998901, 9.320944, -84.04473)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4916096, 9.320944, -84.04473)
 use_collision = true
-size = Vector3(20.122498, 1, 2)
+size = Vector3(6, 1, 2)
 material = SubResource("StandardMaterial3D_rlf4w")
 metadata/_edit_group_ = true
 
@@ -307,8 +304,7 @@ sides = 48
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Player" parent="." instance=ExtResource("1_m7bmf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.977501, 0.86699986, -67.92879)
-JUMP_VELOCITY = 17
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.977501, 7.6459703, -67.92879)
 
 [node name="muestra 06" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 3, 26)
@@ -387,6 +383,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5009995, 6, 28.499496)
 size = Vector3(4, 7, 0.001)
 material = SubResource("StandardMaterial3D_d5vjr")
 
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.000771, 1.7229185, -84.068756)
+use_collision = true
+size = Vector3(2, 2, 2)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.00077, 1.7229185, -84.068756)
+use_collision = true
+size = Vector3(2, 2, 2)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.00077, 3.7229185, -84.068756)
+use_collision = true
+size = Vector3(2, 2, 2)
+
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.519629, 3.7229185, -29.5)
 use_collision = true
@@ -439,77 +450,25 @@ omni_attenuation = 0.7
 [node name="CuadroInteractuable" parent="." instance=ExtResource("6_rlf4w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 5, -29)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2531278, 1.3265339, -81.55354)
-size = Vector3(2.4903564, 1, 2.9941406)
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 2, -75)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2393193, 1.3265339, -81.6536)
-size = Vector3(2.4903564, 1, 2.9941406)
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.892006, 1.3265339, -81.53094)
-size = Vector3(2.4903564, 1, 2.9941406)
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.712879, 1.3265339, -81.53823)
-size = Vector3(2.4903564, 1, 2.9941406)
-
-[node name="salto comun text" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(100, 32)
 
-[node name="Control" type="Control" parent="salto comun text"]
+[node name="Control" type="Control" parent="SubViewport"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="salto comun" type="Label" parent="salto comun text/Control"]
+[node name="salto comun" type="Label" parent="SubViewport/Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "salto comun"
 
-[node name="doble salto text" type="SubViewport" parent="."]
-size = Vector2i(100, 32)
-
-[node name="Control" type="Control" parent="doble salto text"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="doble salto" type="Label" parent="doble salto text/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "doble salto"
-
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9256167, 6.296412, -82.87361)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.674383, 6.296412, -82.87361)
 pixel_size = 0.02
 texture = SubResource("ViewportTexture_yr14q")
-
-[node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 9.3, -83)
-texture = SubResource("ViewportTexture_4pgcq")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.166044, 2.5, -64.890015)
-use_collision = true
-size = Vector3(2, 1, 4)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1660442, 5.5, -64.890015)
-use_collision = true
-size = Vector3(2, 1, 4)
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8339558, 8.5, -64.890015)
-use_collision = true
-size = Vector3(2, 1, 4)
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.833956, 11.5, -64.890015)
-use_collision = true
-size = Vector3(2, 1, 4)
