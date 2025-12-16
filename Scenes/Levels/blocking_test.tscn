@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=12 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="1_kh06x"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_m7bmf"]
@@ -32,64 +32,70 @@ size = Vector3(5.73594, 0.0100098, 2.95496)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kh06x"]
 size = Vector3(1, 2.29846, 3.02332)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_007yc"]
+viewport_path = NodePath("salto normal")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_x2cq6"]
+viewport_path = NodePath("doble salto")
+
 [node name="Node3D" type="Node3D"]
 
 [node name="Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.493239, 0.09825516, -75.779755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.493239, 0.09825516, -9.779755)
 use_collision = true
 size = Vector3(75, 1, 58.51953)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="wall2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.995178, 7.0421867, -104.975975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.995178, 7.0421867, -38.975975)
 use_collision = true
 size = Vector3(11, 15, 1)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 7.0421867, -104.975975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 11.042187, -38.975975)
 use_collision = true
-size = Vector3(8, 15, 1)
+size = Vector3(8, 23, 1)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall8" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.004822, 7.0421867, -104.975975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.004822, 7.0421867, -38.975975)
 use_collision = true
 size = Vector3(17, 15, 1)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 18.042187, -97.975975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 27.042187, -31.975975)
 use_collision = true
 size = Vector3(8, 7, 1)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall5" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 14.042187, -101.475975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 23.042187, -35.475975)
 use_collision = true
 size = Vector3(8, 1, 8)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall10" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.504822, 10.732014, -104.475975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.504822, 10.732014, -38.475975)
 use_collision = true
 size = Vector3(8, 1, 2)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.50482, 7.0421867, -104.475975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.50482, 7.0421867, -38.475975)
 use_collision = true
 size = Vector3(8, 1, 2)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 21.042187, -95.475975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.504822, 30.042187, -29.475975)
 use_collision = true
 size = Vector3(8, 1, 4)
 material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 7, -76)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 7, -10)
 use_collision = true
 size = Vector3(1, 15, 59)
 material = SubResource("StandardMaterial3D_yr14q")
@@ -99,33 +105,82 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.4134216, 3.557711, -57.614
 collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33)
 mesh = SubResource("PrismMesh_xmiqo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
-transform = Transform3D(0.861629, -0.507538, 0, 0.507538, 0.861629, 0, 0, 0, 1, 0.00168324, -0.0110825, 0.00335693)
+transform = Transform3D(0.861629, -0.507538, 0, 0.507538, 0.861629, 0, 0, 0, 1, 0.0016832352, -0.01108253, 33.003357)
 shape = SubResource("BoxShape3D_m7bmf")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Rampa"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, 32.986267)
 shape = SubResource("BoxShape3D_kh06x")
 
 [node name="recta1" parent="Rampa" instance=ExtResource("2_007yc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.5, -19.948643)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.5, 13.051357)
 
 [node name="Player" parent="." instance=ExtResource("1_m7bmf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.022499, 0.64597034, -78)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.022499, 0.64597034, -12)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 11.036493, -77.17917)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 11.036493, -11.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 11.036493, -114.17917)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 20.036493, -48.17917)
+light_energy = 15.0
+omni_range = 45.732
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.652798, 9.036493, -30.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 20.036493, -99.17917)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 20.036493, -33.17917)
 light_energy = 15.0
 omni_range = 45.732
+
+[node name="salto normal" type="SubViewport" parent="."]
+size = Vector2i(100, 28)
+
+[node name="Control" type="Control" parent="salto normal"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="salto normal/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "salto normal"
+horizontal_alignment = 1
+
+[node name="salto_normal_board" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 7.546794, -37)
+pixel_size = 0.05
+texture = SubResource("ViewportTexture_007yc")
+
+[node name="doble salto" type="SubViewport" parent="."]
+size = Vector2i(90, 28)
+
+[node name="Control" type="Control" parent="doble salto"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="doble salto/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Doble Salto"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="doble_salto_board" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 10.720631, -37.311752)
+pixel_size = 0.05
+texture = SubResource("ViewportTexture_x2cq6")
