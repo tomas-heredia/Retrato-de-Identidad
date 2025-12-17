@@ -63,6 +63,7 @@ color = Color(0, 12.444321, 14.202306, 1)
 [sub_resource type="QuadMesh" id="QuadMesh_la4yc"]
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007386446, 0, -0.0015689433)
 
 [node name="huellitas" type="Node3D" parent="."]
 
