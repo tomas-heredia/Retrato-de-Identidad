@@ -2271,7 +2271,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9259, 6.68935, -0.127055)
 textos = Array[Resource]([ExtResource("16_jxnjb"), ExtResource("17_bxv71")])
 
 [node name="CollisionShape3D" parent="Dialogo_huellas" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0947838, 0.677427, -0.65477)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1077118, 9.764665, -0.21643983)
 
 [node name="Recolectable" parent="Dialogo_huellas" instance=ExtResource("16_xlops")]
 
@@ -2343,7 +2343,7 @@ textos = Array[Resource]([ExtResource("24_jno3b"), ExtResource("25_pwq1d"), ExtR
 transform = Transform3D(0.7573029, 0, -0.6530638, 0, 1, 0, 0.6530638, 0, 0.7573029, -0.23823166, 0.6774268, -4.667042)
 
 [node name="escenario" parent="." instance=ExtResource("27_pwq1d")]
-transform = Transform3D(0.99388504, 0, 0, 0, 0.99388504, 0, 0, 0, 0.99388504, -0.01077652, 0.08172417, 0.0022799969)
+transform = Transform3D(0.99388504, 0, 0, 0, 0.99388504, 0, 0, 0, 0.99388504, -0.03101921, 0.1418171, 0.018399)
 
 [node name="Props" type="Node3D" parent="escenario"]
 
