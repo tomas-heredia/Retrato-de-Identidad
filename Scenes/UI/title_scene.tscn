@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=3 uid="uid://cyrjen31hrp1b"]
+
+[ext_resource type="Script" uid="uid://dwfr5181wng0r" path="res://scripts/title_scene.gd" id="1_5imdy"]
+[ext_resource type="Texture2D" uid="uid://b1igy8ijuf4pu" path="res://Assets/UI/Title_scene/Background.PNG.png" id="1_q4bju"]
+[ext_resource type="Texture2D" uid="uid://bij2pc2uq251e" path="res://Assets/UI/Title_scene/TEXTO RETRATO DE IDENTIDAD.PNG.png" id="2_5imdy"]
+[ext_resource type="FontFile" uid="uid://cf5jcsqg12w2k" path="res://Assets/UI/Title_scene/TrajanPro3SemiBold.ttf" id="3_1johb"]
+[ext_resource type="Texture2D" uid="uid://bpdii7gh2v35d" path="res://Assets/UI/Title_scene/Button UI 2 10.png" id="4_2l6vb"]
+[ext_resource type="Texture2D" uid="uid://cx0q3q62qrlwt" path="res://Assets/UI/Title_scene/SFX ON.PNG.png" id="5_7cwwf"]
+[ext_resource type="Texture2D" uid="uid://cs373nctqyj8b" path="res://Assets/UI/Title_scene/MUSIC-ON.PNG.png" id="6_5w1ek"]
+[ext_resource type="Texture2D" uid="uid://rin8h7ejb7x3" path="res://Assets/UI/Title_scene/Exit.PNG.png" id="7_aj5gn"]
+
+[node name="TitleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5imdy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q4bju")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.381
+anchor_bottom = 0.344
+offset_left = 139.0
+offset_top = 148.0
+offset_right = 138.47998
+offset_bottom = 147.47998
+texture = ExtResource("2_5imdy")
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 581.0
+offset_right = 667.0
+offset_bottom = 671.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_font_sizes/font_size = 40
+text = "Jugar"
+icon = ExtResource("4_2l6vb")
+flat = true
+icon_alignment = 1
+
+[node name="Opciones" type="Button" parent="."]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 701.0
+offset_right = 667.0
+offset_bottom = 791.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_font_sizes/font_size = 40
+text = "Opciones"
+icon = ExtResource("4_2l6vb")
+flat = true
+icon_alignment = 1
+
+[node name="Creditos" type="Button" parent="."]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 816.0
+offset_right = 667.0
+offset_bottom = 906.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_font_sizes/font_size = 40
+text = "Creditos"
+icon = ExtResource("4_2l6vb")
+flat = true
+icon_alignment = 1
+
+[node name="SFX" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1618.0
+offset_top = 34.0
+offset_right = 1681.0
+offset_bottom = 92.0
+icon = ExtResource("5_7cwwf")
+flat = true
+
+[node name="Music" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1712.0
+offset_top = 34.0
+offset_right = 1775.0
+offset_bottom = 92.0
+icon = ExtResource("6_5w1ek")
+flat = true
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 34.0
+offset_right = 1863.0
+offset_bottom = 92.0
+icon = ExtResource("7_aj5gn")
+flat = true
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="SFX" to="." method="_on_sfx_pressed"]
+[connection signal="pressed" from="Music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
