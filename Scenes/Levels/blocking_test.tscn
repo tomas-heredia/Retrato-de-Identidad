@@ -6,7 +6,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_007yc"]
 albedo_texture = ExtResource("1_kh06x")
-uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_scale = Vector3(0.2, 0.2, 0.2)
 uv1_triplanar = true
 uv1_world_triplanar = true
 
@@ -41,9 +41,39 @@ viewport_path = NodePath("doble salto")
 [node name="Node3D" type="Node3D"]
 
 [node name="Floor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.493239, 0.09825516, -9.779755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.501388, 0.11777353, -9.798773)
 use_collision = true
 size = Vector3(75, 1, 58.51953)
+material = SubResource("StandardMaterial3D_007yc")
+
+[node name="Floor6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.45772, -23.412392, 49.249496)
+use_collision = true
+size = Vector3(27, 48, 65.03247)
+material = SubResource("StandardMaterial3D_007yc")
+
+[node name="Floor5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.80104, 2, 28.713413)
+use_collision = true
+size = Vector3(21.565918, 3, 2.3779297)
+material = SubResource("StandardMaterial3D_007yc")
+
+[node name="Floor7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.81392, 2, 38.760677)
+use_collision = true
+size = Vector3(21.540161, 3, 2.399414)
+material = SubResource("StandardMaterial3D_007yc")
+
+[node name="Floor8" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.84108, 2, 48.788475)
+use_collision = true
+size = Vector3(21.48584, 3, 2.3721924)
+material = SubResource("StandardMaterial3D_007yc")
+
+[node name="Floor9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.798843, 2, 58.7342)
+use_collision = true
+size = Vector3(21.570313, 3, 2.4384766)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="wall2" type="CSGBox3D" parent="."]
@@ -60,6 +90,12 @@ material = SubResource("StandardMaterial3D_rlf4w")
 
 [node name="wall8" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.004822, 7.0421867, -38.975975)
+use_collision = true
+size = Vector3(17, 15, 1)
+material = SubResource("StandardMaterial3D_rlf4w")
+
+[node name="wall9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.00482, 7.0421867, 20.024025)
 use_collision = true
 size = Vector3(17, 15, 1)
 material = SubResource("StandardMaterial3D_rlf4w")
@@ -120,10 +156,20 @@ shape = SubResource("BoxShape3D_kh06x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1.5, 13.051357)
 
 [node name="Player" parent="." instance=ExtResource("1_m7bmf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.022499, 0.64597034, -12)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -24.0225, 0.64597034, 7)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 11.036493, -11.179169)
+light_energy = 15.0
+omni_range = 45.732
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.652798, 12.036493, -11.179169)
+light_energy = 15.0
+omni_range = 45.732
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.652798, 12.036493, 37.82083)
 light_energy = 15.0
 omni_range = 45.732
 
@@ -184,3 +230,20 @@ vertical_alignment = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 10.720631, -37.311752)
 pixel_size = 0.05
 texture = SubResource("ViewportTexture_x2cq6")
+
+[node name="wall12" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.50482, 10.732014, 18.524025)
+use_collision = true
+size = Vector3(8, 1, 2)
+material = SubResource("StandardMaterial3D_rlf4w")
+
+[node name="wall13" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.50482, 7.0421867, 18.524025)
+use_collision = true
+size = Vector3(8, 1, 2)
+material = SubResource("StandardMaterial3D_rlf4w")
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.652798, 9.036493, 62.82083)
+light_energy = 15.0
+omni_range = 45.732

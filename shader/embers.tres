@@ -1,6 +1,4 @@
-[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://rc3vq5u5k3rw"]
-
-[ext_resource type="Texture2D" uid="uid://d1rg5uthbkg3h" path="res://texturas/embers.png" id="1_s3wkv"]
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://rc3vq5u5k3rw"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_3m4gh"]
 input_name = "color"
@@ -11,7 +9,6 @@ op_type = 2
 operator = 2
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_aqfas"]
-texture = ExtResource("1_s3wkv")
 
 [sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_5eiq0"]
 default_input_values = [0, Quaternion(0, 0, 0, 0)]

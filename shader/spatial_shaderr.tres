@@ -1,7 +1,4 @@
-[gd_resource type="VisualShader" load_steps=23 format=3 uid="uid://ifqsjwua3ldp"]
-
-[ext_resource type="Texture2D" uid="uid://ck8s04fauutfp" path="res://texturas/FIRE2.png" id="1_5r26e"]
-[ext_resource type="Texture2D" uid="uid://dfslavk5se37s" path="res://texturas/distortiontexture.png" id="2_3cbgj"]
+[gd_resource type="VisualShader" load_steps=21 format=3 uid="uid://ifqsjwua3ldp"]
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_bpksr"]
 output_port_for_preview = 0
@@ -44,10 +41,8 @@ input_name = "color"
 parameter_name = "speed"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_bpksr"]
-texture = ExtResource("1_5r26e")
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_lork0"]
-texture = ExtResource("1_5r26e")
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_h2smr"]
 operator = 2
@@ -57,7 +52,6 @@ default_input_values = [0, 0.0, 1, 0.0, 2, 0.0, 3, 0.0]
 op_type = 2
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_d0gx2"]
-texture = ExtResource("2_3cbgj")
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_lpkyb"]
 input_name = "uv"
