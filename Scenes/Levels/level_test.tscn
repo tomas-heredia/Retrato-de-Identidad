@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=35 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://4704y7sd1t4i" path="res://Assets/modulares/texturas/escalones1_DefaultMaterial_Normal.png" id="19_btpkh"]
 [ext_resource type="Texture2D" uid="uid://5kfvgdhbp2ux" path="res://Assets/modulares/texturas/escalones1_DefaultMaterial_OcclusionRoughnessMetallic.png" id="20_m1fqf"]
 [ext_resource type="PackedScene" uid="uid://ddpiugbhfkm4l" path="res://Scenes/escal.tscn" id="21_btpkh"]
+[ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="22_m1fqf"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -36,11 +37,6 @@ size = Vector3(5.73594, 0.0100098, 2.95496)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1bsl4"]
 size = Vector3(1, 2.29846, 3.02332)
-
-[sub_resource type="BoxMesh" id="BoxMesh_qkmes"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_fmmsx"]
-size = Vector3(1, 4.27301, 2.81891)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gm2ak"]
 
@@ -120,17 +116,6 @@ shape = SubResource("BoxShape3D_qkmes")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)
 shape = SubResource("BoxShape3D_1bsl4")
 
-[node name="Portal_level_test_2" type="StaticBody3D" parent="." groups=["Portal"]]
-transform = Transform3D(0.854785, 0, 0.518982, 0, 1, 0, -0.518982, 0, 0.854785, 3.84691, 0, -7.80024)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal_level_test_2"]
-transform = Transform3D(1, 0, 0, 0, 3.25773, 0, 0, 0, 2.69878, 0, 2.12997, 0)
-mesh = SubResource("BoxMesh_qkmes")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal_level_test_2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63651, -0.046051)
-shape = SubResource("BoxShape3D_fmmsx")
-
 [node name="NPC" parent="." instance=ExtResource("5_gm2ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71659, 1.57081, 4.69874)
 textos = Array[Resource]([ExtResource("3_qrn0q"), ExtResource("4_jp6fi"), ExtResource("5_v7c2p")])
@@ -181,10 +166,26 @@ camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 [node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
 
+[node name="Recolectable3" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
+
+[node name="Recolectable4" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 7.273715)
+
+[node name="Recolectable5" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.663055, 2.2609, 7.273715)
+
 [node name="Recolectable2" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
+
+[node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
+bones/0/position = Vector3(0.0071106977, 0.31799737, 0.0008035379)
+bones/4/rotation = Quaternion(-0.003362584, -0.0036325764, -0.055157673, 0.99846536)
+bones/5/rotation = Quaternion(0.016722247, 0.001775308, 0.019547455, 0.9996676)
+bones/8/rotation = Quaternion(-0.0014997721, 0.00098138, -0.08235116, 0.99660176)
+bones/12/rotation = Quaternion(-0.0013492502, 0.0010634195, 0.082788974, 0.9965657)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -234,4 +235,9 @@ surface_material_override/0 = SubResource("ORMMaterial3D_m1fqf")
 [node name="escal" parent="_StaticBody3D_40775" instance=ExtResource("21_btpkh")]
 transform = Transform3D(-0.009999718, -1.818988e-18, -7.469971e-05, -7.469971e-05, -2.3841844e-09, 0.0099997185, -1.7809795e-11, 0.009999997, 2.384118e-09, 0.07475768, 0.08647121, 0.009334601)
 
+[node name="Portal" parent="." instance=ExtResource("22_m1fqf")]
+transform = Transform3D(0.5735336, 0, 0.81918216, 0, 1, 0, -0.81918216, 0, 0.5735336, 4.725979, 2.3873677, -6.0017157)
+a_nivel = "level_1"
+
 [editable path="Player"]
+[editable path="Player/tukuy_2"]
