@@ -1,5 +1,12 @@
 extends CharacterBody3D
 
+@export var max_vida := 100
+
+var vida := 100:
+	set(value):
+		vida = clamp(value, 0, max_vida)
+		actualizar_barra()
+
 @export var SPEED := 5.0
 @export var Max_SPEED := 10
 @export var aceleracion := 20
@@ -17,6 +24,8 @@ var animation : AnimationNodeStateMachinePlayback
 @onready var interaccion_label = $Interaccion_label
 @onready var camera = $SpringArmPivot/Camera3D
 @onready var coyote_timer = $CoyoteTimer
+@onready var BarraVida: ProgressBar = $BarraVida
+
 
 var coyote_timer_activado := true
 var interactuando_portal: bool = false
@@ -31,6 +40,8 @@ var _snapped_to_stairs_last_frame := false
 var _last_frame_was_on_floor = -INF
 
 func _ready():
+	BarraVida.max_value = max_vida
+	actualizar_barra()
 	animation = animation_tree.get("parameters/playback")
 	interaccion_label.hide()
 	
@@ -223,3 +234,9 @@ func _snap_up_to_stairs_check(delta):
 			_snapped_to_stairs_last_frame = true
 			return true
 	return false
+
+func actualizar_barra():
+	BarraVida.value = vida
+
+func daño(valor: int):
+	vida = valor
