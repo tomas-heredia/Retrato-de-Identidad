@@ -166,17 +166,26 @@ camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 [node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
 
+[node name="Recolectable3" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
+
+[node name="Recolectable4" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 7.273715)
+
+[node name="Recolectable5" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.663055, 2.2609, 7.273715)
+
 [node name="Recolectable2" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.009061043, 0.29284257, 0.0016249985)
-bones/4/rotation = Quaternion(-0.0017011414, -0.001837733, -0.027904475, 0.99960744)
-bones/5/rotation = Quaternion(0.040209033, 0.00426877, 0.047002304, 0.99807614)
-bones/8/rotation = Quaternion(-0.003909941, 0.0025580574, -0.0483057, 0.9988217)
-bones/12/rotation = Quaternion(-0.0035174945, 0.0027727182, 0.04945174, 0.9987665)
+bones/0/position = Vector3(0.0071106977, 0.31799737, 0.0008035379)
+bones/4/rotation = Quaternion(-0.003362584, -0.0036325764, -0.055157673, 0.99846536)
+bones/5/rotation = Quaternion(0.016722247, 0.001775308, 0.019547455, 0.9996676)
+bones/8/rotation = Quaternion(-0.0014997721, 0.00098138, -0.08235116, 0.99660176)
+bones/12/rotation = Quaternion(-0.0013492502, 0.0010634195, 0.082788974, 0.9965657)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -228,7 +237,7 @@ transform = Transform3D(-0.009999718, -1.818988e-18, -7.469971e-05, -7.469971e-0
 
 [node name="Portal" parent="." instance=ExtResource("22_m1fqf")]
 transform = Transform3D(0.5735336, 0, 0.81918216, 0, 1, 0, -0.81918216, 0, 0.5735336, 4.725979, 2.3873677, -6.0017157)
-a_nivel = "Level_1"
+a_nivel = "level_1"
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]

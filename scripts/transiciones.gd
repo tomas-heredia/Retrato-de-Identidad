@@ -4,7 +4,7 @@ signal iniciar
 @export var inicio: bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ManejoNiveles.connect("fadeOut",FadeOut)
+	Mensajero.connect("fadeOut",FadeOut)
 	
 	$AnimationPlayer.play("FadeIn")
 	
