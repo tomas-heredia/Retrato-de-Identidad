@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://u1m0kcl66o30"]
+[gd_scene load_steps=31 format=3 uid="uid://u1m0kcl66o30"]
 
 [ext_resource type="Script" uid="uid://bsyte60sr0ow1" path="res://scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://bvsnf05yau30i" path="res://scripts/spring_arm_pivot.gd" id="2_cvnsp"]
@@ -112,6 +112,20 @@ radius = 2.5809
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6t5aa"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8erm5"]
+bg_color = Color(0.25281683, 0.0006389357, 0.42094475, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1ek2"]
+bg_color = Color(0.6, 0.29803923, 0.6, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_v0iea")
@@ -127,20 +141,20 @@ gravity = 38.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.0060489774, 0.33206376, 0.00038101885)
+bones/0/position = Vector3(0.009790339, 0.2834364, 0.0019304788)
 bones/0/rotation = Quaternion(0.012458693, 0.006141001, 0.019284561, 0.99971753)
 bones/0/scale = Vector3(1.0014992, 1.0014988, 1.0014988)
 bones/1/rotation = Quaternion(5.8298577e-10, 6.2573224e-10, -8.731145e-10, 1)
 bones/2/rotation = Quaternion(1.5759407e-09, 4.0745357e-10, 5.8207716e-11, 1)
 bones/3/rotation = Quaternion(1.4406107e-09, 6.548361e-10, -1.8044369e-09, 1)
-bones/4/rotation = Quaternion(-0.004290007, -0.004634464, -0.070370525, 0.997501)
-bones/5/rotation = Quaternion(0.0026289953, 0.0002791058, 0.0030731575, 0.9999918)
+bones/4/rotation = Quaternion(-0.001079521, -0.0011662007, -0.017707795, 0.999842)
+bones/5/rotation = Quaternion(0.052008133, 0.005521414, 0.060794856, 0.9967792)
 bones/5/scale = Vector3(1.0000002, 1, 1.0000002)
 bones/7/rotation = Quaternion(-4.698161e-08, -2.8472973e-08, -0.69363236, 0.72032917)
-bones/8/rotation = Quaternion(-0.00015242411, 9.997545e-05, -0.101330586, 0.9948528)
+bones/8/rotation = Quaternion(-0.0048100245, 0.0031468717, -0.03556019, 0.9993511)
 bones/9/rotation = Quaternion(1.4263367e-07, 5.2849675e-08, -0.45042115, 0.89281625)
 bones/11/rotation = Quaternion(-4.7303928e-08, 2.8154716e-08, 0.69363236, 0.72032917)
-bones/12/rotation = Quaternion(-0.00013713035, 0.00010786548, 0.101374954, 0.9948484)
+bones/12/rotation = Quaternion(-0.0043272735, 0.0034110947, 0.036971267, 0.99930114)
 bones/12/scale = Vector3(1.0000001, 1, 0.99999964)
 bones/13/rotation = Quaternion(1.4357099e-07, -5.108918e-08, 0.45042115, 0.89281625)
 bones/15/rotation = Quaternion(0.0068116267, 3.2793434e-08, -0.7276698, 0.6858939)
@@ -178,8 +192,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03657, 0)
 shape = SubResource("SphereShape3D_v0iea")
 
 [node name="Interaccion_label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 4.0
+offset_top = 977.0
+offset_right = 432.0
+offset_bottom = 1060.0
 theme_override_font_sizes/font_size = 60
 text = "Interactuar \"E\""
 
@@ -214,6 +230,19 @@ target_position = Vector3(0, -0.75, 0)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0274582e-08, 0.2915089, 0.9213748)
 target_position = Vector3(0, -0.75, 0)
+
+[node name="BarraVida" type="ProgressBar" parent="."]
+anchors_preset = -1
+anchor_right = 0.19900002
+anchor_bottom = 0.044000003
+offset_left = 45.0
+offset_top = 41.0
+offset_right = 44.919983
+offset_bottom = 41.479996
+theme_override_styles/background = SubResource("StyleBoxFlat_8erm5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f1ek2")
+rounded = true
+show_percentage = false
 
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]
