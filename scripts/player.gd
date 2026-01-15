@@ -238,5 +238,8 @@ func _snap_up_to_stairs_check(delta):
 func actualizar_barra():
 	BarraVida.value = vida
 
-func daño(valor: int):
-	vida = valor
+func recibir_daño(valor: int):
+	vida -= valor
+	if vida == 0:
+		position = Global.ultimoCheckPoint
+		vida = 100

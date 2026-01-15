@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=37 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -22,6 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://5kfvgdhbp2ux" path="res://Assets/modulares/texturas/escalones1_DefaultMaterial_OcclusionRoughnessMetallic.png" id="20_m1fqf"]
 [ext_resource type="PackedScene" uid="uid://ddpiugbhfkm4l" path="res://Scenes/escal.tscn" id="21_btpkh"]
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="22_m1fqf"]
+[ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="23_fk2v1"]
+[ext_resource type="PackedScene" uid="uid://3k3cc5qbrfmo" path="res://Scenes/areas/CheckPoint.tscn" id="24_k1ht2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -181,11 +183,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.0071106977, 0.31799737, 0.0008035379)
-bones/4/rotation = Quaternion(-0.003362584, -0.0036325764, -0.055157673, 0.99846536)
-bones/5/rotation = Quaternion(0.016722247, 0.001775308, 0.019547455, 0.9996676)
-bones/8/rotation = Quaternion(-0.0014997721, 0.00098138, -0.08235116, 0.99660176)
-bones/12/rotation = Quaternion(-0.0013492502, 0.0010634195, 0.082788974, 0.9965657)
+bones/0/position = Vector3(0.008211673, 0.30379742, 0.0012672539)
+bones/4/rotation = Quaternion(-0.0024250143, -0.0026197261, -0.039778374, 0.99920213)
+bones/5/rotation = Quaternion(0.030004641, 0.0031854264, 0.0350739, 0.99892914)
+bones/8/rotation = Quaternion(-0.002864256, 0.0018739944, -0.063091725, 0.99800193)
+bones/12/rotation = Quaternion(-0.0025715923, 0.0020270338, 0.0640095, 0.997944)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -239,5 +241,17 @@ transform = Transform3D(-0.009999718, -1.818988e-18, -7.469971e-05, -7.469971e-0
 transform = Transform3D(0.5735336, 0, 0.81918216, 0, 1, 0, -0.81918216, 0, 0.5735336, 4.725979, 2.3873677, -6.0017157)
 a_nivel = "level_1"
 
+[node name="AreaMuerte" parent="." instance=ExtResource("23_fk2v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1, 9)
+
+[node name="CollisionShape3D" parent="AreaMuerte" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82318115, -0.06817627)
+
+[node name="CheckPoint" parent="." instance=ExtResource("24_k1ht2")]
+
+[node name="CheckPoint2" parent="." instance=ExtResource("24_k1ht2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.442137, 1.1477699, 2.1572237)
+
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
+[editable path="AreaMuerte"]
