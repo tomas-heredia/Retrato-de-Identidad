@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bex2cf07o254b"]
+
+[ext_resource type="Script" uid="uid://dk2b5fci3bknb" path="res://scripts/area_muerte.gd" id="1_t4f8q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xu1j3"]
+size = Vector3(1, 2.6463623, 3.6195068)
+
+[node name="AreaMuerte" type="Area3D"]
+script = ExtResource("1_t4f8q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_xu1j3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
