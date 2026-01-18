@@ -1,21 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://u1m0kcl66o30"]
+[gd_scene load_steps=29 format=3 uid="uid://u1m0kcl66o30"]
 
 [ext_resource type="Script" uid="uid://bsyte60sr0ow1" path="res://scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://bvsnf05yau30i" path="res://scripts/spring_arm_pivot.gd" id="2_cvnsp"]
 [ext_resource type="PackedScene" uid="uid://b1nkskto4lhnf" path="res://Assets/Personaje/tukuy_2.glb" id="2_vgqql"]
 [ext_resource type="Script" uid="uid://bpi3qiai0b2k" path="res://scripts/camera_3d.gd" id="3_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://c1tsqwgetaeqf" path="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_BaseColor.png" id="3_8erm5"]
-[ext_resource type="Texture2D" uid="uid://dpwn60oh60sio" path="res://Assets/Personaje/fantasmita_DefaultMaterial_Emissive.png" id="4_f1ek2"]
-[ext_resource type="Texture2D" uid="uid://b38tocnrfpdpg" path="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_Normal.png" id="5_tx1dd"]
-[ext_resource type="Texture2D" uid="uid://b0b580vrjdqga" path="res://Assets/Personaje/tukuy_2_fantasmita_DefaultMaterial_OcclusionRoughnessMetallic.png" id="6_gymyn"]
-
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pu2lt"]
-albedo_texture = ExtResource("3_8erm5")
-orm_texture = ExtResource("6_gymyn")
-emission_enabled = true
-emission_texture = ExtResource("4_f1ek2")
-normal_enabled = true
-normal_texture = ExtResource("5_tx1dd")
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tx1dd"]
 animation = &"Doublejump"
@@ -126,6 +114,18 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="Animation" id="Animation_vgqql"]
+resource_name = "invulnerabilidad"
+
+[sub_resource type="Animation" id="Animation_fkybt"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3wgy"]
+_data = {
+&"RESET": SubResource("Animation_fkybt"),
+&"invulnerabilidad": SubResource("Animation_vgqql")
+}
+
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_v0iea")
@@ -141,20 +141,20 @@ gravity = 38.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.0060491185, 0.3320598, 0.00038110127)
+bones/0/position = Vector3(0.00871302, 0.2973312, 0.0014784149)
 bones/0/rotation = Quaternion(0.012458693, 0.006141001, 0.019284561, 0.99971753)
 bones/0/scale = Vector3(1.0014992, 1.0014988, 1.0014988)
 bones/1/rotation = Quaternion(5.8298577e-10, 6.2573224e-10, -8.731145e-10, 1)
 bones/2/rotation = Quaternion(1.5759407e-09, 4.0745357e-10, 5.8207716e-11, 1)
 bones/3/rotation = Quaternion(1.4406107e-09, 6.548361e-10, -1.8044369e-09, 1)
-bones/4/rotation = Quaternion(-0.0042897463, -0.004634183, -0.07036625, 0.9975013)
-bones/5/rotation = Quaternion(0.0026336412, 0.00027959901, 0.003078588, 0.9999918)
+bones/4/rotation = Quaternion(-0.0019999351, -0.0021605168, -0.03280567, 0.9994575)
+bones/5/rotation = Quaternion(0.038006958, 0.0040349863, 0.04442818, 0.99828124)
 bones/5/scale = Vector3(1.0000002, 1, 1.0000002)
 bones/7/rotation = Quaternion(-4.698161e-08, -2.8472973e-08, -0.69363236, 0.72032917)
-bones/8/rotation = Quaternion(-0.00015280333, 0.00010022353, -0.10132525, 0.9948534)
+bones/8/rotation = Quaternion(-0.003481433, 0.0022777368, -0.05436756, 0.9985124)
 bones/9/rotation = Quaternion(1.4263367e-07, 5.2849675e-08, -0.45042115, 0.89281625)
 bones/11/rotation = Quaternion(-4.7303928e-08, 2.8154716e-08, 0.69363236, 0.72032917)
-bones/12/rotation = Quaternion(-0.0001374715, 0.00010813443, 0.101369746, 0.99484885)
+bones/12/rotation = Quaternion(-0.0031280124, 0.0024656774, 0.055448677, 0.9984536)
 bones/12/scale = Vector3(1.0000001, 1, 0.99999964)
 bones/13/rotation = Quaternion(1.4357099e-07, -5.108918e-08, 0.45042115, 0.89281625)
 bones/15/rotation = Quaternion(0.0068116267, 3.2793434e-08, -0.7276698, 0.6858939)
@@ -169,9 +169,6 @@ bones/28/rotation = Quaternion(-0.7204468, -7.9368164e-08, 1.5390268e-07, 0.6935
 bones/30/position = Vector3(1.9706918e-10, 0.24494466, 0.0014746954)
 bones/30/rotation = Quaternion(0.51080185, -0.48895976, -0.51080185, -0.4889596)
 bones/31/rotation = Quaternion(-0.7204468, 7.9368164e-08, -1.5390268e-07, 0.69351023)
-
-[node name="tukuy" parent="tukuy_2/tukuy_armature/Skeleton3D" index="0"]
-surface_material_override/0 = SubResource("ORMMaterial3D_pu2lt")
 
 [node name="AnimationTree" type="AnimationTree" parent="tukuy_2"]
 tree_root = SubResource("AnimationNodeStateMachine_ukyrk")
@@ -244,9 +241,18 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_f1ek2")
 rounded = true
 show_percentage = false
 
+[node name="invulnerable_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="efectos_animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_x3wgy")
+}
+
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]
 [connection signal="timeout" from="salto_timer" to="." method="_on_salto_timer_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
+[connection signal="timeout" from="invulnerable_timer" to="." method="_on_invulnerable_timer_timeout"]
 
 [editable path="tukuy_2"]

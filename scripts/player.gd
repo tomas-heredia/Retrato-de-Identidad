@@ -13,8 +13,11 @@ var vida := 100:
 @export var desaceleracion := 0.2
 @export var JUMP_VELOCITY := 8
 @export var gravity := 9.8
+@export var invulnerabilidad_time := 1
 var direction = Vector3(0,0,0)
 
+@onready var efectos_animation: AnimationPlayer = $efectos_animation
+@onready var invulnerable_timer: Timer = $invulnerable_timer
 @onready var stairs_ahead = $StairsAhead
 @onready var stairs_below = $StairsBehaind
 @onready var tukuy = $tukuy_2
@@ -26,7 +29,7 @@ var animation : AnimationNodeStateMachinePlayback
 @onready var coyote_timer = $CoyoteTimer
 @onready var BarraVida: ProgressBar = $BarraVida
 
-
+var es_invulnerable := false
 var coyote_timer_activado := true
 var interactuando_portal: bool = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -40,6 +43,7 @@ var _snapped_to_stairs_last_frame := false
 var _last_frame_was_on_floor = -INF
 
 func _ready():
+	invulnerable_timer.time = invulnerabilidad_time
 	BarraVida.max_value = max_vida
 	actualizar_barra()
 	animation = animation_tree.get("parameters/playback")
@@ -239,7 +243,17 @@ func actualizar_barra():
 	BarraVida.value = vida
 
 func recibir_daño(valor: int):
-	vida -= valor
-	if vida == 0:
-		position = Global.ultimoCheckPoint
-		vida = 100
+	if !es_invulnerable:
+		vida -= valor
+		if vida == 0:
+			position = Global.ultimoCheckPoint
+			vida = 100
+
+func activar_invulnerabilidad():
+	
+	es_invulnerable = true
+	invulnerable_timer.start()
+
+
+func _on_invulnerable_timer_timeout() -> void:
+	es_invulnerable = false
