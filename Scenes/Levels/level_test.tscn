@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=38 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="22_m1fqf"]
 [ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="23_fk2v1"]
 [ext_resource type="PackedScene" uid="uid://3k3cc5qbrfmo" path="res://Scenes/areas/CheckPoint.tscn" id="24_k1ht2"]
+[ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="25_tu8bo"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -168,8 +169,9 @@ camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 [node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
 
-[node name="Recolectable3" parent="." instance=ExtResource("6_1bsl4")]
+[node name="Recolectable3" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
+RigidBody_relacionados = [NodePath("../Plataforma_invisible")]
 
 [node name="Recolectable4" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 7.273715)
@@ -183,11 +185,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.008211673, 0.30379742, 0.0012672539)
-bones/4/rotation = Quaternion(-0.0024250143, -0.0026197261, -0.039778374, 0.99920213)
-bones/5/rotation = Quaternion(0.030004641, 0.0031854264, 0.0350739, 0.99892914)
-bones/8/rotation = Quaternion(-0.002864256, 0.0018739944, -0.063091725, 0.99800193)
-bones/12/rotation = Quaternion(-0.0025715923, 0.0020270338, 0.0640095, 0.997944)
+bones/0/position = Vector3(0.009658321, 0.2851391, 0.0018756029)
+bones/4/rotation = Quaternion(-0.001192045, -0.0012877585, -0.019553551, 0.99980736)
+bones/5/rotation = Quaternion(0.05032112, 0.0053423126, 0.058822818, 0.9969851)
+bones/8/rotation = Quaternion(-0.004647177, 0.0030403421, -0.037867412, 0.99926734)
+bones/12/rotation = Quaternion(-0.004180761, 0.0032955937, 0.03923055, 0.9992161)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -251,6 +253,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82318115, -0.06817627)
 
 [node name="CheckPoint2" parent="." instance=ExtResource("24_k1ht2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.442137, 1.1477699, 2.1572237)
+
+[node name="Plataforma_invisible" parent="." instance=ExtResource("25_tu8bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.777443, 3.3599, 0.051781893)
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
