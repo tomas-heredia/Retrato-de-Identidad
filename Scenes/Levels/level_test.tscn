@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=39 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="23_fk2v1"]
 [ext_resource type="PackedScene" uid="uid://3k3cc5qbrfmo" path="res://Scenes/areas/CheckPoint.tscn" id="24_k1ht2"]
 [ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="25_tu8bo"]
+[ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="26_2rbid"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -185,11 +186,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.009658321, 0.2851391, 0.0018756029)
-bones/4/rotation = Quaternion(-0.001192045, -0.0012877585, -0.019553551, 0.99980736)
-bones/5/rotation = Quaternion(0.05032112, 0.0053423126, 0.058822818, 0.9969851)
-bones/8/rotation = Quaternion(-0.004647177, 0.0030403421, -0.037867412, 0.99926734)
-bones/12/rotation = Quaternion(-0.004180761, 0.0032955937, 0.03923055, 0.9992161)
+bones/0/position = Vector3(0.010565058, 0.27344435, 0.0022557778)
+bones/4/rotation = Quaternion(-0.00041930637, -0.00045297615, -0.006878067, 0.9999762)
+bones/5/rotation = Quaternion(0.061572794, 0.0065368414, 0.071975455, 0.9954827)
+bones/8/rotation = Quaternion(-0.005764719, 0.0037714122, -0.022022733, 0.9997338)
+bones/12/rotation = Quaternion(-0.005186237, 0.004088245, 0.023714984, 0.99969697)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -256,6 +257,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.442137, 1.1477699, 2.1572
 
 [node name="Plataforma_invisible" parent="." instance=ExtResource("25_tu8bo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.777443, 3.3599, 0.051781893)
+
+[node name="Plataforma_movil" parent="." instance=ExtResource("26_2rbid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44354412, 1.1797211, 7.030309)
+altura_max = 5
+velocidad = 5
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]

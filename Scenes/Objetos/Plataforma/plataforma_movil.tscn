@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5ls4ahcpp7wq"]
+
+[ext_resource type="Script" uid="uid://b0v05ml8mdyed" path="res://scripts/plataforma_movil.gd" id="1_xwwj2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtxff"]
+size = Vector3(4.006221, 0.0635343, 3.8969598)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xwwj2"]
+
+[node name="Plataforma_movil" type="RigidBody3D"]
+gravity_scale = 0.0
+script = ExtResource("1_xwwj2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vtxff")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.006221, 0, 0, 0, 0.0635343, 0, 0, 0, 3.8969598, 0, 0, 0)
+mesh = SubResource("BoxMesh_xwwj2")
