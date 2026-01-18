@@ -16,7 +16,6 @@ var vida := 100:
 @export var invulnerabilidad_time := 1
 var direction = Vector3(0,0,0)
 
-@onready var efectos_animation: AnimationPlayer = $efectos_animation
 @onready var invulnerable_timer: Timer = $invulnerable_timer
 @onready var stairs_ahead = $StairsAhead
 @onready var stairs_below = $StairsBehaind
@@ -43,7 +42,7 @@ var _snapped_to_stairs_last_frame := false
 var _last_frame_was_on_floor = -INF
 
 func _ready():
-	invulnerable_timer.time = invulnerabilidad_time
+	invulnerable_timer.wait_time = invulnerabilidad_time
 	BarraVida.max_value = max_vida
 	actualizar_barra()
 	animation = animation_tree.get("parameters/playback")
@@ -68,8 +67,10 @@ func movement(delta):
 			coyote_timer.start()
 		velocity.y -= gravity * delta
 		
-		
-		
+	if Input.is_action_just_pressed("Restart"):
+		position = Global.ultimoCheckPoint
+		vida = 100
+	
 	if Input.is_action_just_pressed("Jump") and doble_salto :
 		animation.travel("doublejump")
 		#animation.travel("doublejump")
@@ -244,6 +245,7 @@ func actualizar_barra():
 
 func recibir_daño(valor: int):
 	if !es_invulnerable:
+		activar_invulnerabilidad()
 		vida -= valor
 		if vida == 0:
 			position = Global.ultimoCheckPoint

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=42 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="26_2rbid"]
 [ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="27_kxg02"]
 [ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="28_v6cxb"]
+[ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="29_gljck"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -188,11 +189,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.009897308, 0.28205672, 0.001976132)
-bones/4/rotation = Quaternion(-0.0009883486, -0.0010677078, -0.016212262, 0.99986756)
-bones/5/rotation = Quaternion(0.053367004, 0.005665678, 0.062383313, 0.99660844)
-bones/8/rotation = Quaternion(-0.0049419445, 0.0032331701, -0.033690702, 0.99941486)
-bones/12/rotation = Quaternion(-0.004445961, 0.0035046604, 0.03514068, 0.9993664)
+bones/0/position = Vector3(0.008170929, 0.30432293, 0.0012500926)
+bones/4/rotation = Quaternion(-0.0024601335, -0.0026576663, -0.040354475, 0.99917895)
+bones/5/rotation = Quaternion(0.030784331, 0.0032682004, 0.035985302, 0.99887276)
+bones/8/rotation = Quaternion(-0.0028101327, 0.0018385882, -0.06385636, 0.9979535)
+bones/12/rotation = Quaternion(-0.0025275233, 0.0019922918, 0.0646872, 0.9979005)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -270,6 +271,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3953, 2.2819266, 1.3649012
 
 [node name="Pico" parent="." instance=ExtResource("28_v6cxb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.397885, 1.636147, 4.7924385)
+
+[node name="a_hub" parent="." instance=ExtResource("29_gljck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.103345, 1.0071256, 5.2889643)
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
