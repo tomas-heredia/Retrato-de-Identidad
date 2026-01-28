@@ -16,3 +16,6 @@ signal pensamiento_fin()
 
 @warning_ignore("unused_signal")
 signal recolectable()
+
+@warning_ignore("unused_signal")
+signal fadeOut()

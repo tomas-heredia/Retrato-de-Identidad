@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4huqejfcb8y1"]
+
+[ext_resource type="Script" uid="uid://6215kax7xrii" path="res://scripts/plataforma_temporal.gd" id="1_8mu8l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mu8l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_14iul"]
+material = SubResource("StandardMaterial3D_8mu8l")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8mu8l"]
+size = Vector3(4.0431013, 0.27006584, 3.9393528)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14iul"]
+size = Vector3(3.918213, 0.22015381, 3.7490234)
+
+[node name="plataforma_temporal" type="RigidBody3D"]
+gravity_scale = 0.0
+script = ExtResource("1_8mu8l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.0431013, 0, 0, 0, 0.27006584, 0, 0, 0, 3.9393528, 0, 0, 0)
+mesh = SubResource("BoxMesh_14iul")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_8mu8l")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26014847, 0)
+shape = SubResource("BoxShape3D_14iul")
+
+[node name="ruptura_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="reconstruccion_timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="ruptura_timer" to="." method="_on_ruptura_timer_timeout"]
+[connection signal="timeout" from="reconstruccion_timer" to="." method="_on_reconstruccion_timer_timeout"]
