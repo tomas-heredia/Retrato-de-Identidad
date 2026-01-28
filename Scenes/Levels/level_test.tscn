@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=43 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -29,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="27_kxg02"]
 [ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="28_v6cxb"]
 [ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="29_gljck"]
-[ext_resource type="PackedScene" uid="uid://b4qksvh17i1o5" path="res://Scenes/Objetos/vasija.tscn" id="30_d1w1t"]
 [ext_resource type="SphereMesh" uid="uid://ltqbg3klyj4l" path="res://Assets/Materiales/Contornos/objeto_interactuable_esfera.tres" id="31_k0c0j"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
@@ -191,11 +190,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.007327589, 0.3152, 0.0008948894)
-bones/4/rotation = Quaternion(-0.0031779679, -0.003433136, -0.05212935, 0.99862945)
-bones/5/rotation = Quaternion(0.0193683, 0.0020562245, 0.022640558, 0.999554)
-bones/8/rotation = Quaternion(-0.0017678443, 0.0011567464, -0.07857044, 0.99690634)
-bones/12/rotation = Quaternion(-0.0015904128, 0.0012535357, 0.0790868, 0.9968657)
+bones/0/position = Vector3(0.010841745, 0.26986095, 0.0023659396)
+bones/4/rotation = Quaternion(-0.00018261332, -0.00019727719, -0.002995494, 0.99999547)
+bones/5/rotation = Quaternion(0.062390514, 0.006623653, 0.072931305, 0.99536157)
+bones/8/rotation = Quaternion(-0.0061066328, 0.0039950833, -0.017169796, 0.99982595)
+bones/12/rotation = Quaternion(-0.0054938835, 0.0043307734, 0.01896263, 0.99979573)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -276,11 +275,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.103345, 1.0071256, 5.28896
 
 [node name="Cristo" parent="." instance=ExtResource("12_v7c2p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.014906, 0.54999995, -4.717147)
-
-[node name="Vasija" parent="." instance=ExtResource("30_d1w1t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.512068, 0.54999995, 2.4666195)
-vasija_rota = ExtResource("31_k0c0j")
-Texto = " "
+achilata = ExtResource("31_k0c0j")
 modelo = ExtResource("7_0m88k")
 
 [editable path="Player"]

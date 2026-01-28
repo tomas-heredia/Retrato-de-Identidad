@@ -25,8 +25,10 @@ func _ready():
 
 
 func _unhandled_input(event):
+	
 	if interactuable:
 		if  event.is_action_pressed("Interact") and ! Global.interactuando:
+			
 			cambio()
 			audio_player.play()
 			interaccion_label.hide()
@@ -69,4 +71,5 @@ func set_mesh_dinamico(new_mesh: Mesh):
 	contorno.scale = Vector3(1.1, 1.1, 1.1)
 
 func cambio():
+	
 	pass
