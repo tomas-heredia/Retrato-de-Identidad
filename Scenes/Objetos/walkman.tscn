@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://da2pa7ex8djta"]
+
+[ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_6vipk"]
+[ext_resource type="Script" uid="uid://dq21k3u33h7vn" path="res://scripts/walkman.gd" id="2_fbm6f"]
+[ext_resource type="AudioStream" uid="uid://bbg8va21ymoa3" path="res://Assets/Musica/Walkman/intro-music-black-box-saxy-blasts-12574.mp3" id="3_fl500"]
+[ext_resource type="AudioStream" uid="uid://h1otac32nehr" path="res://Assets/Musica/Walkman/mystical-music-54294.mp3" id="4_lawan"]
+[ext_resource type="AudioStream" uid="uid://cimti6yyaye7u" path="res://Assets/Musica/Walkman/noncopyright-music-pianos-295174.mp3" id="5_hnyh4"]
+[ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="6_fl500"]
+[ext_resource type="AudioStream" uid="uid://cu0noy8ka26ck" path="res://Assets/Musica/efecto_objetos/mouse-click-117076.mp3" id="7_v8edl"]
+
+[node name="Walkman" instance=ExtResource("1_6vipk")]
+script = ExtResource("2_fbm6f")
+cancion1 = ExtResource("3_fl500")
+cancion2 = ExtResource("4_lawan")
+cancion3 = ExtResource("5_hnyh4")
+modelo = ExtResource("6_fl500")
+efecto = ExtResource("7_v8edl")
+
+[node name="EfectoBoton" type="AudioStreamPlayer" parent="." index="7"]
+
+[node name="Musica" type="AudioStreamPlayer3D" parent="." index="8"]
+max_distance = 20.0

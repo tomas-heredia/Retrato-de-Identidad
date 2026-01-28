@@ -41,6 +41,7 @@ func _unhandled_input(event):
 				
 				Mensajero.regresar_camara.emit()
 				label_3d.hide()
+				mas_interacciones()
 				
 
 func _on_area_3d_body_entered(objeto):
@@ -72,4 +73,7 @@ func set_mesh_dinamico(new_mesh: Mesh):
 
 func cambio():
 	
+	pass
+
+func mas_interacciones():
 	pass
