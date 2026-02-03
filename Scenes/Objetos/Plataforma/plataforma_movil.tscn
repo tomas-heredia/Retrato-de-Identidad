@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b0v05ml8mdyed" path="res://scripts/plataforma_movil.gd" id="1_xwwj2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtxff"]
-size = Vector3(16, 0.0635343, 16)
+size = Vector3(8, 0.0635343, 15.099731)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xwwj2"]
 
@@ -15,5 +15,5 @@ script = ExtResource("1_xwwj2")
 shape = SubResource("BoxShape3D_vtxff")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(16, 0, 0, 0, 0.064, 0, 0, 0, 16, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 0.05, 0, 0, 0, 15, 0, 0, 0)
 mesh = SubResource("BoxMesh_xwwj2")
