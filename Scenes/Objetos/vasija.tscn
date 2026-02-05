@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4qksvh17i1o5"]
+
+[ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_y2mc5"]
+[ext_resource type="Script" uid="uid://bjc87ieew5mut" path="res://scripts/vasija.gd" id="2_a4skr"]
+
+[node name="Vasija" instance=ExtResource("1_y2mc5")]
+script = ExtResource("2_a4skr")
+vasija_rota = null

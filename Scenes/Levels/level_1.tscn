@@ -27,6 +27,13 @@ shape = SubResource("CylinderShape3D_5f3p6")
 [node name="Player" parent="." instance=ExtResource("1_3mqfk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.11218, 0.494704, 0)
 
+[node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
+bones/0/position = Vector3(0.008808736, 0.2960967, 0.001518729)
+bones/4/rotation = Quaternion(-0.0019186337, -0.0020726877, -0.031472057, 0.9995007)
+bones/5/rotation = Quaternion(0.039272465, 0.004169338, 0.045907494, 0.9981648)
+bones/8/rotation = Quaternion(-0.0036000332, 0.0023553222, -0.052690182, 0.99860173)
+bones/12/rotation = Quaternion(-0.0032340123, 0.0025492406, 0.053816933, 0.9985423)
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
 
@@ -36,3 +43,4 @@ camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 [node name="Ui" parent="." instance=ExtResource("3_cyadu")]
 
 [editable path="Player"]
+[editable path="Player/tukuy_2"]

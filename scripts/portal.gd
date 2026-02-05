@@ -13,4 +13,6 @@ func _ready():
 
 func _on_area_3d_body_entered(objeto):
 	if objeto.is_in_group("Player") and Global.puede_continuar:
+		Mensajero.fadeOut.emit()
+		await get_tree().create_timer(2.0).timeout
 		ManejoNiveles.cambiar(a_nivel)

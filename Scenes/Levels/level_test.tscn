@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=44 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -21,6 +21,16 @@
 [ext_resource type="Texture2D" uid="uid://4704y7sd1t4i" path="res://Assets/modulares/texturas/escalones1_DefaultMaterial_Normal.png" id="19_btpkh"]
 [ext_resource type="Texture2D" uid="uid://5kfvgdhbp2ux" path="res://Assets/modulares/texturas/escalones1_DefaultMaterial_OcclusionRoughnessMetallic.png" id="20_m1fqf"]
 [ext_resource type="PackedScene" uid="uid://ddpiugbhfkm4l" path="res://Scenes/escal.tscn" id="21_btpkh"]
+[ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="22_m1fqf"]
+[ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="23_fk2v1"]
+[ext_resource type="PackedScene" uid="uid://3k3cc5qbrfmo" path="res://Scenes/areas/CheckPoint.tscn" id="24_k1ht2"]
+[ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="25_tu8bo"]
+[ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="26_2rbid"]
+[ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="27_kxg02"]
+[ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="28_v6cxb"]
+[ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="29_gljck"]
+[ext_resource type="PackedScene" uid="uid://da2pa7ex8djta" path="res://Scenes/Objetos/walkman.tscn" id="31_d1w1t"]
+[ext_resource type="SphereMesh" uid="uid://ltqbg3klyj4l" path="res://Assets/Materiales/Contornos/objeto_interactuable_esfera.tres" id="31_k0c0j"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -36,11 +46,6 @@ size = Vector3(5.73594, 0.0100098, 2.95496)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1bsl4"]
 size = Vector3(1, 2.29846, 3.02332)
-
-[sub_resource type="BoxMesh" id="BoxMesh_qkmes"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_fmmsx"]
-size = Vector3(1, 4.27301, 2.81891)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gm2ak"]
 
@@ -120,17 +125,6 @@ shape = SubResource("BoxShape3D_qkmes")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)
 shape = SubResource("BoxShape3D_1bsl4")
 
-[node name="Portal_level_test_2" type="StaticBody3D" parent="." groups=["Portal"]]
-transform = Transform3D(0.854785, 0, 0.518982, 0, 1, 0, -0.518982, 0, 0.854785, 3.84691, 0, -7.80024)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Portal_level_test_2"]
-transform = Transform3D(1, 0, 0, 0, 3.25773, 0, 0, 0, 2.69878, 0, 2.12997, 0)
-mesh = SubResource("BoxMesh_qkmes")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Portal_level_test_2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63651, -0.046051)
-shape = SubResource("BoxShape3D_fmmsx")
-
 [node name="NPC" parent="." instance=ExtResource("5_gm2ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71659, 1.57081, 4.69874)
 textos = Array[Resource]([ExtResource("3_qrn0q"), ExtResource("4_jp6fi"), ExtResource("5_v7c2p")])
@@ -181,19 +175,33 @@ camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 [node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
 
+[node name="Recolectable3" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
+RigidBody_relacionados = [NodePath("../Plataforma_invisible")]
+
+[node name="Recolectable4" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 7.273715)
+
+[node name="Recolectable5" parent="." instance=ExtResource("6_1bsl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.663055, 2.2609, 7.273715)
+
 [node name="Recolectable2" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
+
+[node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
+bones/0/position = Vector3(0.00594369, 0.3331232, 0.00033006002)
+bones/4/rotation = Quaternion(-0.0043597883, -0.004709848, -0.071515165, 0.9974189)
+bones/5/rotation = Quaternion(0.00056650443, 6.014285e-05, 0.00066221476, 0.9999997)
+bones/8/rotation = Quaternion(-5.96795e-05, 3.9304447e-05, -0.10263564, 0.9947191)
+bones/12/rotation = Quaternion(-5.3691154e-05, 4.2088468e-05, 0.102653034, 0.9947173)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
 [node name="NPC2" parent="." instance=ExtResource("5_gm2ak")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17249, 1.57082, 4.16488)
 textos = Array[Resource]([ExtResource("11_jp6fi")])
-
-[node name="Cristo" parent="." instance=ExtResource("12_v7c2p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.014906, 0.54999995, -4.717147)
 
 [node name="Baldosa" parent="." instance=ExtResource("14_fjvvq")]
 transform = Transform3D(0.9162649, 0, -0.40057293, 0, 1, 0, 0.40057293, 0, 0.9162649, 9.823518, 0.5738675, -7.5506897)
@@ -234,4 +242,46 @@ surface_material_override/0 = SubResource("ORMMaterial3D_m1fqf")
 [node name="escal" parent="_StaticBody3D_40775" instance=ExtResource("21_btpkh")]
 transform = Transform3D(-0.009999718, -1.818988e-18, -7.469971e-05, -7.469971e-05, -2.3841844e-09, 0.0099997185, -1.7809795e-11, 0.009999997, 2.384118e-09, 0.07475768, 0.08647121, 0.009334601)
 
+[node name="Portal" parent="." instance=ExtResource("22_m1fqf")]
+transform = Transform3D(0.5735336, 0, 0.81918216, 0, 1, 0, -0.81918216, 0, 0.5735336, 4.725979, 2.3873677, -6.0017157)
+a_nivel = "level_1"
+
+[node name="AreaMuerte" parent="." instance=ExtResource("23_fk2v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1, 9)
+
+[node name="CollisionShape3D" parent="AreaMuerte" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82318115, -0.06817627)
+
+[node name="CheckPoint" parent="." instance=ExtResource("24_k1ht2")]
+
+[node name="CheckPoint2" parent="." instance=ExtResource("24_k1ht2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.442137, 1.1477699, 2.1572237)
+
+[node name="Plataforma_invisible" parent="." instance=ExtResource("25_tu8bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.777443, 3.3599, 0.051781893)
+
+[node name="Plataforma_movil" parent="." instance=ExtResource("26_2rbid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44354412, 1.1797211, 7.030309)
+altura_max = 5
+velocidad = 5
+
+[node name="plataforma_temporal" parent="." instance=ExtResource("27_kxg02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3953, 2.2819266, 1.3649012)
+
+[node name="Pico" parent="." instance=ExtResource("28_v6cxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.397885, 1.636147, 4.7924385)
+
+[node name="a_hub" parent="." instance=ExtResource("29_gljck")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.103345, 1.0071256, 5.2889643)
+
+[node name="Cristo" parent="." instance=ExtResource("12_v7c2p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.014906, 0.54999995, -4.717147)
+achilata = ExtResource("31_k0c0j")
+modelo = ExtResource("7_0m88k")
+
+[node name="Walkman" parent="." instance=ExtResource("31_d1w1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.50246, 0.54999995, -17.215538)
+
 [editable path="Player"]
+[editable path="Player/tukuy_2"]
+[editable path="AreaMuerte"]

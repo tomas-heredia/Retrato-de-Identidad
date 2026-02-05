@@ -31,9 +31,6 @@ shape = SubResource("SphereShape3D_dvvhj")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1062, 2.25542, 0)
-text = "mucho texto mucho texto y asi pa que tenga mucho tenxto.
-Falta texto...
-Metalica es la luz"
 autowrap_mode = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]

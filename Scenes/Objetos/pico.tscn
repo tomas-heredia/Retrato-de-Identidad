@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://uj2qkpxnbgln"]
+
+[ext_resource type="Script" uid="uid://be8fvamnlq5jc" path="res://scripts/pico.gd" id="1_rp4uq"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_kbcuc"]
+size = Vector3(0.565, 0.5, 0.535)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rp4uq"]
+size = Vector3(0.565, 0.5, 0.535)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_25cvy"]
+size = Vector3(0.6738281, 0.5332031, 0.6064453)
+
+[node name="Pico" type="RigidBody3D"]
+gravity_scale = 0.0
+script = ExtResource("1_rp4uq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PrismMesh_kbcuc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_rp4uq")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_25cvy")
+debug_color = Color(0.97459465, 0.10128724, 0.32062137, 0.41960785)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
