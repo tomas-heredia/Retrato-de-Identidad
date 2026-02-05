@@ -1,9 +1,6 @@
-[gd_resource type="VisualShader" load_steps=9 format=3 uid="uid://ca74gs1rc2luu"]
-
-[ext_resource type="Texture2D" uid="uid://ctw2l3ml6fua2" path="res://shader/texturas/smoke.png" id="1_5lk1r"]
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://ca74gs1rc2luu"]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_h3qpe"]
-texture = ExtResource("1_5lk1r")
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_5lk1r"]
 input_name = "color"
