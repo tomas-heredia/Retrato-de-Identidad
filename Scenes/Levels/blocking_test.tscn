@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=21 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="1_kh06x"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_m7bmf"]
 [ext_resource type="PackedScene" uid="uid://4e0341w7ch0y" path="res://Assets/modulares/paredes área recta/recta1.glb" id="2_007yc"]
+[ext_resource type="Script" uid="uid://bsyte60sr0ow1" path="res://scripts/player.gd" id="3_yr14q"]
 [ext_resource type="Texture2D" uid="uid://bfym55vkfp5gh" path="res://Assets/kenney_prototype_textures/PNG/Green/texture_02.png" id="4_x2cq6"]
 [ext_resource type="Texture2D" uid="uid://c1hyxn5s6l44v" path="res://Assets/kenney_prototype_textures/PNG/Red/texture_04.png" id="5_jxe66"]
 [ext_resource type="Texture2D" uid="uid://bhpu7dwa2jgq3" path="res://Assets/kenney_prototype_textures/PNG/Purple/texture_04.png" id="6_rlf4w"]
@@ -276,8 +277,14 @@ shape = SubResource("BoxShape3D_m7bmf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.4732, -1.5921551, 31.986263)
 shape = SubResource("BoxShape3D_kh06x")
 
-[node name="Player" parent="." instance=ExtResource("1_m7bmf")]
+[node name="Player" type="CharacterBody3D" parent="." groups=["Player"] instance=ExtResource("1_m7bmf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -214.57451, 27.473614, 87.1387)
+script = ExtResource("3_yr14q")
+SPEED = 8.0
+aceleracion = 40
+desaceleracion = 0.13
+JUMP_VELOCITY = 15
+gravity = 38.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 11.036493, -306.47842)
