@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=35 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="1_kh06x"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_m7bmf"]
@@ -77,6 +77,9 @@ viewport_path = NodePath("DISTANCIAS DE SALTO/DISTANCIA DE SALTO")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_o0gk4"]
 viewport_path = NodePath("pinchos_BOARD")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l7kml"]
+viewport_path = NodePath("nota importante")
 
 [node name="Node3D" type="Node3D"]
 
@@ -201,7 +204,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.850075, -1.9901215, 31.98
 shape = SubResource("BoxShape3D_kh06x")
 
 [node name="Player" parent="." instance=ExtResource("1_m7bmf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.374305, 1.8640757, -321.39758)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.374305, 2.8640757, 110.568344)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.347202, 11.036493, -306.47842)
@@ -276,7 +279,7 @@ light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D32" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.6528, 22.174484, 272.70374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -113.6528, 22.174484, 272.70374)
 light_energy = 15.0
 omni_range = 45.732
 
@@ -286,82 +289,82 @@ light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D14" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.652798, 48.03649, 326.94846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.6528, 48.03649, 326.94846)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.60337, 48.03649, 326.94846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -135.60336, 48.03649, 326.94846)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D16" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -166.6528, 56.03649, 326.94846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -185.6528, 56.03649, 326.94846)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D17" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -221.6528, 43.735558, 332.94846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -254.1748, 50.735558, 327.94846)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D18" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -258.6528, 56.735558, 323.94846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -291.8183, 63.735558, 318.94846)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D19" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -290.6528, 54.03649, 304.9067)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -544.65283, 54.03649, 304.9067)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D20" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.6528, 54.03649, 206.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -535.65283, 54.03649, 206.82083)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D22" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.6528, 54.03649, 265.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -535.65283, 54.03649, 265.82083)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D21" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.6528, 73.03649, 127.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -535.65283, 73.03649, 127.82083)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D28" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.6528, 73.03649, 91.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.6528, 73.03649, -8.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D24" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.3418, 73.03649, 78.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.3418, 73.03649, -21.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D26" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.6528, 73.03649, 76.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.6528, 73.03649, -23.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D29" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.6528, 74.03649, 75.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.6528, 74.03649, -24.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D30" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.6528, 74.03649, 75.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.6528, 74.03649, -24.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D27" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154.6528, 73.03649, 74.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -154.6528, 73.03649, -25.179169)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="OmniLight3D23" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.6528, 54.03649, 169.82083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -535.65283, 54.03649, 169.82083)
 light_energy = 15.0
 omni_range = 45.732
 
@@ -408,157 +411,157 @@ size = Vector3(21.598633, 3, 37.204224)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor27" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.6332, 21, 321.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.63321, 21, 321.19745)
 use_collision = true
 size = Vector3(25, 3, 10)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor42" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.78084, 21, 321.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.18263, 21, 321.19745)
 use_collision = true
-size = Vector3(50.80359, 3, 10)
+size = Vector3(54, 3, 10)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor28" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.875565, 21, 342.69745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.18263, 21, 342.69745)
 use_collision = true
-size = Vector3(42.614136, 3, 9)
+size = Vector3(46, 3, 9)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor32" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.1332, 21, 332.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -135.13321, 21, 332.19745)
 use_collision = true
 size = Vector3(8, 3, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor33" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.852036, 21, 342.57257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.85204, 21, 342.57257)
 use_collision = true
 size = Vector3(16.59375, 3, 9)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor34" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -151.183, 32, 344.197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -170.183, 30, 344.197)
 use_collision = true
 size = Vector3(20, 3, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor35" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174.473, 40, 321.197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.473, 40, 321.197)
 use_collision = true
 size = Vector3(12, 3, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor36" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.18263, 31.699066, 326.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -242.70464, 38.699066, 321.19745)
 use_collision = true
 size = Vector3(18, 3, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor38" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -238.68263, 31.699066, 326.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -271.84814, 38.699066, 321.19745)
 use_collision = true
 size = Vector3(13, 3, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor39" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -241.68263, 34.199066, 326.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -274.84814, 41.199066, 321.19745)
 use_collision = true
 size = Vector3(7, 2, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor41" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -248.68262, 36.199066, 326.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.84814, 43.199066, 321.19745)
 use_collision = true
 size = Vector3(7, 2, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor40" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -273.18262, 38.699066, 325.69745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -306.34814, 45.699066, 320.69745)
 use_collision = true
 size = Vector3(44, 3, 21)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor57" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 39, 223.48645)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532.1826, 39, 223.48645)
 use_collision = true
 size = Vector3(20, 3, 7.289673)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor60" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 39, 151.1313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532.1826, 39, 151.1313)
 use_collision = true
 size = Vector3(20, 3, 36)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor61" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -272.18262, 41.76715, 144.1313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -526.1826, 41.76715, 144.1313)
 use_collision = true
 size = Vector3(8, 2.5343018, 22)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor65" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.18262, 41.76715, 142.6313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -536.1826, 41.76715, 142.6313)
 use_collision = true
 size = Vector3(12, 2.5343018, 19)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor62" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 43.76715, 142.6313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532.1826, 43.76715, 142.6313)
 use_collision = true
 size = Vector3(20, 2.5343018, 19)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor63" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -283.18262, 45.76715, 140.6313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -537.1826, 45.76715, 140.6313)
 use_collision = true
 size = Vector3(10, 2.5343018, 15)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor64" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -283.18262, 47.76715, 138.6313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -537.1826, 47.76715, 138.6313)
 use_collision = true
 size = Vector3(10, 2.5343018, 11)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor66" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 47.76715, 121.6313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532.1826, 47.76715, 121.6313)
 use_collision = true
 size = Vector3(20, 2.5343018, 23)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor67" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 47.76715, 79.1313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 47.76715, -20.868698)
 use_collision = true
 size = Vector3(20, 2.5343018, 24)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor71" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -278.18262, 49.967148, 105.1313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -532.1826, 49.967148, 105.1313)
 use_collision = true
 size = Vector3(20, 2.5343018, 10)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor68" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.68263, 48.76715, 78.1313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.68263, 48.76715, -21.868698)
 use_collision = true
 size = Vector3(5, 2.5343018, 22)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor69" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.68263, 50, 75.1313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.68263, 50, -24.868698)
 use_collision = true
 size = Vector3(11, 1, 20)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor70" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -230.24765, 50, 78.709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -230.24765, 50, -21.291)
 use_collision = true
 size = Vector3(10, 1, 14)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor74" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -172.24765, 50, 78.709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -172.24765, 50, -21.291)
 use_collision = true
 size = Vector3(10, 1, 14)
 material = SubResource("StandardMaterial3D_007yc")
@@ -570,157 +573,139 @@ size = Vector3(6, 1, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor45" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -287.18262, 40, 310.16293)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -541.1826, 40, 310.16293)
 use_collision = true
 size = Vector3(20, 3, 9.19873)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor50" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -287.18262, 40, 271.16293)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -541.1826, 40, 271.16293)
 use_collision = true
 size = Vector3(20, 3, 9.19873)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor46" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -280.68262, 40, 295.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -534.6826, 40, 295.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor47" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -294.68262, 40, 295.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -548.6826, 40, 295.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor53" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -271.68262, 40, 258.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -525.6826, 40, 258.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor54" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -285.68262, 40, 258.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -539.6826, 40, 258.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor55" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -271.68262, 40, 247.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -525.6826, 40, 247.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor56" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -285.68262, 40, 247.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -539.6826, 40, 247.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor58" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -285.68262, 40, 235.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -539.6826, 40, 235.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor59" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -271.68262, 40, 235.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -525.6826, 40, 235.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor48" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -280.68262, 42, 284.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -534.6826, 42, 284.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor49" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -294.68262, 42, 284.64944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -548.6826, 42, 284.64944)
 use_collision = true
 size = Vector3(7, 3, 6)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor37" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216.68263, 34.199066, 326.19745)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -249.20464, 41.199066, 321.19745)
 use_collision = true
 size = Vector3(5, 2, 12)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor43" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.182632, 21, 331.56982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1826324, 21, 331.56982)
 use_collision = true
-size = Vector3(14, 3, 33)
+size = Vector3(16, 3, 33)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor51" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.182632, 21, 331.56982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.182632, 21, 331.56982)
 use_collision = true
-size = Vector3(40, 3, 33)
+size = Vector3(36, 3, 33)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor30" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.52736, 23.5, 331.74683)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.52736, 23.5, 331.74683)
 use_collision = true
 size = Vector3(6, 2, 31.098755)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="Floor31" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.89546, 23.5, 331.748)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -85.89546, 23.5, 331.748)
 use_collision = true
 size = Vector3(6.574341, 2, 31.101074)
 material = SubResource("StandardMaterial3D_007yc")
 
 [node name="plataforma elevadiza6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -279.76758, 39.76201, 210.99133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -533.7676, 39.76201, 210.99133)
 use_collision = true
 size = Vector3(15.490234, 1, 9)
 material = SubResource("StandardMaterial3D_jxe66")
 
 [node name="plataforma elevadiza7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -284.5, 39.76201, 195.99133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -538.5, 39.76201, 195.99133)
 use_collision = true
 size = Vector3(6, 1, 9)
 material = SubResource("StandardMaterial3D_jxe66")
 
 [node name="plataforma elevadiza10" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -274.5, 39.76201, 179.99133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -528.5, 39.76201, 179.99133)
 use_collision = true
 size = Vector3(6, 1, 9)
 material = SubResource("StandardMaterial3D_jxe66")
 
 [node name="plataforma elevadiza11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -156.5, 48.76201, 77.99133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -156.5, 48.76201, -22.008667)
 use_collision = true
 size = Vector3(8, 1, 5)
 material = SubResource("StandardMaterial3D_jxe66")
 
 [node name="plataforma elevadiza12" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -187.5, 47.76201, 78.99133)
-use_collision = true
-size = Vector3(8, 1, 11)
-material = SubResource("StandardMaterial3D_jxe66")
-
-[node name="plataforma elevadiza14" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -186.5, 37.76201, 319.99133)
-use_collision = true
-size = Vector3(8, 1, 11)
-material = SubResource("StandardMaterial3D_jxe66")
-
-[node name="plataforma elevadiza15" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -166.5, 31.762009, 341.99133)
-use_collision = true
-size = Vector3(8, 1, 11)
-material = SubResource("StandardMaterial3D_jxe66")
-
-[node name="plataforma elevadiza16" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.45056, 19.762009, 325.99133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -187.5, 47.76201, -21.008667)
 use_collision = true
 size = Vector3(8, 1, 11)
 material = SubResource("StandardMaterial3D_jxe66")
 
 [node name="plataforma elevadiza13" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -209.5, 47.76201, 78.99133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -209.5, 47.76201, -21.008667)
 use_collision = true
 size = Vector3(8, 1, 11)
 material = SubResource("StandardMaterial3D_jxe66")
@@ -750,37 +735,37 @@ size = Vector3(3, 3, 3)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos8" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.91333, 23, 321.21198)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.91333, 23, 321.21198)
 use_collision = true
 size = Vector3(1.1733398, 3, 10.384888)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos9" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 23, 331.51953)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 23, 331.51953)
 use_collision = true
 size = Vector3(5, 3, 31)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos12" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.81641, 23, 317.01953)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.81641, 23, 317.01953)
 use_collision = true
 size = Vector3(9.3671875, 3, 2)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos13" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84.5, 23, 326.01953)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.5, 23, 326.01953)
 use_collision = true
 size = Vector3(10, 3, 2)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos10" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.85913, 23, 332.8452)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.85913, 23, 332.8452)
 use_collision = true
 size = Vector3(1.2817383, 3, 2.3486328)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.882324, 23, 343.1162)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.882324, 23, 343.1162)
 use_collision = true
 size = Vector3(1.2353516, 3, 8.193359)
 material = SubResource("StandardMaterial3D_mednc")
@@ -798,49 +783,49 @@ size = Vector3(3, 3, 3)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos19" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -287.68448, 42.053062, 284.4154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -541.68445, 42.053062, 284.4154)
 use_collision = true
 size = Vector3(6.9785767, 2.8009033, 3)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos20" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -287.73102, 40.705757, 304.8622)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -541.731, 40.705757, 304.8622)
 use_collision = true
 size = Vector3(17.495682, 1.946228, 1.6918945)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos21" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -286.86688, 38.296936, 276.06946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -540.8669, 38.296936, 276.06946)
 use_collision = true
 size = Vector3(19.223915, 1.946228, 1.6918945)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos22" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -285.58362, 41.296936, 247.54828)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -539.5836, 41.296936, 247.54828)
 use_collision = true
 size = Vector3(5.8144016, 1.946228, 3.4279785)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos23" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -271.58362, 41.296936, 235.70773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -525.5836, 41.296936, 235.70773)
 use_collision = true
 size = Vector3(5.8144016, 1.946228, 3.4279785)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos24" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -271.58362, 41.296936, 258.54828)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -525.5836, 41.296936, 258.54828)
 use_collision = true
 size = Vector3(5.8144016, 1.946228, 3.4279785)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos30" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -145.1764, 50.296936, 77.834305)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -145.1764, 50.296936, -22.165695)
 use_collision = true
 size = Vector3(7, 1.946228, 6)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos27" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -279.1764, 48.105072, 92.548294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -279.1764, 48.105072, -7.451706)
 use_collision = true
 size = Vector3(19, 1.946228, 3.4279785)
 material = SubResource("StandardMaterial3D_mednc")
@@ -852,84 +837,84 @@ size = Vector3(3, 6, 20)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="Crumble" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.26047, 41.75003, 152.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -536.2605, 41.75003, 152.75946)
 use_collision = true
 size = Vector3(12, 2.500061, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -273.26047, 45.75003, 145.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -527.2605, 45.75003, 145.75946)
 use_collision = true
 size = Vector3(10, 2.500061, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -273.26047, 46.747574, 138.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -527.2605, 46.747574, 138.75946)
 use_collision = true
 size = Vector3(10, 4.4951477, 11)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="OmniLight3D31" type="OmniLight3D" parent="."]
-transform = Transform3D(0.00691142, 0, -0.99997616, 0, 1, 0, 0.99997616, 0, 0.00691142, -197.46115, 59.03649, 77.52201)
+transform = Transform3D(0.00691142, 0, -0.99997616, 0, 1, 0, 0.99997616, 0, 0.00691142, -197.46115, 59.03649, -22.47799)
 light_energy = 15.0
 omni_range = 45.732
 
 [node name="Crumble4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.76047, 47.995148, 78.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.76047, 47.995148, -21.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.76047, 47.995148, 78.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.76047, 47.995148, -21.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble10" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -219.76047, 47.995148, 78.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -219.76047, 47.995148, -21.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble11" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198.76047, 47.995148, 78.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198.76047, 47.995148, -21.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble12" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262.76047, 47.995148, 73.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262.76047, 47.995148, -26.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble13" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262.76047, 47.995148, 83.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262.76047, 47.995148, -16.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble14" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252.76047, 47.995148, 73.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252.76047, 47.995148, -26.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble15" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252.76047, 47.995148, 83.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252.76047, 47.995148, -16.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble16" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.76047, 47.995148, 73.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.76047, 47.995148, -26.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
 
 [node name="Crumble17" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.76047, 47.995148, 83.75946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.76047, 47.995148, -16.24054)
 use_collision = true
 size = Vector3(5, 2, 5)
 material = SubResource("StandardMaterial3D_4pgcq")
@@ -939,18 +924,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.085564, 17.572569, 283.926
 size = Vector3(2, 5, 2)
 material = SubResource("StandardMaterial3D_kjnga")
 
+[node name="checkpoint7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0855637, 24.572569, 331.9262)
+size = Vector3(2, 5, 2)
+material = SubResource("StandardMaterial3D_kjnga")
+
 [node name="checkpoint5" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.824764, 3.2284307, -321.0458)
 size = Vector3(2, 5, 2)
 material = SubResource("StandardMaterial3D_kjnga")
 
 [node name="checkpoint3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -263.08557, 42.133644, 325.0433)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -296.2511, 49.133644, 320.0433)
 size = Vector3(2, 5, 2)
 material = SubResource("StandardMaterial3D_kjnga")
 
 [node name="checkpoint4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -281.08557, 51.434578, 123.91568)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -535.0856, 51.434578, 123.91568)
 size = Vector3(2, 5, 2)
 material = SubResource("StandardMaterial3D_kjnga")
 
@@ -958,6 +948,24 @@ material = SubResource("StandardMaterial3D_kjnga")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.106367, 14.588203, 299.93515)
 altura_max = 30
 altura_min = 14
+velocidad = 5
+
+[node name="Plataforma_movil4" parent="." instance=ExtResource("8_yr14q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -168.10637, 21.588203, 324.1247)
+altura_max = 32
+altura_min = 20
+velocidad = 5
+
+[node name="Plataforma_movil5" parent="." instance=ExtResource("8_yr14q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192.10637, 30.588203, 342.1247)
+altura_max = 42
+altura_min = 30
+velocidad = 5
+
+[node name="Plataforma_movil6" parent="." instance=ExtResource("8_yr14q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -217.10637, 30.588203, 320.06372)
+altura_max = 42
+altura_min = 30
 velocidad = 5
 
 [node name="CheckPoint" parent="." instance=ExtResource("9_kjnga")]
@@ -1100,481 +1108,481 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.23
 empuje = 20
 
 [node name="Pico58" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 339.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 339.4661)
 empuje = 20
 
 [node name="Pico59" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 338.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 338.4661)
 empuje = 20
 
 [node name="Pico60" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 337.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 337.4661)
 empuje = 20
 
 [node name="Pico61" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 336.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 336.4661)
 empuje = 20
 
 [node name="Pico62" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 335.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 335.4661)
 empuje = 20
 
 [node name="Pico63" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 344.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 344.4661)
 empuje = 20
 
 [node name="Pico64" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 343.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 343.4661)
 empuje = 20
 
 [node name="Pico67" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 342.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 342.4661)
 empuje = 20
 
 [node name="Pico68" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 346.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 346.4661)
 empuje = 20
 
 [node name="Pico69" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 345.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 345.4661)
 empuje = 20
 
 [node name="Pico70" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 341.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 341.4661)
 empuje = 20
 
 [node name="Pico75" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 340.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 340.4661)
 empuje = 20
 
 [node name="Pico126" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 339.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 339.66257)
 empuje = 20
 
 [node name="Pico127" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 333.26608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 333.26608)
 empuje = 20
 
 [node name="Pico135" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 332.26608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 332.26608)
 empuje = 20
 
 [node name="Pico144" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 325.26608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 325.26608)
 empuje = 20
 
 [node name="Pico145" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 324.26608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 324.26608)
 empuje = 20
 
 [node name="Pico128" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 344.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 344.66257)
 empuje = 20
 
 [node name="Pico129" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 343.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 343.66257)
 empuje = 20
 
 [node name="Pico130" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 342.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 342.66257)
 empuje = 20
 
 [node name="Pico131" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 346.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 346.66257)
 empuje = 20
 
 [node name="Pico132" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 345.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 345.66257)
 empuje = 20
 
 [node name="Pico133" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 341.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 341.66257)
 empuje = 20
 
 [node name="Pico134" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 340.66257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 340.66257)
 empuje = 20
 
 [node name="Pico146" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 339.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 339.66257)
 empuje = 20
 
 [node name="Pico147" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 344.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 344.66257)
 empuje = 20
 
 [node name="Pico148" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 343.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 343.66257)
 empuje = 20
 
 [node name="Pico149" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 342.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 342.66257)
 empuje = 20
 
 [node name="Pico150" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 346.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 346.66257)
 empuje = 20
 
 [node name="Pico151" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 345.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 345.66257)
 empuje = 20
 
 [node name="Pico152" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 341.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 341.66257)
 empuje = 20
 
 [node name="Pico153" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 340.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 340.66257)
 empuje = 20
 
 [node name="pinchos28" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.25485, 21.629063, 342.63022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.25485, 21.629063, 342.63022)
 use_collision = true
 size = Vector3(1.2353516, 3, 8.193359)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="Pico166" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 339.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 339.17657)
 empuje = 20
 
 [node name="Pico167" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 344.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 344.17657)
 empuje = 20
 
 [node name="Pico168" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 343.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 343.17657)
 empuje = 20
 
 [node name="Pico169" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 342.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 342.17657)
 empuje = 20
 
 [node name="Pico170" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 346.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 346.17657)
 empuje = 20
 
 [node name="Pico171" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 345.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 345.17657)
 empuje = 20
 
 [node name="Pico172" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 341.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 341.17657)
 empuje = 20
 
 [node name="Pico173" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -103.429344, 23.247643, 340.17657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122.429344, 23.247643, 340.17657)
 empuje = 20
 
 [node name="Pico174" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 339.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 339.17657)
 empuje = 20
 
 [node name="Pico175" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 344.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 344.17657)
 empuje = 20
 
 [node name="Pico176" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 343.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 343.17657)
 empuje = 20
 
 [node name="Pico177" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 342.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 342.17657)
 empuje = 20
 
 [node name="Pico178" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 346.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 346.17657)
 empuje = 20
 
 [node name="Pico179" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 345.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 345.17657)
 empuje = 20
 
 [node name="Pico180" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 341.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 341.17657)
 empuje = 20
 
 [node name="Pico181" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -102.429344, 22.302944, 340.17657)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -121.429344, 22.302944, 340.17657)
 empuje = 20
 
 [node name="Pico154" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 316.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 316.66257)
 empuje = 20
 
 [node name="Pico155" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 321.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 321.66257)
 empuje = 20
 
 [node name="Pico156" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 320.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 320.66257)
 empuje = 20
 
 [node name="Pico157" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 319.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 319.66257)
 empuje = 20
 
 [node name="Pico158" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 323.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 323.66257)
 empuje = 20
 
 [node name="Pico159" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 322.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 322.66257)
 empuje = 20
 
 [node name="Pico162" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 325.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 325.66257)
 empuje = 20
 
 [node name="Pico163" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 324.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 324.66257)
 empuje = 20
 
 [node name="Pico164" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 333.3021)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 333.3021)
 empuje = 20
 
 [node name="Pico165" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 332.3021)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 332.3021)
 empuje = 20
 
 [node name="Pico160" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 318.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 318.66257)
 empuje = 20
 
 [node name="Pico161" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -51.056816, 23.673882, 317.66257)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -70.056816, 23.673882, 317.66257)
 empuje = 20
 
 [node name="Pico136" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 316.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 316.4661)
 empuje = 20
 
 [node name="Pico137" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 321.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 321.4661)
 empuje = 20
 
 [node name="Pico138" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 320.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 320.4661)
 empuje = 20
 
 [node name="Pico139" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 319.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 319.4661)
 empuje = 20
 
 [node name="Pico140" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 323.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 323.4661)
 empuje = 20
 
 [node name="Pico141" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 322.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 322.4661)
 empuje = 20
 
 [node name="Pico142" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 318.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 318.4661)
 empuje = 20
 
 [node name="Pico143" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.056816, 24.61858, 317.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.056816, 24.61858, 317.4661)
 empuje = 20
 
 [node name="Pico76" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 334.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 334.4661)
 empuje = 20
 
 [node name="Pico77" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 333.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 333.4661)
 empuje = 20
 
 [node name="Pico78" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 332.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 332.4661)
 empuje = 20
 
 [node name="Pico79" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 331.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 331.4661)
 empuje = 20
 
 [node name="Pico80" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 330.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 330.4661)
 empuje = 20
 
 [node name="Pico81" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 329.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 329.4661)
 empuje = 20
 
 [node name="Pico82" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 328.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 328.4661)
 empuje = 20
 
 [node name="Pico83" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 327.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 327.4661)
 empuje = 20
 
 [node name="Pico84" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 326.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 326.4661)
 empuje = 20
 
 [node name="Pico85" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 325.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 325.4661)
 empuje = 20
 
 [node name="Pico86" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 324.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 324.4661)
 empuje = 20
 
 [node name="Pico87" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 323.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 323.4661)
 empuje = 20
 
 [node name="Pico88" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 322.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 322.4661)
 empuje = 20
 
 [node name="Pico89" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 321.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 321.4661)
 empuje = 20
 
 [node name="Pico90" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 320.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 320.4661)
 empuje = 20
 
 [node name="Pico91" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 319.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 319.4661)
 empuje = 20
 
 [node name="Pico92" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 318.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 318.4661)
 empuje = 20
 
 [node name="Pico93" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 317.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 317.4661)
 empuje = 20
 
 [node name="Pico94" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.76988, 24.61858, 316.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.76988, 24.61858, 316.4661)
 empuje = 20
 
 [node name="Pico95" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 339.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 339.4661)
 empuje = 20
 
 [node name="Pico96" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 338.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 338.4661)
 empuje = 20
 
 [node name="Pico97" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 337.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 337.4661)
 empuje = 20
 
 [node name="Pico98" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 336.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 336.4661)
 empuje = 20
 
 [node name="Pico99" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 335.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 335.4661)
 empuje = 20
 
 [node name="Pico100" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 344.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 344.4661)
 empuje = 20
 
 [node name="Pico101" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 343.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 343.4661)
 empuje = 20
 
 [node name="Pico102" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 342.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 342.4661)
 empuje = 20
 
 [node name="Pico103" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 346.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 346.4661)
 empuje = 20
 
 [node name="Pico104" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 345.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 345.4661)
 empuje = 20
 
 [node name="Pico105" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 341.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 341.4661)
 empuje = 20
 
 [node name="Pico106" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 340.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 340.4661)
 empuje = 20
 
 [node name="Pico107" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 334.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 334.4661)
 empuje = 20
 
 [node name="Pico108" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 333.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 333.4661)
 empuje = 20
 
 [node name="Pico109" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 332.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 332.4661)
 empuje = 20
 
 [node name="Pico110" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 331.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 331.4661)
 empuje = 20
 
 [node name="Pico111" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 330.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 330.4661)
 empuje = 20
 
 [node name="Pico112" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 329.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 329.4661)
 empuje = 20
 
 [node name="Pico113" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 328.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 328.4661)
 empuje = 20
 
 [node name="Pico114" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 327.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 327.4661)
 empuje = 20
 
 [node name="Pico115" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 326.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 326.4661)
 empuje = 20
 
 [node name="Pico116" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 325.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 325.4661)
 empuje = 20
 
 [node name="Pico117" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 324.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 324.4661)
 empuje = 20
 
 [node name="Pico118" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 323.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 323.4661)
 empuje = 20
 
 [node name="Pico119" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 322.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 322.4661)
 empuje = 20
 
 [node name="Pico120" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 321.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 321.4661)
 empuje = 20
 
 [node name="Pico121" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 320.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 320.4661)
 empuje = 20
 
 [node name="Pico122" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 319.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 319.4661)
 empuje = 20
 
 [node name="Pico123" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 318.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 318.4661)
 empuje = 20
 
 [node name="Pico124" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 317.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 317.4661)
 empuje = 20
 
 [node name="Pico125" parent="." instance=ExtResource("10_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.76988, 24.61858, 316.4661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.76988, 24.61858, 316.4661)
 empuje = 20
 
 [node name="Pico40" parent="." instance=ExtResource("10_72f8c")]
@@ -1705,7 +1713,7 @@ empuje = 20
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.738897, 23.290155, 439.90308)
 
 [node name="plataforma_temporal" parent="." instance=ExtResource("12_d5vjr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -260.14587, 33.939903, 129.24133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -260.14587, 33.939903, 29.241333)
 
 [node name="min distancia" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.76487, 1.167957, -321.23587)
@@ -1753,7 +1761,7 @@ size = Vector3(4.99321, 6.637451, 3.7431793)
 material = SubResource("StandardMaterial3D_fv0ta")
 
 [node name="mid distancia4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.807945, 9.427729, 277.32953)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.807945, 9.427729, 277.32953)
 size = Vector3(4.7274475, 11.069458, 1.8188915)
 material = SubResource("StandardMaterial3D_83cib")
 
@@ -1768,42 +1776,87 @@ size = Vector3(2.3743896, 1, 10.161797)
 material = SubResource("StandardMaterial3D_83cib")
 
 [node name="min distancia7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.0645, 2.5003953, 266.82074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112.0645, 2.5003953, 266.82074)
+size = Vector3(2.5077515, 1, 7.4542236)
+material = SubResource("StandardMaterial3D_fv0ta")
+
+[node name="min distancia12" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.0645, 39.500397, 330.90192)
 size = Vector3(2.5077515, 1, 7.4542236)
 material = SubResource("StandardMaterial3D_fv0ta")
 
 [node name="mid distancia5" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.53974, 2.3930001, 287.41116)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -118.53974, 2.3930001, 287.41116)
 size = Vector3(2.3743896, 1, 10.161797)
 material = SubResource("StandardMaterial3D_83cib")
 
 [node name="max distancia2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.97982, 4.3926635, 273.48914)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115.97982, 4.3926635, 273.48914)
 size = Vector3(2.508728, 1, 12.169983)
 material = SubResource("StandardMaterial3D_l7kml")
 
 [node name="min distancia8" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -84.0645, 2.5003953, 266.82074)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -103.0645, 2.5003953, 266.82074)
+size = Vector3(2.5077515, 1, 7.4542236)
+material = SubResource("StandardMaterial3D_fv0ta")
+
+[node name="min distancia13" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.564499, 21.500395, 319.82074)
+size = Vector3(2.5077515, 1, 7.4542236)
+material = SubResource("StandardMaterial3D_fv0ta")
+
+[node name="min distancia14" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -61.5645, 21.500395, 319.82074)
+size = Vector3(2.5077515, 1, 7.4542236)
+material = SubResource("StandardMaterial3D_fv0ta")
+
+[node name="min distancia15" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -61.5645, 21.500395, 340.82074)
+size = Vector3(2.5077515, 1, 7.4542236)
+material = SubResource("StandardMaterial3D_fv0ta")
+
+[node name="min distancia10" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -159.85048, 21.500395, 319.82074)
+size = Vector3(2.5077515, 1, 7.4542236)
+material = SubResource("StandardMaterial3D_fv0ta")
+
+[node name="min distancia11" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -183.85048, 31.500395, 341.82074)
 size = Vector3(2.5077515, 1, 7.4542236)
 material = SubResource("StandardMaterial3D_fv0ta")
 
 [node name="mid distancia6" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -90.53974, 2.3930001, 287.41116)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -109.53974, 2.3930001, 287.41116)
+size = Vector3(2.3743896, 1, 10.161797)
+material = SubResource("StandardMaterial3D_83cib")
+
+[node name="mid distancia8" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -204.54, 40, 320.411)
+size = Vector3(2.3743896, 1, 10.161797)
+material = SubResource("StandardMaterial3D_83cib")
+
+[node name="mid distancia9" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -228.54, 40, 320.411)
 size = Vector3(2.3743896, 1, 10.161797)
 material = SubResource("StandardMaterial3D_83cib")
 
 [node name="mid distancia7" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -97.24111, 21.393, 340.41116)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -116.24111, 21.393, 340.41116)
 size = Vector3(2.3743896, 1, 10.161797)
 material = SubResource("StandardMaterial3D_83cib")
 
 [node name="max distancia3" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -87.97982, 4.3926635, 273.48914)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -106.97982, 4.3926635, 273.48914)
+size = Vector3(2.508728, 1, 12.169983)
+material = SubResource("StandardMaterial3D_l7kml")
+
+[node name="max distancia5" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -258.97983, 39.392662, 319.48914)
 size = Vector3(2.508728, 1, 12.169983)
 material = SubResource("StandardMaterial3D_l7kml")
 
 [node name="max distancia4" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -106.20638, 22.392664, 318.48914)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -125.20638, 22.392664, 318.48914)
 size = Vector3(2.508728, 1, 12.169983)
 material = SubResource("StandardMaterial3D_l7kml")
 
@@ -1920,3 +1973,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.1331, 4.6427755, -274.468
 altura_max = 16
 altura_min = 6
 velocidad = 6
+
+[node name="nota importante" type="SubViewport" parent="."]
+size = Vector2i(512, 150)
+
+[node name="Control" type="Control" parent="nota importante"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="nota importante/Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "este cuadrado tocalo con pinzas porq viene a ser una separacion
+de niveles. cuando el player agarre el checkpoint anterior
+este cacho de cuadrado va a aparecer. estaria piola
+q surja como un cacho de isla
+pero eso ya lo veremos."
+horizontal_alignment = 1
+justification_flags = 162
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.22026, 30.118906, 337.11505)
+pixel_size = 0.05
+billboard = 1
+texture = SubResource("ViewportTexture_l7kml")
