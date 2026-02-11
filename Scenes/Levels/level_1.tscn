@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://hkh756ni2jcm"]
+[gd_scene load_steps=23 format=3 uid="uid://hkh756ni2jcm"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="2_iixi8"]
@@ -41,9 +41,6 @@ albedo_texture = ExtResource("11_nojx8")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd8f4"]
 albedo_texture = ExtResource("12_vvknj")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_hnn05"]
-viewport_path = NodePath("nota importante")
-
 [node name="Level_1" type="Node3D"]
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
@@ -66,11 +63,11 @@ JUMP_VELOCITY = 20
 gravity = 45.0
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.010896814, 0.26908875, 0.0023872284)
-bones/4/rotation = Quaternion(-0.00013161213, -0.00014218102, -0.0021588958, 0.99999774)
-bones/5/rotation = Quaternion(0.06325052, 0.006714955, 0.073936604, 0.99523246)
-bones/8/rotation = Quaternion(-0.006180282, 0.0040432634, -0.016124154, 0.99984276)
-bones/12/rotation = Quaternion(-0.0055601513, 0.0043830154, 0.017938614, 0.99981403)
+bones/0/position = Vector3(0.009857674, 0.28256792, 0.0019592168)
+bones/4/rotation = Quaternion(-0.0010221296, -0.0011042011, -0.01676638, 0.9998583)
+bones/5/rotation = Quaternion(0.05286355, 0.005612229, 0.061794795, 0.9966722)
+bones/8/rotation = Quaternion(-0.004893068, 0.0032011967, -0.03438339, 0.9993916)
+bones/12/rotation = Quaternion(-0.004401987, 0.0034699943, 0.035818953, 0.9993426)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
@@ -1623,12 +1620,6 @@ material = SubResource("StandardMaterial3D_t8afp")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -354.5645, 46.500397, 248.82074)
 size = Vector3(2.5077515, 1, 7.4542236)
 material = SubResource("StandardMaterial3D_t8afp")
-
-[node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -333.22028, 56.118904, 242.11505)
-pixel_size = 0.05
-billboard = 1
-texture = SubResource("ViewportTexture_hnn05")
 
 [node name="Floor72" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -573.1826, 64.81403, 238.03537)
