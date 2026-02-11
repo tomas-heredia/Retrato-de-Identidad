@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="8_yr14q"]
 [ext_resource type="PackedScene" uid="uid://3k3cc5qbrfmo" path="res://Scenes/areas/CheckPoint.tscn" id="9_kjnga"]
 [ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="10_72f8c"]
-[ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="11_72f8c"]
 [ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="12_d5vjr"]
 [ext_resource type="Texture2D" uid="uid://c4u8bq8daou7a" path="res://Assets/kenney_prototype_textures/PNG/Red/texture_02.png" id="13_x486h"]
 [ext_resource type="Texture2D" uid="uid://cj81hio3gdvq4" path="res://Assets/kenney_prototype_textures/PNG/Orange/texture_04.png" id="14_o0gk4"]
 [ext_resource type="Texture2D" uid="uid://csy5yky4ygiap" path="res://Assets/kenney_prototype_textures/PNG/Green/texture_04.png" id="15_ht42e"]
+[ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="15_x486h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_007yc"]
 albedo_texture = ExtResource("1_kh06x")
@@ -1595,9 +1595,6 @@ empuje = 20
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -13.786352, 16.61858, 272.53906)
 empuje = 20
 
-[node name="Plataforma_invisible" parent="." instance=ExtResource("11_72f8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.738897, 23.290155, 439.90308)
-
 [node name="min distancia" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.76487, 1.167957, -321.23587)
 size = Vector3(2.5077515, 1, 7.4542236)
@@ -2244,3 +2241,6 @@ vertical_alignment = 1
 transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, -890, 64, 277)
 pixel_size = 0.5
 texture = SubResource("ViewportTexture_fv0ta")
+
+[node name="a_hub" parent="." instance=ExtResource("15_x486h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -851.6577, 67.12038, 309.42905)
