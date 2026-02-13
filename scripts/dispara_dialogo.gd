@@ -21,3 +21,7 @@ func _on_body_entered(objeto):
 		dialogo.textos = textos
 		add_child(dialogo)
 		dialogo.iniciar_dialogo()
+
+func usado():
+	self.hide()
+	$CollisionShape3D.disabled = true

@@ -172,8 +172,9 @@ modelo = ExtResource("7_0m88k")
 [node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("4_qkmes")]
 camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 
-[node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
+[node name="Recolectable" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
+RigidBody_relacionados = [NodePath("../Plataforma_invisible2")]
 
 [node name="Recolectable3" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
@@ -191,11 +192,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.00594369, 0.3331232, 0.00033006002)
-bones/4/rotation = Quaternion(-0.0043597883, -0.004709848, -0.071515165, 0.9974189)
-bones/5/rotation = Quaternion(0.00056650443, 6.014285e-05, 0.00066221476, 0.9999997)
-bones/8/rotation = Quaternion(-5.96795e-05, 3.9304447e-05, -0.10263564, 0.9947191)
-bones/12/rotation = Quaternion(-5.3691154e-05, 4.2088468e-05, 0.102653034, 0.9947173)
+bones/0/position = Vector3(0.008450148, 0.30072165, 0.0013676966)
+bones/4/rotation = Quaternion(-0.0022218374, -0.0024002353, -0.03644559, 0.9993303)
+bones/5/rotation = Quaternion(0.03287107, 0.0034897397, 0.038424607, 0.9987147)
+bones/8/rotation = Quaternion(-0.0031575835, 0.0020658826, -0.05894636, 0.998254)
+bones/12/rotation = Quaternion(-0.0028374142, 0.0022365893, 0.059920635, 0.99819666)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -281,6 +282,9 @@ modelo = ExtResource("7_0m88k")
 
 [node name="Walkman" parent="." instance=ExtResource("31_d1w1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.50246, 0.54999995, -17.215538)
+
+[node name="Plataforma_invisible2" parent="." instance=ExtResource("25_tu8bo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.554084, 2.9003882, -4.5809116)
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]

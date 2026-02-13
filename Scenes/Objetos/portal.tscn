@@ -15,7 +15,7 @@ size = Vector3(0.34436035, 3.4612885, 0.4868164)
 size = Vector3(0.34436035, 3.4612885, 0.4868164)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rgta1"]
-size = Vector3(0.165, 3.045, 2.59)
+size = Vector3(0.6442871, 3.045, 2.59)
 
 [node name="Portal" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_765tg")

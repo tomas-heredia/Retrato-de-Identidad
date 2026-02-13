@@ -6,6 +6,7 @@ extends Area3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	animation_player.play("flotar")
+	
 
 
 
@@ -18,3 +19,7 @@ func _on_body_entered(objeto):
 
 		Mensajero.recolectable.emit()
 		self.queue_free()
+
+func recolectado():
+	self.hide()
+	$CollisionShape3D.disabled = true
