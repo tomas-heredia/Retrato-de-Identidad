@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=4 uid="uid://cgx7tcdlt4j0g"]
+[gd_scene load_steps=118 format=4 uid="uid://cgx7tcdlt4j0g"]
 
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="1_jp5f3"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="2_8a8y7"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://cpfeb2itdx8om" path="res://Assets/NPC/churrero_churrero_Material_2.png" id="36_21408"]
 [ext_resource type="Texture2D" uid="uid://ctvo752b0cn61" path="res://Assets/Props-lev2/conparque_lP_Material_BaseColor.png" id="37_bc348"]
 [ext_resource type="Texture2D" uid="uid://72yewaedkm4l" path="res://Assets/NPC/churrero_churrero_Material.png" id="37_olrlc"]
+[ext_resource type="PackedScene" uid="uid://qey50hgqxidt" path="res://Assets/Props-lev2/sm_pileton.glb" id="38_id13f"]
 [ext_resource type="Texture2D" uid="uid://bjc3nq170qjq8" path="res://Assets/Props-lev2/conparque_lP_Material_OcclusionRoughnessMetallic.png" id="38_iilwm"]
 [ext_resource type="Texture2D" uid="uid://c2ek4j5l64ff5" path="res://Assets/terreno/textura/terreno2_albedo.png" id="40_4g31k"]
 [ext_resource type="Texture2D" uid="uid://jqcwagh1ab0k" path="res://Assets/terreno/textura/terreno2_Normal.png" id="41_21408"]
@@ -1439,12 +1440,6 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 413.95
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 338.75003, -24.973614, 192.07452)
 size = Vector3(4, 2, 7.446289)
 
-[node name="Floor25" type="CSGBox3D" parent="blocking"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -122.842, -36.696297, 212.14015)
-use_collision = true
-size = Vector3(49.922363, 3, 82.17822)
-material = SubResource("StandardMaterial3D_007yc")
-
 [node name="CSGBox3D" type="CSGBox3D" parent="blocking"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 350.69412, -23.973614, 212.57452)
 size = Vector3(5, 6, 3.5256348)
@@ -1784,7 +1779,7 @@ size = Vector3(3, 6, 13)
 material = SubResource("StandardMaterial3D_mednc")
 
 [node name="pinchos3" type="CSGBox3D" parent="blocking"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -180.2532, -17.473614, 198.5745)
+transform = Transform3D(0.005916588, 0, -0.9999825, 0, 1, 0, 0.9999825, 0, 0.005916588, -180.2532, -17.473614, 198.5745)
 use_collision = true
 size = Vector3(3, 3, 3)
 material = SubResource("StandardMaterial3D_mednc")
@@ -2658,6 +2653,54 @@ mesh = SubResource("ArrayMesh_fh2b3")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
 
+[node name="Tree_015_Base_Material_0_010" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(103.174, 8.256421, -27.254576, 5.526018, -106.29244, -11.280758, -27.936428, 9.467004, -102.88733, 20.221199, -3.309964, 46.943142)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_011" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99822, -8.621569, 31.271122, 12.560561, -105.63032, 11.846649, 29.907305, 14.959255, 101.674194, 17.37833, -4.166208, 38.291004)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_014" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99822, -8.621569, 31.271122, 12.560561, -105.63032, 11.846649, 29.907305, 14.959255, 101.674194, 17.37833, -4.166208, 42.86304)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_015" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99822, -8.621569, 31.271122, 12.560561, -105.63032, 11.846649, 29.907305, 14.959255, 101.674194, 31.478878, -4.166208, 48.76518)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_016" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99822, -8.621567, 31.271122, 9.616243, -106.580864, 1.9809808, 30.979706, 4.697344, 102.342865, 35.804447, -3.3972554, 53.54243)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_017" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99822, -8.621567, 31.271122, 9.616243, -106.580864, 1.9809808, 30.979706, 4.697344, 102.342865, 35.804447, -3.703284, 49.781284)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_013" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99822, -8.621569, 31.271122, 12.560561, -105.63032, 11.846649, 29.907305, 14.959255, 101.674194, 21.287233, -4.166208, 43.461475)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
+[node name="Tree_015_Base_Material_0_012" type="MeshInstance3D" parent="terrenos/arboles11"]
+transform = Transform3D(-101.99824, -8.62157, 31.271128, 5.5260186, -106.29244, -11.280758, 31.963701, -9.13571, 101.738556, 24.093706, -3.3099637, 46.943142)
+mesh = SubResource("ArrayMesh_fh2b3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_or3nf")
+
 [node name="Tree_015_Base_Material_0_009" type="MeshInstance3D" parent="terrenos/arboles11"]
 transform = Transform3D(-73.13736, 12.326095, -77.167755, -8.479101, -106.31996, -8.946377, -77.68461, -9.536069e-06, 73.627235, 0.051715374, -0.48236722, 19.157116)
 mesh = SubResource("ArrayMesh_fh2b3")
@@ -2750,7 +2793,7 @@ shape = SubResource("ConcavePolygonShape3D_6jmsv")
 transform = Transform3D(1.0799999, 0, 0, 0, 1.4608533, 0.09511229, 0, -0.1101498, 1.261419, 0, -0.5017953, 15.9999695)
 
 [node name="tablas2" type="MeshInstance3D" parent="props/tablillas/tablas/tablas2/tablas2"]
-transform = Transform3D(54.56, 0, 0, 0, -27.584538, 47.073166, 0, -47.073174, -27.584545, 8.28669, 1.676816, 15.021881)
+transform = Transform3D(54.56, 0, 0, 0, -27.584538, 47.073166, 0, -47.07317, -27.584541, 8.28669, 1.5438061, 17.064804)
 mesh = SubResource("ArrayMesh_hblu2")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ORMMaterial3D_m58j8")
@@ -3005,6 +3048,17 @@ transform = Transform3D(0.99999994, 1.4901161e-08, -3.7252903e-09, 0, 0.99999994
 visible = false
 shape = SubResource("ConcavePolygonShape3D_rmweb")
 
+[node name="terreno6" type="Node3D" parent="parque"]
+transform = Transform3D(1.2068051, 0.2364158, -0.32902592, -0.24473163, 1.249254, 1.0070481e-09, 0.32288843, 0.06325456, 1.2297443, -15.71417, -13.948811, 253.9496)
+
+[node name="_StaticBody3D_28893" type="StaticBody3D" parent="parque/terreno6"]
+transform = Transform3D(-38.01484, -378.16705, -15.335438, 3.8485746, -15.798049, 380.03455, -378.45837, 37.824936, 5.404999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parque/terreno6/_StaticBody3D_28893"]
+transform = Transform3D(0.99999994, 1.4901161e-08, -3.7252903e-09, 0, 0.99999994, -1.8626451e-09, 3.7252903e-09, 1.6763806e-08, 1, -4.23193e-06, 5.0999224e-06, 4.3042004e-05)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_rmweb")
+
 [node name="terreno3" type="Node3D" parent="parque"]
 transform = Transform3D(1.2452316, 0.2439436, 0.10207108, -0.24473162, 1.2492539, 1.1498119e-08, -0.100167096, -0.019622963, 1.2689013, -15.71417, 6.1971307, 266.5284)
 
@@ -3018,6 +3072,70 @@ surface_material_override/0 = SubResource("ORMMaterial3D_or3nf")
 transform = Transform3D(-38.01484, -378.16705, -15.335438, 3.8485746, -15.798049, 380.03455, -378.45837, 37.824936, 5.404999, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="parque/terreno3/_StaticBody3D_28893"]
+visible = false
+shape = SubResource("ConcavePolygonShape3D_rmweb")
+
+[node name="terreno7" type="Node3D" parent="parque"]
+transform = Transform3D(-3.5538561, -0.05721768, -1.1147578, -0.08650759, 3.1616886, 0.05080252, 1.1123657, 0.06307873, -3.5575476, 10.40793, -22.933962, 242.98997)
+
+[node name="terreno2" type="MeshInstance3D" parent="parque/terreno7"]
+transform = Transform3D(-38.014885, -378.16705, -15.335438, 3.8485756, -15.798053, 380.03455, -378.4584, 37.82493, 5.405, -12.541963, 0.6496897, -7.5887947)
+mesh = SubResource("ArrayMesh_0vk3h")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ORMMaterial3D_or3nf")
+
+[node name="_StaticBody3D_28893" type="StaticBody3D" parent="parque/terreno7"]
+transform = Transform3D(-38.01484, -378.16705, -15.335438, 3.8485746, -15.798049, 380.03455, -378.45837, 37.824936, 5.404999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parque/terreno7/_StaticBody3D_28893"]
+visible = false
+shape = SubResource("ConcavePolygonShape3D_rmweb")
+
+[node name="terreno8" type="Node3D" parent="parque"]
+transform = Transform3D(-3.5538561, -0.05721768, -1.1147578, -0.08650759, 3.1616886, 0.05080252, 1.1123657, 0.06307873, -3.5575476, 9.065096, -29.68057, 242.98997)
+
+[node name="terreno2" type="MeshInstance3D" parent="parque/terreno8"]
+transform = Transform3D(-38.01487, -378.16705, -15.335438, 3.8485756, -15.798051, 380.03455, -378.4584, 37.82493, 5.4049997, -0.038682938, 1.9609232, 0.02267456)
+mesh = SubResource("ArrayMesh_0vk3h")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ORMMaterial3D_or3nf")
+
+[node name="_StaticBody3D_28893" type="StaticBody3D" parent="parque/terreno8"]
+transform = Transform3D(-38.01484, -378.16705, -15.335438, 3.8485746, -15.798049, 380.03455, -378.45837, 37.824936, 5.404999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parque/terreno8/_StaticBody3D_28893"]
+visible = false
+shape = SubResource("ConcavePolygonShape3D_rmweb")
+
+[node name="terreno9" type="Node3D" parent="parque"]
+transform = Transform3D(-3.5281467, 0.04212798, -1.1069376, 0.031687897, 2.7671552, 0.087473825, 1.1040359, 0.055204764, -3.5399275, 36.42092, -26.462137, 242.98997)
+
+[node name="terreno2" type="MeshInstance3D" parent="parque/terreno9"]
+transform = Transform3D(-38.01494, -378.16724, -15.3354435, 3.8485727, -15.79805, 380.0347, -378.45853, 37.82495, 5.4049997, 0.19724464, 2.6808825, -0.52667236)
+mesh = SubResource("ArrayMesh_0vk3h")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ORMMaterial3D_or3nf")
+
+[node name="_StaticBody3D_28893" type="StaticBody3D" parent="parque/terreno9"]
+transform = Transform3D(-38.01484, -378.16705, -15.335438, 3.8485746, -15.798049, 380.03455, -378.45837, 37.824936, 5.404999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parque/terreno9/_StaticBody3D_28893"]
+visible = false
+shape = SubResource("ConcavePolygonShape3D_rmweb")
+
+[node name="terreno11" type="Node3D" parent="parque"]
+transform = Transform3D(-0.5213425, -0.061269514, 3.6720016, 0.0316879, 2.7671556, 0.08747385, -3.6599069, 0.032686085, -0.5223088, 11.599316, -15.729832, 216.04301)
+
+[node name="terreno2" type="MeshInstance3D" parent="parque/terreno11"]
+transform = Transform3D(-38.014877, -378.1671, -15.33544, 3.8485746, -15.798052, 380.03455, -378.45847, 37.82495, 5.4050016, -0.011234283, -1.7506366, -0.03081131)
+mesh = SubResource("ArrayMesh_0vk3h")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ORMMaterial3D_or3nf")
+
+[node name="_StaticBody3D_28893" type="StaticBody3D" parent="parque/terreno11"]
+transform = Transform3D(-38.01484, -378.16705, -15.335438, 3.8485746, -15.798049, 380.03455, -378.45837, 37.824936, 5.404999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parque/terreno11/_StaticBody3D_28893"]
 visible = false
 shape = SubResource("ConcavePolygonShape3D_rmweb")
 
@@ -3494,3 +3612,6 @@ skin = SubResource("Skin_vnvpm")
 libraries = {
 &"": SubResource("AnimationLibrary_hsef0")
 }
+
+[node name="sm_pileton2" parent="." instance=ExtResource("38_id13f")]
+transform = Transform3D(0.05086589, 0, 1.2609744, 0, 1.262, 0, -1.2609744, 0, 0.05086589, 37.839333, 4.905425, 265.15485)
