@@ -32,11 +32,11 @@ JUMP_VELOCITY = 20
 gravity = 45.0
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.0062674913, 0.32887274, 0.0004514726)
-bones/4/rotation = Quaternion(-0.0040797694, -0.004407346, -0.06692192, 0.9977402)
-bones/5/rotation = Quaternion(0.005070245, 0.0005382794, 0.0059268516, 0.9999695)
-bones/8/rotation = Quaternion(-0.00045793902, 0.00029983677, -0.09703023, 0.99528134)
-bones/12/rotation = Quaternion(-0.0004119875, 0.00032454345, 0.09716363, 0.9952683)
+bones/0/position = Vector3(0.009411894, 0.28831744, 0.0017727726)
+bones/4/rotation = Quaternion(-0.0014020917, -0.0015146699, -0.022999015, 0.99973345)
+bones/5/rotation = Quaternion(0.047143728, 0.0050049867, 0.055108603, 0.99735427)
+bones/8/rotation = Quaternion(-0.004343093, 0.0028414142, -0.04217423, 0.9990969)
+bones/12/rotation = Quaternion(-0.0039071823, 0.0030799224, 0.043447826, 0.99904335)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)

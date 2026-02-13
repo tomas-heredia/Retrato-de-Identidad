@@ -22,6 +22,7 @@ ManejoNiveles="*res://scripts/Manejo_niveles.gd"
 Global="*res://scripts/Global.gd"
 Mensajero="*res://scripts/Mensajero.gd"
 ManejoPensamientos="*res://scripts/Manejo_pensamientos.gd"
+Guardado="*res://scripts/Guardado.gd"
 
 [display]
 
