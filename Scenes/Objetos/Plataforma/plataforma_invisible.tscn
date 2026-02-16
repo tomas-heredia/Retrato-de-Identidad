@@ -2,19 +2,20 @@
 
 [ext_resource type="Script" uid="uid://doojaveb3bjut" path="res://scripts/plataforma_invisible.gd" id="1_bxq74"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_befcq"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_bxq74"]
+size = Vector3(2.683838, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_befcq"]
 
 [node name="Plataforma_invisible" type="RigidBody3D" groups=["plataforma_invisible"]]
 collision_layer = 3
 gravity_scale = 0.0
 script = ExtResource("1_bxq74")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.7569244, 0, 0, 0, 0.06210637, 0, 0, 0, 3.993681, 0, 0, 0)
-mesh = SubResource("BoxMesh_befcq")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3.7569244, 0, 0, 0, 0.06210637, 0, 0, 0, 3.993681, 0, 0, 0)
+transform = Transform3D(3.7569244, 0, 0, 0, 0.06210637, 0, 0, 0, 3.993681, -0.03806448, 0, 0)
 shape = SubResource("BoxShape3D_bxq74")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("BoxMesh_befcq")
