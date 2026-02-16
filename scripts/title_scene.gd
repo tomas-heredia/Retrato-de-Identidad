@@ -11,7 +11,8 @@ var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
 
 
 
-
+func _ready() -> void:
+	Guardado.load_game()
 
 
 func _on_jugar_pressed():

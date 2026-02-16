@@ -1,3 +1,4 @@
+
 extends Node
 var niveles := {
 	"level_test": preload("res://Scenes/Levels/level_test.tscn"),
@@ -13,8 +14,13 @@ func cambiar(nombre :String):
 	if niveles.has(nombre):
 		#Guardado.game_data.nivel_actual = nombre.to_lower()
 		#Global.nivel_actual = nombre.to_lower()
-		
-		print(nombre)
+		match Global.nivel_actual:
+			"level_hub_world":
+				Guardado.game_data.hub_visitado = true
+			"level_1":
+				Guardado.game_data.level_1_visitado = true
+		Guardado.save_game()
+		Global.nivel_actual = nombre
 		get_tree().change_scene_to_packed(niveles[nombre])
 			
 	else:
