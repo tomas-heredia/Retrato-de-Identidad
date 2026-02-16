@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=42 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -24,8 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://uknv6478ggco" path="res://Scenes/Objetos/portal.tscn" id="22_m1fqf"]
 [ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="23_fk2v1"]
 [ext_resource type="PackedScene" uid="uid://3k3cc5qbrfmo" path="res://Scenes/areas/CheckPoint.tscn" id="24_k1ht2"]
-[ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="25_tu8bo"]
-[ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="26_2rbid"]
 [ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="27_kxg02"]
 [ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="28_v6cxb"]
 [ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="29_gljck"]
@@ -174,11 +172,11 @@ camara_Player = NodePath("../Player/SpringArmPivot/Camera3D")
 
 [node name="Recolectable" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
-RigidBody_relacionados = [NodePath("../Plataforma_invisible2")]
+RigidBody_relacionados = [NodePath("")]
 
 [node name="Recolectable3" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
-RigidBody_relacionados = [NodePath("../Plataforma_invisible")]
+RigidBody_relacionados = [NodePath("")]
 
 [node name="Recolectable4" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 7.273715)
@@ -192,11 +190,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.008450148, 0.30072165, 0.0013676966)
-bones/4/rotation = Quaternion(-0.0022218374, -0.0024002353, -0.03644559, 0.9993303)
-bones/5/rotation = Quaternion(0.03287107, 0.0034897397, 0.038424607, 0.9987147)
-bones/8/rotation = Quaternion(-0.0031575835, 0.0020658826, -0.05894636, 0.998254)
-bones/12/rotation = Quaternion(-0.0028374142, 0.0022365893, 0.059920635, 0.99819666)
+bones/0/position = Vector3(0.010354635, 0.2761583, 0.0021679236)
+bones/4/rotation = Quaternion(-0.00059860613, -0.0006466714, -0.009819159, 0.9999515)
+bones/5/rotation = Quaternion(0.055993773, 0.005944546, 0.06545386, 0.99626565)
+bones/8/rotation = Quaternion(-0.005505587, 0.003601893, -0.025699101, 0.99964815)
+bones/12/rotation = Quaternion(-0.0049530817, 0.0039044393, 0.027315067, 0.99960697)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 
@@ -258,14 +256,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82318115, -0.06817627)
 [node name="CheckPoint2" parent="." instance=ExtResource("24_k1ht2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.442137, 1.1477699, 2.1572237)
 
-[node name="Plataforma_invisible" parent="." instance=ExtResource("25_tu8bo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.777443, 3.3599, 0.051781893)
-
-[node name="Plataforma_movil" parent="." instance=ExtResource("26_2rbid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44354412, 1.1797211, 7.030309)
-altura_max = 5
-velocidad = 5
-
 [node name="plataforma_temporal" parent="." instance=ExtResource("27_kxg02")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3953, 2.2819266, 1.3649012)
 
@@ -283,8 +273,8 @@ modelo = ExtResource("7_0m88k")
 [node name="Walkman" parent="." instance=ExtResource("31_d1w1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.50246, 0.54999995, -17.215538)
 
-[node name="Plataforma_invisible2" parent="." instance=ExtResource("25_tu8bo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.554084, 2.9003882, -4.5809116)
+[node name="plataforma_temporal2" parent="." instance=ExtResource("27_kxg02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8718157, 0.6350329, -3.2361484)
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
