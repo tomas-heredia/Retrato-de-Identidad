@@ -2220,7 +2220,7 @@ offset_bottom = 23.0
 text = "HASTA AQUI PARQUE AVELLANEDA"
 
 [node name="Sprite3D6" type="Sprite3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -601, 80, 301)
+transform = Transform3D(0.010663744, 0, 0.99994314, 0, 1, 0, -0.99994314, 0, 0.010663744, -606.7168, 80, 302.90024)
 pixel_size = 0.5
 texture = SubResource("ViewportTexture_83cib")
 

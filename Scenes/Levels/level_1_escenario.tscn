@@ -3615,3 +3615,6 @@ libraries = {
 
 [node name="sm_pileton2" parent="." instance=ExtResource("38_id13f")]
 transform = Transform3D(0.05086589, 0, 1.2609744, 0, 1.262, 0, -1.2609744, 0, 0.05086589, 37.839333, 4.905425, 265.15485)
+
+[node name="Player2" parent="." instance=ExtResource("2_8a8y7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.373235, 5.0428047, 118.285645)
