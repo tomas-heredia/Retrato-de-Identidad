@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://jhm5aqhxulma"]
+
+[ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_a202f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_a202f")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.310598, 1.8814566, 0)
+
+[node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
+bones/0/position = Vector3(0.005978461, 0.332694, 0.00034292904)
+bones/4/rotation = Quaternion(-0.004331518, -0.0046793083, -0.07105144, 0.99745226)
+bones/5/rotation = Quaternion(0.00095947256, 0.00010186237, 0.0011215755, 0.9999989)
+bones/8/rotation = Quaternion(-9.115873e-05, 5.989739e-05, -0.1021927, 0.9947647)
+bones/12/rotation = Quaternion(-8.201205e-05, 6.441452e-05, 0.10221925, 0.994762)
+
+[node name="CollisionShape3D" parent="Player/Interaccion" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7500446, 0)
+
+[node name="Camera3D" parent="Player/SpringArmPivot" index="1"]
+transform = Transform3D(1.0000005, 0, -2.9802322e-08, 0, 1, 0, 1.4901161e-08, 0, 1.0000005, 0.11772388, 0, -0.7432811)
+
+[editable path="Player"]
+[editable path="Player/tukuy_2"]

@@ -4,7 +4,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mu8l"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_14iul"]
+[sub_resource type="BoxMesh" id="BoxMesh_8mu8l"]
+resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_8mu8l")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8mu8l"]
@@ -19,7 +20,7 @@ script = ExtResource("1_8mu8l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.0431013, 0, 0, 0, 0.27006584, 0, 0, 0, 3.9393528, 0, 0, 0)
-mesh = SubResource("BoxMesh_14iul")
+mesh = SubResource("BoxMesh_8mu8l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_8mu8l")

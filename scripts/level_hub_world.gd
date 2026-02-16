@@ -15,6 +15,7 @@ var Dialogo = load("res://Scenes/UI/dialogo.tscn")
 @onready var recolectable_4: Area3D = $Recolectable4
 @onready var level_1_marker: Marker3D = $Level1_marker
 @onready var player: CharacterBody3D = $Player
+@onready var portal_lv_1: MeshInstance3D = $Portal_LV1
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,3 +45,5 @@ func _ready():
 		recolectable_3.recolectado()
 		recolectable_4.recolectado()
 		
+	if(Guardado.game_data.level_1_visitado):
+		portal_lv_1.desactivar()
