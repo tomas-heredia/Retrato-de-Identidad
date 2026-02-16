@@ -1,3 +1,4 @@
+
 extends Node
 var niveles := {
 	"level_test": preload("res://Scenes/Levels/level_test.tscn"),
