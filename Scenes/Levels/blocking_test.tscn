@@ -1,7 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=35 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="1_kh06x"]
-[ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_m7bmf"]
 [ext_resource type="PackedScene" uid="uid://4e0341w7ch0y" path="res://Assets/modulares/paredes área recta/recta1.glb" id="2_007yc"]
 [ext_resource type="Texture2D" uid="uid://c1hyxn5s6l44v" path="res://Assets/kenney_prototype_textures/PNG/Red/texture_04.png" id="5_jxe66"]
 [ext_resource type="Texture2D" uid="uid://bhpu7dwa2jgq3" path="res://Assets/kenney_prototype_textures/PNG/Purple/texture_04.png" id="6_rlf4w"]
@@ -208,34 +207,6 @@ shape = SubResource("BoxShape3D_m7bmf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -97.850075, -1.9901215, 31.986263)
 shape = SubResource("BoxShape3D_kh06x")
 
-[node name="Player" parent="." instance=ExtResource("1_m7bmf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.374305, 2.8640757, 110.568344)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.347202, 11.036493, -306.47842)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D7" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.652798, 12.036493, -306.47842)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 20.036493, -343.47842)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.652798, 9.036493, -325.47842)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3472023, 20.036493, -328.47842)
-light_energy = 15.0
-omni_range = 45.732
-
 [node name="doble salto" type="SubViewport" parent="."]
 size = Vector2i(90, 28)
 
@@ -257,136 +228,6 @@ vertical_alignment = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 12.478003, -331.61102)
 pixel_size = 0.05
 texture = SubResource("ViewportTexture_x2cq6")
-
-[node name="OmniLight3D8" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 23.926271, 119.82083)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D9" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 22.036493, 156.82083)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D10" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 20.036493, 194.82083)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D12" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 32.174484, 262.70374)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D25" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 32.174484, 262.70374)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D32" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -502.6528, 56.174484, 206.55692)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D13" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 38.17448, 298.70374)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D14" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.6528, 48.03649, 326.94846)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D15" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -135.60336, 48.03649, 326.94846)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D16" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -185.6528, 56.03649, 326.94846)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D17" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -254.1748, 50.735558, 327.94846)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D18" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -291.8183, 63.735558, 318.94846)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D19" type="OmniLight3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -367.65634, 60.03649, 320.4702)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D20" type="OmniLight3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -465.74222, 60.03649, 311.4702)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D22" type="OmniLight3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -426.74222, 60.03649, 319.4702)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D21" type="OmniLight3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -544.7422, 79.03649, 311.4702)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D28" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -608.9595, 88.850525, 306.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D24" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -583.2705, 88.850525, 311.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D26" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -642.9595, 88.850525, 307.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D29" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -751.9595, 89.850525, 308.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D33" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -794.9595, 89.850525, 312.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D34" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -845.9595, 89.850525, 312.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D30" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -751.9595, 89.850525, 308.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D27" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -730.9595, 88.850525, 309.56668)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D23" type="OmniLight3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -502.74222, 74.03649, 311.4702)
-light_energy = 15.0
-omni_range = 45.732
-
-[node name="OmniLight3D11" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6527977, 20.036493, 213.82083)
-light_energy = 15.0
-omni_range = 45.732
 
 [node name="recta1" parent="." instance=ExtResource("2_007yc")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.5865784, 0.5577109, -326.81134)
@@ -787,11 +628,6 @@ material = SubResource("StandardMaterial3D_4pgcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.260498, 21, 100.75946)
 size = Vector3(106, 45, 3)
 material = SubResource("StandardMaterial3D_4pgcq")
-
-[node name="OmniLight3D31" type="OmniLight3D" parent="."]
-transform = Transform3D(-0.0069115073, 0, 0.99997616, 0, 1, 0, -0.99997616, 0, -0.0069115073, -688.1511, 74.850525, 306.8655)
-light_energy = 15.0
-omni_range = 45.732
 
 [node name="checkpoint2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.085564, 17.572569, 283.9262)
@@ -1635,11 +1471,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.976738, 12.748783, 246.976
 size = Vector3(4.99321, 6.637451, 3.7431793)
 material = SubResource("StandardMaterial3D_fv0ta")
 
-[node name="min distancia9" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -462.97675, 46.748783, 199.8298)
-size = Vector3(4.99321, 6.637451, 3.7431793)
-material = SubResource("StandardMaterial3D_fv0ta")
-
 [node name="min distancia30" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -512.97675, 56.748783, 314.8298)
 size = Vector3(4.99321, 6.637451, 3.7431793)
@@ -1649,11 +1480,6 @@ material = SubResource("StandardMaterial3D_fv0ta")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -518.97675, 60.748783, 314.8298)
 size = Vector3(4.99321, 6.637451, 3.7431793)
 material = SubResource("StandardMaterial3D_fv0ta")
-
-[node name="mid distancia4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -514.808, 43.427727, 211.18271)
-size = Vector3(4.7274475, 11.069458, 1.8188915)
-material = SubResource("StandardMaterial3D_83cib")
 
 [node name="max distancia" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.709618, 1.3926636, -323.51083)
@@ -1665,28 +1491,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5397415, 2.3930001, 214.4
 size = Vector3(2.3743896, 1, 10.161797)
 material = SubResource("StandardMaterial3D_83cib")
 
-[node name="min distancia7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -501.0645, 36.500397, 200.67392)
-size = Vector3(2.5077515, 1, 7.4542236)
-material = SubResource("StandardMaterial3D_fv0ta")
-
 [node name="min distancia12" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -193.0645, 39.500397, 330.90192)
-size = Vector3(2.5077515, 1, 7.4542236)
-material = SubResource("StandardMaterial3D_fv0ta")
-
-[node name="mid distancia5" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -507.53973, 36.393, 221.26434)
-size = Vector3(2.3743896, 1, 10.161797)
-material = SubResource("StandardMaterial3D_83cib")
-
-[node name="max distancia2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -504.97983, 38.392662, 207.34232)
-size = Vector3(2.508728, 1, 12.169983)
-material = SubResource("StandardMaterial3D_l7kml")
-
-[node name="min distancia8" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -492.0645, 36.500397, 253.67392)
 size = Vector3(2.5077515, 1, 7.4542236)
 material = SubResource("StandardMaterial3D_fv0ta")
 
@@ -1804,11 +1610,6 @@ material = SubResource("StandardMaterial3D_83cib")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -116.24111, 21.393, 340.41116)
 size = Vector3(2.3743896, 1, 10.161797)
 material = SubResource("StandardMaterial3D_83cib")
-
-[node name="max distancia3" type="CSGBox3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -495.97983, 38.392662, 207.34232)
-size = Vector3(2.508728, 1, 12.169983)
-material = SubResource("StandardMaterial3D_l7kml")
 
 [node name="max distancia6" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -723.97986, 67.39266, 312.34232)
