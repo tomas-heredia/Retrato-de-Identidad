@@ -191,11 +191,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.008552949, 0.29939577, 0.0014109948)
-bones/4/rotation = Quaternion(-0.0021358929, -0.0023073913, -0.035035834, 0.9993812)
-bones/5/rotation = Quaternion(0.035882585, 0.0038094537, 0.04194491, 0.9984681)
-bones/8/rotation = Quaternion(-0.0032828394, 0.0021478217, -0.05717567, 0.9983565)
-bones/12/rotation = Quaternion(-0.0029507226, 0.0023259136, 0.0581772, 0.99829924)
+bones/0/position = Vector3(0.0075636976, 0.31215477, 0.0009947927)
+bones/4/rotation = Quaternion(-0.0029769393, -0.003215967, -0.04883182, 0.9987975)
+bones/5/rotation = Quaternion(0.022644317, 0.0024040206, 0.026470054, 0.9993903)
+bones/8/rotation = Quaternion(-0.002059685, 0.0013476622, -0.07445277, 0.9972215)
+bones/12/rotation = Quaternion(-0.0018529579, 0.0014605083, 0.075054765, 0.99717665)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
 

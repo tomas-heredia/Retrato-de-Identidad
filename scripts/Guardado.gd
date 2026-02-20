@@ -55,3 +55,6 @@ func existe_guardado():
 		return true
 	else:
 		return false
+
+func sobreescribir():
+	game_data = default_data
