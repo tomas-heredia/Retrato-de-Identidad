@@ -15,5 +15,7 @@ func _process(delta: float) -> void:
 func _on_area_3d_body_entered(objeto: Node3D) -> void:
 	if objeto.is_in_group("Player"):
 		objeto.recibir_daño(daño)
-		var dir := (objeto.global_position - global_position).normalized()
+		var dir := objeto.global_position - global_position
+		dir.y = 0   # eliminamos empuje vertical
+		dir = dir.normalized()
 		objeto.velocity += dir * empuje
