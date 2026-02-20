@@ -123,16 +123,8 @@ func movement(delta):
 	else:
 		if animation.get_current_node() != "idle" and is_on_floor():
 			animation.travel("idle")
-		if not frenando:
-			
-			frenando = true
-			#playback.travel("idle")
-			#velocity.x = move_toward(velocity.x, 0, SPEED)
-			#velocity.z = move_toward(velocity.z, 0, SPEED)
-			var tween := create_tween()
-			tween.tween_property(self, "velocity:x", 0.0, desaceleracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-			tween.tween_property(self, "velocity:z", 0.0, desaceleracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-
+		velocity.x = move_toward(velocity.x, 0.0, aceleracion * delta)
+		velocity.z = move_toward(velocity.z, 0.0, aceleracion * delta)
 	if not _snap_up_to_stairs_check(delta):
 		move_and_slide()
 		_snap_down_to_stairs_check()
@@ -248,6 +240,7 @@ func recibir_daño(valor: int):
 		activar_invulnerabilidad()
 		vida -= valor
 		if vida == 0:
+			velocity = Vector3.ZERO
 			position = Global.ultimoCheckPoint
 			vida = 100
 

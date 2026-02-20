@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends AnimatableBody3D
 @export var altura_max : int
 @export var altura_min : int
 @export var velocidad : int

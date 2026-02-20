@@ -7,8 +7,7 @@ size = Vector3(8, 0.0635343, 15.099731)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xwwj2"]
 
-[node name="Plataforma_movil" type="RigidBody3D"]
-gravity_scale = 0.0
+[node name="Plataforma_movil" type="AnimatableBody3D"]
 script = ExtResource("1_xwwj2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
