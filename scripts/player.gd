@@ -240,6 +240,7 @@ func recibir_daño(valor: int):
 		activar_invulnerabilidad()
 		vida -= valor
 		if vida == 0:
+			velocity = Vector3.ZERO
 			position = Global.ultimoCheckPoint
 			vida = 100
 
