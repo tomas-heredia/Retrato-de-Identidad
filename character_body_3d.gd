@@ -2,9 +2,13 @@ extends CharacterBody3D
 @export var mouse_sensitivity := 0.002
 @onready var cam = $Camera3D
 
+
 var rotation_x := 0.0
 var activado := false
-const SPEED = 5.0
+
+const min_speed = 1.0
+const max_speed = 25.0
+var SPEED = 5.0
 func _ready():
 	self.hide()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -12,7 +16,19 @@ func _input(event):
 	if event.is_action_pressed("camara_libre"):
 		activado = !activado
 		Global.interactuando = activado
+		if activado:
+			Mensajero.Cambio_Camara.emit(cam)
+		else:
+			SPEED = 5
+			position = Vector3.ZERO
+			Mensajero.regresar_camara.emit()
+	
+	if event.is_action_pressed("wheel_up") and activado:
+		SPEED = min(SPEED + 1, max_speed)
 
+	if event.is_action_pressed("wheel_down") and activado:
+		SPEED = max(SPEED - 1, min_speed)
+	
 	if event is InputEventMouseMotion and activado:
 		# Rotación horizontal (cuerpo)
 		rotate_y(-event.relative.x * mouse_sensitivity)

@@ -9,6 +9,6 @@ script = ExtResource("1_5nqvi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_5nqvi")
+disabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
-current = true
