@@ -1951,19 +1951,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -638
 [node name="plataforma_temporal12" parent="." instance=ExtResource("12_d5vjr")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -627.0823, 64.56684, 306.9044)
 
-[node name="plataforma_temporal13" parent="." instance=ExtResource("12_d5vjr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -514.0823, 60.752808, 315.43884)
-
-[node name="plataforma_temporal14" parent="." instance=ExtResource("12_d5vjr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -519.0823, 64.04194, 315.43884)
-
 [node name="min distancia32" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -523.97675, 63.748783, 314.8298)
 size = Vector3(4.99321, 6.637451, 3.7431793)
 material = SubResource("StandardMaterial3D_fv0ta")
-
-[node name="plataforma_temporal15" parent="." instance=ExtResource("12_d5vjr")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -524.0823, 67.04194, 315.43884)
 
 [node name="plataforma_temporal6" parent="." instance=ExtResource("12_d5vjr")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -678.0823, 65.56684, 309.9044)
@@ -2250,3 +2241,15 @@ texture = SubResource("ViewportTexture_fv0ta")
 
 [node name="a_hub" parent="." instance=ExtResource("15_x486h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -851.6577, 67.12038, 309.42905)
+
+[node name="plataforma_temporal21" parent="." instance=ExtResource("12_d5vjr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -509.08228, 59.752808, 315.43884)
+
+[node name="plataforma_temporal22" parent="." instance=ExtResource("12_d5vjr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -514.0823, 61.752808, 315.43884)
+
+[node name="plataforma_temporal23" parent="." instance=ExtResource("12_d5vjr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -519.0823, 64.04194, 315.43884)
+
+[node name="plataforma_temporal24" parent="." instance=ExtResource("12_d5vjr")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -524.0823, 67.04194, 315.43884)
