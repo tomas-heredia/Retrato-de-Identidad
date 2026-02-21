@@ -48,6 +48,7 @@ func _ready():
 	animation = animation_tree.get("parameters/playback")
 	interaccion_label.hide()
 	
+	
 
 
 func _physics_process(delta):

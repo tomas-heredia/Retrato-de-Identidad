@@ -44,7 +44,9 @@ func cambio_camara(camara_objetivo: Camera3D):
 	#Transition0ffsetTween.tween_property(camera_transicion,"offset",target_offset,0.5).set_trans(Tween.TRANS_SINE)
 	#
 	camara_actual = camara_objetivo
-	
+	await get_tree().create_timer(0.5).timeout
+	camera_transicion.current = false
+	camara_actual.current = true
 func regresar_camara():
 	cambio_camara(camara_Player)
 	await get_tree().create_timer(0.5).timeout
