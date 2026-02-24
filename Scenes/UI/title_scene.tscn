@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyrjen31hrp1b"]
+[gd_scene load_steps=10 format=3 uid="uid://cyrjen31hrp1b"]
 
 [ext_resource type="Script" uid="uid://dwfr5181wng0r" path="res://scripts/title_scene.gd" id="1_5imdy"]
 [ext_resource type="Texture2D" uid="uid://b1igy8ijuf4pu" path="res://Assets/UI/Title_scene/Background.PNG.png" id="1_q4bju"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cx0q3q62qrlwt" path="res://Assets/UI/Title_scene/SFX ON.PNG.png" id="5_7cwwf"]
 [ext_resource type="Texture2D" uid="uid://cs373nctqyj8b" path="res://Assets/UI/Title_scene/MUSIC-ON.PNG.png" id="6_5w1ek"]
 [ext_resource type="Texture2D" uid="uid://rin8h7ejb7x3" path="res://Assets/UI/Title_scene/Exit.PNG.png" id="7_aj5gn"]
+[ext_resource type="AudioStream" uid="uid://ba251f1a5a5g1" path="res://Assets/Musica/musica ambiental/The Other Side of the Door.mp3" id="9_1johb"]
 
 [node name="TitleScene" type="Control"]
 layout_mode = 3
@@ -106,6 +107,10 @@ offset_right = 1863.0
 offset_bottom = 92.0
 icon = ExtResource("7_aj5gn")
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1johb")
+autoplay = true
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Opciones" to="." method="_on_opciones_pressed"]

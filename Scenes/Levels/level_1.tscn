@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://hkh756ni2jcm"]
+[gd_scene load_steps=26 format=3 uid="uid://hkh756ni2jcm"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_3mqfk"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="2_iixi8"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="14_pmbdk"]
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="15_3628d"]
 [ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="16_irw6p"]
+[ext_resource type="AudioStream" uid="uid://djdr757xdevln" path="res://Assets/Musica/musica ambiental/Ethernight Club.mp3" id="17_irw6p"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xgxfi"]
 
@@ -65,11 +66,11 @@ JUMP_VELOCITY = 20
 gravity = 45.0
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.010834804, 0.2699583, 0.0023632564)
-bones/4/rotation = Quaternion(-0.00018904153, -0.0002042215, -0.0031009386, 0.99999523)
-bones/5/rotation = Quaternion(0.062282115, 0.0066121444, 0.07280459, 0.9953777)
-bones/8/rotation = Quaternion(-0.0060973493, 0.003989011, -0.017301582, 0.9998238)
-bones/12/rotation = Quaternion(-0.0054855305, 0.004324189, 0.019091686, 0.99979335)
+bones/0/position = Vector3(0.0065696742, 0.32497528, 0.0005782678)
+bones/4/rotation = Quaternion(-0.0038228612, -0.004129812, -0.0627078, 0.9980161)
+bones/5/rotation = Quaternion(0.009186806, 0.0009753126, 0.010738908, 0.99989974)
+bones/8/rotation = Quaternion(-0.000831215, 0.00054402504, -0.09177351, 0.99577945)
+bones/12/rotation = Quaternion(-0.0007478003, 0.0005892763, 0.0920158, 0.9957571)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
@@ -1808,6 +1809,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.3543, 66.882484, 239.115
 
 [node name="CheckPoint7" parent="." instance=ExtResource("9_7hll7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.38074, 66.8741, 239.09311)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_irw6p")
+autoplay = true
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
