@@ -10,13 +10,27 @@
 
 [node name="Walkman" instance=ExtResource("1_6vipk")]
 script = ExtResource("2_fbm6f")
-cancion1 = ExtResource("3_fl500")
-cancion2 = ExtResource("4_lawan")
-cancion3 = ExtResource("5_hnyh4")
+canciones = Array[AudioStream]([ExtResource("3_fl500"), ExtResource("4_lawan"), ExtResource("5_hnyh4")])
 modelo = ExtResource("6_fl500")
 efecto = ExtResource("7_v8edl")
 
-[node name="EfectoBoton" type="AudioStreamPlayer" parent="." index="7"]
+[node name="Interaccion_label2" type="Label" parent="." index="6"]
+visible = false
+offset_left = -2.0
+offset_right = 426.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 60
+text = "Cambiar \"E\""
 
-[node name="Musica" type="AudioStreamPlayer3D" parent="." index="8"]
+[node name="Interaccion_label3" type="Label" parent="." index="7"]
+visible = false
+offset_top = 124.0
+offset_right = 428.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 60
+text = "Salir \"C\""
+
+[node name="EfectoBoton" type="AudioStreamPlayer" parent="." index="9"]
+
+[node name="Musica" type="AudioStreamPlayer3D" parent="." index="10"]
 max_distance = 20.0
