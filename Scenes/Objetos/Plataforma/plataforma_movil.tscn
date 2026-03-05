@@ -9,6 +9,7 @@ size = Vector3(8, 0.0635343, 15.099731)
 
 [node name="Plataforma_movil" type="AnimatableBody3D"]
 script = ExtResource("1_xwwj2")
+tiempo_espera = 0.2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_vtxff")
