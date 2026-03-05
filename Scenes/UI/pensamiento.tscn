@@ -84,12 +84,11 @@ anchor_right = 0.5
 offset_left = -175.0
 offset_top = 185.0
 offset_right = 152.0
-offset_bottom = 362.0
+offset_bottom = 407.0
 grow_horizontal = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 30
-text = "este es un pensamiento tipo
-! AMOORR!
+text = "Mmm, ¿Qué es esto?\\nJuro haberlo visto antes...\\npero nunca tan pequeño
 "
 horizontal_alignment = 1
 vertical_alignment = 1

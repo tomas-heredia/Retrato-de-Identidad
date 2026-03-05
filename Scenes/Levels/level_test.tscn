@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=45 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="27_kxg02"]
 [ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="28_v6cxb"]
 [ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="29_gljck"]
+[ext_resource type="PackedScene" uid="uid://me6qva30o8un" path="res://Scenes/Objetos/limonero.tscn" id="31_4udkj"]
 [ext_resource type="PackedScene" uid="uid://da2pa7ex8djta" path="res://Scenes/Objetos/walkman.tscn" id="31_d1w1t"]
 [ext_resource type="SphereMesh" uid="uid://ltqbg3klyj4l" path="res://Assets/Materiales/Contornos/objeto_interactuable_esfera.tres" id="31_k0c0j"]
 [ext_resource type="PackedScene" uid="uid://dk5cqwte2ndc2" path="res://Scenes/controlables/camara_libre.tscn" id="31_sqhsv"]
@@ -91,6 +92,8 @@ albedo_texture = ExtResource("18_hwde3")
 orm_texture = ExtResource("20_m1fqf")
 normal_enabled = true
 normal_texture = ExtResource("19_btpkh")
+
+[sub_resource type="BoxMesh" id="BoxMesh_d1w1t"]
 
 [node name="Level_test" type="Node3D"]
 script = ExtResource("1_fmmsx")
@@ -191,13 +194,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.009512247, 0.2870231, 0.0018150411)
-bones/4/rotation = Quaternion(-0.0013165511, -0.001422263, -0.021595893, 0.999765)
-bones/5/rotation = Quaternion(0.045644447, 0.004845815, 0.053356003, 0.9975201)
-bones/8/rotation = Quaternion(-0.0044669444, 0.0029224374, -0.040420327, 0.9991686)
-bones/12/rotation = Quaternion(-0.0040186066, 0.0031677624, 0.041730415, 0.9991158)
+bones/0/position = Vector3(0.006289499, 0.32858887, 0.00046030222)
+bones/4/rotation = Quaternion(-0.004061064, -0.004387139, -0.066615075, 0.99776083)
+bones/5/rotation = Quaternion(0.006382729, 0.0006776191, 0.007461081, 0.99995166)
+bones/8/rotation = Quaternion(-0.00048512316, 0.00031762, -0.096647546, 0.99531853)
+bones/12/rotation = Quaternion(-0.00043644282, 0.0003438234, 0.096788846, 0.9953048)
 
-[node name="Camara_libre" parent="Player" instance=ExtResource("31_sqhsv")]
+[node name="Camara_libre2" parent="Player" instance=ExtResource("31_sqhsv")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3.4886723, 0)
 
 [node name="Ui" parent="." instance=ExtResource("5_1bsl4")]
@@ -250,7 +253,7 @@ transform = Transform3D(0.5735336, 0, 0.81918216, 0, 1, 0, -0.81918216, 0, 0.573
 a_nivel = "level_1"
 
 [node name="AreaMuerte" parent="." instance=ExtResource("23_fk2v1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1, 9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, -59.86096, 9)
 
 [node name="CollisionShape3D" parent="AreaMuerte" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.82318115, -0.06817627)
@@ -276,6 +279,10 @@ modelo = ExtResource("7_0m88k")
 
 [node name="Walkman" parent="." instance=ExtResource("31_d1w1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.50246, 0.54999995, -17.215538)
+
+[node name="Limonero" parent="." instance=ExtResource("31_4udkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.469322, 0.54999995, -14.744665)
+modelo = SubResource("BoxMesh_d1w1t")
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]

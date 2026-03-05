@@ -4,3 +4,5 @@ class_name vasija
 
 func cambio():
 	set_mesh_dinamico(vasija_rota)
+	Mensajero.Crear_pensamiento.emit("Eeeh… esto ya estaba así, ¿no? Mejor me voy.")
+	interactuado = true
