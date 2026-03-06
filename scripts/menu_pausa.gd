@@ -1,0 +1,75 @@
+extends Control
+@onready var confirmacion: Control = $Confirmacion
+@onready var label: Label = $Confirmacion/Label
+var SF_ON := preload("res://Assets/UI/Title_scene/SFX ON.PNG.png")
+var SF_OFF := preload("res://Assets/UI/Title_scene/SFX OFF.png")
+var MUSIC_ON := preload("res://Assets/UI/Title_scene/MUSIC-ON.PNG.png")
+var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
+
+@onready var sfx = $SFX
+@onready var music = $Music
+@onready var salir = $Salir
+var reiniciar := false
+var pausado := false
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	hide()
+
+
+
+
+
+
+func _on_volver_pressed() -> void:
+	hide()
+	pausado = !pausado
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	get_tree().paused = false
+
+
+func _on_reiniciar_pressed() -> void:
+	confirmacion.show()
+	label.text = "¿Reiniciar partida?"
+	reiniciar = true
+	for boton in [$Volver, $Reiniciar, $"Menu Principal"]:
+		boton.disabled = true
+
+
+func _on_menu_principal_pressed() -> void:
+	confirmacion.show()
+	label.text = "¿Salir al Menu?"
+	for boton in [$Volver, $Reiniciar, $"Menu Principal"]:
+		boton.disabled = true
+
+
+func _on_si_pressed() -> void:
+	
+	if reiniciar:
+		ManejoNiveles.recargar()
+	else: 
+		ManejoNiveles.cambiar("title_scene")
+
+
+func _on_no_pressed() -> void:
+	confirmacion.hide()
+	reiniciar = false
+	for boton in [$Volver, $Reiniciar, $"Menu Principal"]:
+		boton.disabled = false
+
+
+func _on_sfx_pressed() -> void:
+	if (sfx.icon == SF_ON):
+		sfx.icon = SF_OFF
+	else:
+		sfx.icon = SF_ON
+
+
+func _on_music_pressed() -> void:
+	if (music.icon == MUSIC_ON):
+		music.icon = MUSIC_OFF
+	else:
+		music.icon = MUSIC_ON
+
+
+func _on_salir_pressed() -> void:
+	get_tree().quit()

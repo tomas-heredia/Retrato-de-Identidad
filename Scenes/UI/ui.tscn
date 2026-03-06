@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://crhodbryfr2km"]
+[gd_scene load_steps=4 format=3 uid="uid://crhodbryfr2km"]
 
 [ext_resource type="Script" uid="uid://00316bym6p1c" path="res://scripts/ui.gd" id="1_ahcct"]
 [ext_resource type="PackedScene" uid="uid://bwy3gtfu7qk8l" path="res://Scenes/UI/transiciones.tscn" id="2_de23q"]
+[ext_resource type="PackedScene" uid="uid://y1po1tx5u1sd" path="res://Scenes/UI/menu_pausa.tscn" id="3_c7mb3"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -43,4 +44,7 @@ theme_override_font_sizes/font_size = 40
 text = "0"
 
 [node name="Transiciones" parent="." instance=ExtResource("2_de23q")]
+layout_mode = 1
+
+[node name="menu_pausa" parent="." instance=ExtResource("3_c7mb3")]
 layout_mode = 1

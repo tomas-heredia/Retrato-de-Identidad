@@ -69,3 +69,7 @@ func cambiar(nombre :String):
 #func cambiar_titulo( titulo: String = "xxxx"):
 	#nombre_titulo = titulo
 	#get_tree().change_scene_to_file("res://Scenes/UI/pantalla_titulos.tscn")
+
+func recargar():
+	
+	get_tree().change_scene_to_packed(niveles[Global.nivel_actual])

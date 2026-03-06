@@ -1,0 +1,157 @@
+[gd_scene load_steps=6 format=3 uid="uid://y1po1tx5u1sd"]
+
+[ext_resource type="Texture2D" uid="uid://cnut7ygtyv36f" path="res://Assets/UI/Dialogo/shadedDark12.png" id="1_6me4n"]
+[ext_resource type="Script" uid="uid://cg86y1jlg4ru6" path="res://scripts/menu_pausa.gd" id="1_gi0rv"]
+[ext_resource type="Texture2D" uid="uid://cx0q3q62qrlwt" path="res://Assets/UI/Title_scene/SFX ON.PNG.png" id="3_w1vkx"]
+[ext_resource type="Texture2D" uid="uid://cs373nctqyj8b" path="res://Assets/UI/Title_scene/MUSIC-ON.PNG.png" id="4_xr03p"]
+[ext_resource type="Texture2D" uid="uid://rin8h7ejb7x3" path="res://Assets/UI/Title_scene/Exit.PNG.png" id="5_qphy3"]
+
+[node name="menu_pausa" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gi0rv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6me4n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.0
+offset_top = 79.0
+offset_right = 102.0
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 70
+text = "Pausa"
+
+[node name="Volver" type="Button" parent="."]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 298.0
+offset_right = 1198.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 50
+text = "Volver al Juego"
+
+[node name="Reiniciar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 482.0
+offset_right = 1198.0
+offset_bottom = 579.0
+theme_override_font_sizes/font_size = 50
+text = "Reiniciar"
+
+[node name="Menu Principal" type="Button" parent="."]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 652.0
+offset_right = 1198.0
+offset_bottom = 749.0
+theme_override_font_sizes/font_size = 50
+text = "Menu Principal"
+
+[node name="Confirmacion" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -457.0
+offset_top = -194.0
+offset_right = 457.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Confirmacion"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6me4n")
+
+[node name="Label" type="Label" parent="Confirmacion"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.0
+offset_top = 51.0
+offset_right = 222.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "¿Reiniciar partida?"
+
+[node name="Si" type="Button" parent="Confirmacion"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 224.0
+offset_right = 322.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 50
+text = "Si"
+
+[node name="No" type="Button" parent="Confirmacion"]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 224.0
+offset_right = 727.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 50
+text = "No"
+
+[node name="SFX" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1618.0
+offset_top = 34.0
+offset_right = 1681.0
+offset_bottom = 92.0
+icon = ExtResource("3_w1vkx")
+flat = true
+
+[node name="Music" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1712.0
+offset_top = 34.0
+offset_right = 1775.0
+offset_bottom = 92.0
+icon = ExtResource("4_xr03p")
+flat = true
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1800.0
+offset_top = 34.0
+offset_right = 1863.0
+offset_bottom = 92.0
+icon = ExtResource("5_qphy3")
+flat = true
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="Menu Principal" to="." method="_on_menu_principal_pressed"]
+[connection signal="pressed" from="Confirmacion/Si" to="." method="_on_si_pressed"]
+[connection signal="pressed" from="Confirmacion/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="SFX" to="." method="_on_sfx_pressed"]
+[connection signal="pressed" from="Music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
