@@ -55,7 +55,7 @@ func _on_salir_pressed():
 func _on_nuevo_juego_pressed() -> void:
 	if Guardado.existe_guardado():
 		confirmacion.show()
-		for boton in [$Jugar, $Nuevo_juego, $Opciones, $Creditos, $SFX, $Music, $Salir]:
+		for boton in [$Jugar, $Nuevo_juego, $Controles, $Creditos, $SFX, $Music, $Salir]:
 			boton.disabled = true
 
 	else:
@@ -64,13 +64,13 @@ func _on_nuevo_juego_pressed() -> void:
 
 
 func _on_si_pressed() -> void:
-	
+	Guardado.sobreescribir()
 	ManejoNiveles.cambiar("level_hub_world")
 
 
 func _on_no_pressed() -> void:
 	confirmacion.hide()
-	for boton in [$Jugar, $Nuevo_juego, $Opciones, $Creditos, $SFX, $Music, $Salir]:
+	for boton in [$Jugar, $Nuevo_juego, $Controles, $Creditos, $SFX, $Music, $Salir]:
 			boton.disabled = false
 	if !Guardado.existe_guardado():
 		jugar.disabled =true

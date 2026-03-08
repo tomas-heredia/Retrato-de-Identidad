@@ -47,6 +47,8 @@ func _on_si_pressed() -> void:
 	if reiniciar:
 		ManejoNiveles.recargar()
 	else: 
+		get_tree().paused = false
+		await get_tree().process_frame
 		ManejoNiveles.cambiar("title_scene")
 
 

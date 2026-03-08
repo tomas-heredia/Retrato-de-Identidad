@@ -58,3 +58,4 @@ func existe_guardado():
 
 func sobreescribir():
 	game_data = default_data
+	save_game()
