@@ -195,11 +195,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.50187, 2.10784, 8.45683)
 [node name="Player" parent="." instance=ExtResource("1_vflva")]
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.009433782, 0.2880351, 0.0017819923)
-bones/4/rotation = Quaternion(-0.0013834343, -0.0014945164, -0.022693004, 0.9997405)
-bones/5/rotation = Quaternion(0.044697676, 0.004745302, 0.05224928, 0.997622)
-bones/8/rotation = Quaternion(-0.0043701045, 0.0028590867, -0.041791733, 0.9991127)
-bones/12/rotation = Quaternion(-0.0039314833, 0.0030990792, 0.043073304, 0.9990594)
+bones/0/position = Vector3(0.008632736, 0.2983667, 0.0014446004)
+bones/4/rotation = Quaternion(-0.0020681259, -0.002234183, -0.03392423, 0.9994198)
+bones/5/rotation = Quaternion(0.036943924, 0.0039221295, 0.04318555, 0.9983761)
+bones/8/rotation = Quaternion(-0.0033818318, 0.00221258, -0.055776015, 0.99843514)
+bones/12/rotation = Quaternion(-0.0030390965, 0.0023955812, 0.056817222, 0.99837714)
 
 [node name="Camara_libre2" parent="Player" instance=ExtResource("31_sqhsv")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 3.4886723, 0)

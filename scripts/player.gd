@@ -26,7 +26,8 @@ var animation : AnimationNodeStateMachinePlayback
 @onready var interaccion_label = $Interaccion_label
 @onready var camera = $SpringArmPivot/Camera3D
 @onready var coyote_timer = $CoyoteTimer
-@onready var BarraVida: ProgressBar = $BarraVida
+@onready var BarraVida: ProgressBar = $Control/BarraSola/BarraVida
+
 
 var es_invulnerable := false
 var coyote_timer_activado := true
