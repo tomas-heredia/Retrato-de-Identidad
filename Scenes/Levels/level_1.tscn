@@ -62,11 +62,11 @@ JUMP_VELOCITY = 20
 gravity = 45.0
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.0068647168, 0.32116994, 0.00070195005)
-bones/4/rotation = Quaternion(-0.0035718982, -0.0038586985, -0.058591135, 0.9982683)
-bones/5/rotation = Quaternion(0.013693939, 0.0014538092, 0.016007517, 0.9997771)
-bones/8/rotation = Quaternion(-0.0011957766, 0.00078251323, -0.08663671, 0.996239)
-bones/12/rotation = Quaternion(-0.00107577, 0.00084782613, 0.086985566, 0.99620867)
+bones/0/position = Vector3(0.008203903, 0.30389762, 0.0012639812)
+bones/4/rotation = Quaternion(-0.0024323193, -0.0026276186, -0.039898224, 0.99919736)
+bones/5/rotation = Quaternion(0.031224474, 0.0033149282, 0.03649981, 0.9988403)
+bones/8/rotation = Quaternion(-0.0028508645, 0.0018652339, -0.06328089, 0.99798995)
+bones/12/rotation = Quaternion(-0.0025640568, 0.0020210925, 0.06412538, 0.99793655)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
@@ -1799,6 +1799,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.38074, 66.8741, 239.0931
 [node name="AreaMuerte" parent="." instance=ExtResource("16_3628d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -436, -28, 154)
 visible = false
+
+[node name="PI [1]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.036071777, 1.3070679, 0)
+size = Vector3(0.92785645, 3.6141357, 1)
+
+[node name="PI [2- PINCHOS]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2627196, 18.22305, 192.97513)
+size = Vector3(0.92785645, 3.6141357, 1)
+
+[node name="PI [3- FRAGMENTO BOWL]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -197.29848, 43.49182, 247.43758)
+size = Vector3(3.0873718, 3.6141357, 1)
+
+[node name="PI [4- INICIO PARQUE]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -293.68256, 49.325066, 247.3802)
+size = Vector3(4.1959076, 3.6141357, 0.8852539)
+
+[node name="PI [5- CHURRERO]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -361.93668, 49.16365, 247.3802)
+size = Vector3(4.1959076, 3.6141357, 0.8852539)
+
+[node name="PI [6- PILETON]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -365.63412, 33.009945, 272.0344)
+size = Vector3(4.1959076, 3.6141357, 0.8852539)
+
+[node name="PI [7- FRAGMENTO CORNETA]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -469.05533, 48.187138, 245.8067)
+size = Vector3(4.1959076, 3.6141357, 0.8852539)
+
+[node name="PI [8]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -534.8672, 67.880844, 245.80612)
+size = Vector3(4.1959076, 3.6141357, 0.8852539)
+
+[node name="PI [9- FOTOGRAFIA]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -736.19684, 67.81843, 239.21951)
+size = Vector3(0.14092255, 3.6141357, 3.9368896)
+
+[node name="PI [10- MEMORIA FINAL]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -854.53265, 67.81843, 235.86485)
+size = Vector3(0.14092255, 3.6141357, 3.9368896)
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
