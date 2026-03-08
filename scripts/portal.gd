@@ -4,29 +4,17 @@ extends MeshInstance3D
 @export var a_nivel :String = "level_hub_world"
 @export var musica: AudioStreamWAV
 var desactivado := false
-@onready var collision_shape_3d: CollisionShape3D = $Dispara_Dialogo3/CollisionShape3D
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	collision_shape_3d.disabled = true
 	audio_stream_player_3d.stream = musica
 	audio_stream_player_3d.play()
 	
 
 func desactivar():
 	desactivado = true
-	collision_shape_3d.disabled = true
 
 func _on_area_3d_body_entered(objeto):
 	if objeto.is_in_group("Player") and Global.puede_continuar and !desactivado:
 		Mensajero.fadeOut.emit()
 		await get_tree().create_timer(2.0).timeout
 		ManejoNiveles.cambiar(a_nivel)
-
-
-
-
-func _on_activador_dialogo_body_entered(objeto: Node3D) -> void:
-	if objeto.is_in_group("Player") and Global.puede_continuar and !desactivado:
-		print("entra")
-		collision_shape_3d.set_deferred("disabled", false)

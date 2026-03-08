@@ -1,10 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://uknv6478ggco"]
+[gd_scene load_steps=7 format=3 uid="uid://uknv6478ggco"]
 
 [ext_resource type="Script" uid="uid://dy0veii704ttv" path="res://scripts/portal.gd" id="1_ktqwa"]
-[ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="2_po1l2"]
-[ext_resource type="Resource" uid="uid://doam4c1ejbefw" path="res://Assets/Resources/dialogos/NPC_Guia/1_cuadro_LV1.tres" id="3_50u5b"]
-[ext_resource type="Resource" uid="uid://grftlu31qk7s" path="res://Assets/Resources/dialogos/NPC_Guia/2_cuadro_LV1.tres" id="4_7ekdo"]
-[ext_resource type="Resource" uid="uid://5b3gs1ulapb8" path="res://Assets/Resources/dialogos/NPC_Guia/3_cuadro_LV1.tres" id="5_4s3gn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gp6qn"]
 
@@ -20,9 +16,6 @@ size = Vector3(0.34436035, 3.4612885, 0.4868164)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rgta1"]
 size = Vector3(0.6442871, 3.045, 2.59)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_po1l2"]
-size = Vector3(2.9423828, 2.2578125, 6.385742)
 
 [node name="Portal" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_765tg")
@@ -70,21 +63,4 @@ max_distance = 20.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_rgta1")
 
-[node name="Dispara_Dialogo3" parent="." instance=ExtResource("2_po1l2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6911936, -1.6532216, 14.959725)
-nombre = "Guia"
-textos = Array[Resource]([ExtResource("3_50u5b"), ExtResource("4_7ekdo"), ExtResource("5_4s3gn")])
-
-[node name="CollisionShape3D" parent="Dispara_Dialogo3" index="0"]
-transform = Transform3D(0.9998599, 0, 0.016736954, 0, 1, 0, -0.016736954, 0, 0.9998599, 0.20202255, 0.6774268, -15.578136)
-
-[node name="activador_dialogo" type="Area3D" parent="Dispara_Dialogo3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19444275, 0.7097311, -15.767114)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Dispara_Dialogo3/activador_dialogo"]
-shape = SubResource("BoxShape3D_po1l2")
-
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="Dispara_Dialogo3/activador_dialogo" to="." method="_on_activador_dialogo_body_entered"]
-
-[editable path="Dispara_Dialogo3"]
