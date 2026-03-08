@@ -7,7 +7,7 @@ var Dialogo = load("res://Scenes/UI/dialogo.tscn")
 @onready var dispara_dialogo: Area3D = $Dispara_Dialogo
 @onready var dialogo_huellas: Area3D = $Dialogo_huellas
 @onready var dispara_dialogo_2: Area3D = $Dispara_Dialogo2
-@onready var dispara_dialogo_3: Area3D = $Dispara_Dialogo3
+
 @onready var recolectable: Area3D = $Dialogo_huellas/Recolectable
 @onready var recolectable_1: Area3D = $Recolectable
 @onready var recolectable_2: Area3D = $Recolectable2
@@ -37,7 +37,7 @@ func _ready():
 		guia_dialogo.disabled = true
 		dispara_dialogo.usado()
 		dispara_dialogo_2.usado()
-		dispara_dialogo_3.usado()
+		
 		dialogo_huellas.usado()
 		recolectable.recolectado()
 		recolectable_1.recolectado()
