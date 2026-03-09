@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6iet3acdvxfj"]
+
+[ext_resource type="Script" uid="uid://ujbxnxkmyxg5" path="res://scripts/area_pensamiento.gd" id="1_vrrn4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w0bcv"]
+size = Vector3(2.4313965, 0.60375977, 1.7070313)
+
+[node name="Area_pensamiento" type="Area3D"]
+script = ExtResource("1_vrrn4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_w0bcv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
