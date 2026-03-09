@@ -62,11 +62,11 @@ JUMP_VELOCITY = 20
 gravity = 45.0
 
 [node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.009290118, 0.28988805, 0.0017214818)
-bones/4/rotation = Quaternion(-0.0015058909, -0.0016268039, -0.02470168, 0.9996925)
-bones/5/rotation = Quaternion(0.045560766, 0.0048369328, 0.0532582, 0.9975292)
-bones/8/rotation = Quaternion(-0.0041927756, 0.0027430803, -0.044302505, 0.9990057)
-bones/12/rotation = Quaternion(-0.0037719463, 0.0029733118, 0.045531828, 0.9989514)
+bones/0/position = Vector3(0.006800657, 0.32199615, 0.00067558244)
+bones/4/rotation = Quaternion(-0.0036263962, -0.003917572, -0.05948509, 0.99821496)
+bones/5/rotation = Quaternion(0.012898204, 0.0013693303, 0.015077344, 0.99980223)
+bones/8/rotation = Quaternion(-0.0011166175, 0.0007307292, -0.08775231, 0.9961415)
+bones/12/rotation = Quaternion(-0.0010045564, 0.00079168595, 0.08807802, 0.9961128)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
@@ -592,45 +592,52 @@ omni_range = 45.732
 
 [node name="Plataforma_movil" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.106367, 14.588203, 225.93515)
-altura_max = 30
+altura_max = 22
 altura_min = 14
 velocidad = 5
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil2" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.893631, 5.5882034, 111.93515)
 altura_max = 2
 altura_min = -8
 velocidad = 5
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil4" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -168.10637, 21.588203, 250.1247)
 altura_max = 32
 altura_min = 20
 velocidad = 5
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil5" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192.10637, 30.588203, 268.1247)
 altura_max = 42
 altura_min = 30
 velocidad = 5
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil7" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -482.99948, 45.588203, 243.1247)
 altura_max = 57
 altura_min = 45
 velocidad = 5
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil8" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -689.0418, 66.5882, 238.1247)
 altura_max = 66
 altura_min = 55
 velocidad = 7
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil6" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -217.10637, 30.588203, 246.06372)
 altura_max = 42
 altura_min = 30
 velocidad = 5
+tiempo_espera = 0.3
 
 [node name="Pico2" parent="." instance=ExtResource("8_31phq")]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -17.199638, 16.61858, 186.4661)
@@ -1732,12 +1739,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -713.0418, 66.5882, 238.1247)
 altura_max = 66
 altura_min = 55
 velocidad = 7
+tiempo_espera = 0.3
 
 [node name="Plataforma_movil10" parent="." instance=ExtResource("7_irw6p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -751.0418, 66.5882, 239.1247)
 altura_max = 66
 altura_min = 55
 velocidad = 7
+tiempo_espera = 0.3
 
 [node name="plataforma_temporal16" parent="." instance=ExtResource("13_ad63i")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -702.0823, 65.56684, 235.90439)
@@ -1802,3 +1811,4 @@ visible = false
 
 [editable path="Player"]
 [editable path="Player/tukuy_2"]
+[editable path="Player/Control"]
