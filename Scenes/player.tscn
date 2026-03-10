@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://u1m0kcl66o30"]
+[gd_scene load_steps=32 format=3 uid="uid://u1m0kcl66o30"]
 
 [ext_resource type="Script" uid="uid://bsyte60sr0ow1" path="res://scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://bvsnf05yau30i" path="res://scripts/spring_arm_pivot.gd" id="2_cvnsp"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bxr3mopjwjkh5" path="res://Assets/Personaje/tukuy_fantasmita_DefaultMaterial_OcclusionRoughnessMetallic.png" id="6_gymyn"]
 [ext_resource type="PackedScene" uid="uid://dk5cqwte2ndc2" path="res://Scenes/controlables/camara_libre.tscn" id="9_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://c8ncn8qb1cyj" path="res://Scenes/UI/barra_vida.tscn" id="10_tx1dd"]
+[ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="11_gymyn"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pu2lt"]
 albedo_texture = ExtResource("3_8erm5")
@@ -129,20 +130,20 @@ gravity = 38.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.010455005, 0.27486378, 0.0022104005)
+bones/0/position = Vector3(0.009152723, 0.29166013, 0.0016636123)
 bones/0/rotation = Quaternion(0.012458693, 0.006141001, 0.019284561, 0.99971753)
 bones/0/scale = Vector3(1.0014992, 1.0014988, 1.0014988)
 bones/1/rotation = Quaternion(5.8298577e-10, 6.2573224e-10, -8.731145e-10, 1)
 bones/2/rotation = Quaternion(1.5759407e-09, 4.0745357e-10, 5.8207716e-11, 1)
 bones/3/rotation = Quaternion(1.4406107e-09, 6.548361e-10, -1.8044369e-09, 1)
-bones/4/rotation = Quaternion(-0.00051307643, -0.00055427494, -0.008416211, 0.99996436)
-bones/5/rotation = Quaternion(0.06027048, 0.0063985824, 0.07045311, 0.99567217)
+bones/4/rotation = Quaternion(-0.0016236026, -0.0017539674, -0.026632551, 0.9996425)
+bones/5/rotation = Quaternion(0.04376927, 0.004646739, 0.05116402, 0.99771994)
 bones/5/scale = Vector3(1.0000002, 1, 1.0000002)
 bones/7/rotation = Quaternion(-4.698161e-08, -2.8472973e-08, -0.69363236, 0.72032917)
-bones/8/rotation = Quaternion(-0.005629212, 0.0036827663, -0.023945376, 0.9996907)
+bones/8/rotation = Quaternion(-0.0040231477, 0.0026321155, -0.046703607, 0.9988973)
 bones/9/rotation = Quaternion(1.4263367e-07, 5.2849675e-08, -0.45042115, 0.89281625)
 bones/11/rotation = Quaternion(-4.7303928e-08, 2.8154716e-08, 0.69363236, 0.72032917)
-bones/12/rotation = Quaternion(-0.0050643133, 0.0039921277, 0.025597753, 0.9996516)
+bones/12/rotation = Quaternion(-0.0036185598, 0.002852392, 0.047894962, 0.99884176)
 bones/12/scale = Vector3(1.0000001, 1, 0.99999964)
 bones/13/rotation = Quaternion(1.4357099e-07, -5.108918e-08, 0.45042115, 0.89281625)
 bones/15/rotation = Quaternion(0.0068116267, 3.2793434e-08, -0.7276698, 0.6858939)
@@ -225,6 +226,10 @@ target_position = Vector3(0, -0.75, 0)
 
 [node name="Control" parent="." instance=ExtResource("10_tx1dd")]
 mouse_filter = 2
+
+[node name="Manejo_camaras" parent="." node_paths=PackedStringArray("camara_Player") instance=ExtResource("11_gymyn")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+camara_Player = NodePath("../SpringArmPivot/Camera3D")
 
 [connection signal="body_entered" from="Interaccion" to="." method="_on_interaccion_body_entered"]
 [connection signal="body_exited" from="Interaccion" to="." method="_on_interaccion_body_exited"]

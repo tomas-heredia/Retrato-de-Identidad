@@ -61,13 +61,6 @@ Max_SPEED = 12
 JUMP_VELOCITY = 20
 gravity = 45.0
 
-[node name="Skeleton3D" parent="Player/tukuy_2/tukuy_armature" index="0"]
-bones/0/position = Vector3(0.006800657, 0.32199615, 0.00067558244)
-bones/4/rotation = Quaternion(-0.0036263962, -0.003917572, -0.05948509, 0.99821496)
-bones/5/rotation = Quaternion(0.012898204, 0.0013693303, 0.015077344, 0.99980223)
-bones/8/rotation = Quaternion(-0.0011166175, 0.0007307292, -0.08775231, 0.9961415)
-bones/12/rotation = Quaternion(-0.0010045564, 0.00079168595, 0.08807802, 0.9961128)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.89905, -0.234368, 0.369839, -0.102011, 0.933554, 0.343616, -0.425797, 0.2712, -0.863219, 0, 10.4908, 0)
 
@@ -1808,7 +1801,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.38074, 66.8741, 239.0931
 [node name="AreaMuerte" parent="." instance=ExtResource("16_3628d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -436, -28, 154)
 visible = false
-
-[editable path="Player"]
-[editable path="Player/tukuy_2"]
-[editable path="Player/Control"]
