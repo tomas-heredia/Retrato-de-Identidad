@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4g8a4l8ox456"
+path="res://.godot/imported/Menu con intro.mp3-c9585210b742d4e6d4f051b05329e40f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Musica/musica final/Menu con intro.mp3"
+dest_files=["res://.godot/imported/Menu con intro.mp3-c9585210b742d4e6d4f051b05329e40f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

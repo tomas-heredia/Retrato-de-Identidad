@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cyrjen31hrp1b"]
+[gd_scene load_steps=11 format=3 uid="uid://cyrjen31hrp1b"]
 
 [ext_resource type="Script" uid="uid://dwfr5181wng0r" path="res://scripts/title_scene.gd" id="1_5imdy"]
 [ext_resource type="Texture2D" uid="uid://b1igy8ijuf4pu" path="res://Assets/UI/Title_scene/Background.PNG.png" id="1_q4bju"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cs373nctqyj8b" path="res://Assets/UI/Title_scene/MUSIC-ON.PNG.png" id="6_5w1ek"]
 [ext_resource type="Texture2D" uid="uid://rin8h7ejb7x3" path="res://Assets/UI/Title_scene/Exit.PNG.png" id="7_aj5gn"]
 [ext_resource type="Texture2D" uid="uid://cnut7ygtyv36f" path="res://Assets/UI/Dialogo/shadedDark12.png" id="9_1johb"]
+[ext_resource type="AudioStream" uid="uid://dlvftmxpl7ta3" path="res://Assets/Musica/musica final/Menu loop.mp3" id="10_2l6vb"]
 
 [node name="TitleScene" type="Control"]
 layout_mode = 3
@@ -203,6 +204,9 @@ offset_right = 1882.0
 offset_bottom = 1050.0
 theme_override_font_sizes/font_size = 50
 text = "Volver"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_2l6vb")
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Nuevo_juego" to="." method="_on_nuevo_juego_pressed"]
