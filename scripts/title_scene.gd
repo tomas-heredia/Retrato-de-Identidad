@@ -24,7 +24,7 @@ func _ready() -> void:
 
 func _on_jugar_pressed():
 	
-	ManejoNiveles.cambiar("level_hub_world")
+	ManejoNiveles.cambiar(Guardado.game_data.level_actual)
 
 
 func _on_controles_pressed() -> void:
