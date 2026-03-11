@@ -13,7 +13,14 @@ var game_data : Dictionary= {
 #aqui debemos agregar los campos nuevos
 var default_data : Dictionary= {
 	"hub_visitado" : false,
-	"level_1_visitado" : false
+	"level_1_visitado" : false,
+	"level_actual" : " ",
+	"checkpoints" : {
+	"level_1": Vector3.ZERO,
+	"level_2": Vector3.ZERO,
+	"level_3": Vector3.ZERO
+}
+
 #NOTAAA!!!! siempre que agregues algo al defalut data, agregrarlo en la func sobreescribir
 }
 
@@ -28,6 +35,7 @@ func _ready():
 	pass
 
 func save_game() -> void:
+	
 	var save_file = FileAccess.open(save_path,FileAccess.WRITE)
 	
 	save_file.store_var(game_data)

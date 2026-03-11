@@ -19,8 +19,9 @@ func cambiar(nombre :String):
 				Guardado.game_data.hub_visitado = true
 			"level_1":
 				Guardado.game_data.level_1_visitado = true
-		Guardado.save_game()
+		
 		Global.nivel_actual = nombre
+		Guardado.game_data.level_actual = nombre
 		get_tree().change_scene_to_packed(niveles[nombre])
 			
 	else:
