@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://hkh756ni2jcm"]
+[gd_scene load_steps=25 format=3 uid="uid://hkh756ni2jcm"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_3mqfk"]
+[ext_resource type="Script" uid="uid://du17belac2p0l" path="res://Scenes/Levels/level_1.gd" id="1_irw6p"]
 [ext_resource type="PackedScene" uid="uid://bmf8aosw2jxo7" path="res://Scenes/manejo_camaras.tscn" id="2_iixi8"]
 [ext_resource type="PackedScene" uid="uid://crhodbryfr2km" path="res://Scenes/UI/ui.tscn" id="3_cyadu"]
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="4_k2mw1"]
@@ -41,6 +42,7 @@ albedo_texture = ExtResource("11_nojx8")
 albedo_texture = ExtResource("12_vvknj")
 
 [node name="Level_1" type="Node3D"]
+script = ExtResource("1_irw6p")
 
 [node name="Suelo1" type="StaticBody3D" parent="."]
 transform = Transform3D(-3.13215e-07, 0, 5.56968, 0, 1, 0, -7.16552, 0, -2.43458e-07, 0, 0, 0)
