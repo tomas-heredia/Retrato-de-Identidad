@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://hkh756ni2jcm"]
+[gd_scene load_steps=26 format=3 uid="uid://hkh756ni2jcm"]
 
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_3mqfk"]
 [ext_resource type="Script" uid="uid://du17belac2p0l" path="res://Scenes/Levels/level_1.gd" id="1_irw6p"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="15_3628d"]
 [ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="16_3628d"]
 [ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="16_irw6p"]
+[ext_resource type="AudioStream" uid="uid://c12s0h17x1q5s" path="res://Assets/Musica/Ambiente/LOOP NIVEL 1 .mp3" id="18_31phq"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xgxfi"]
 
@@ -1803,3 +1804,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.38074, 66.8741, 239.0931
 [node name="AreaMuerte" parent="." instance=ExtResource("16_3628d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -436, -28, 154)
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_31phq")
+autoplay = true
