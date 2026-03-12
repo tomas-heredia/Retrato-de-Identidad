@@ -1,19 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5ls4ahcpp7wq"]
+[gd_scene load_steps=8 format=3 uid="uid://b5ls4ahcpp7wq"]
 
 [ext_resource type="Script" uid="uid://b0v05ml8mdyed" path="res://scripts/plataforma_movil.gd" id="1_xwwj2"]
+[ext_resource type="ArrayMesh" uid="uid://cxc7ha4s7qh60" path="res://Assets/Plataformas/plataforma_movil.obj" id="2_40jdl"]
+[ext_resource type="Texture2D" uid="uid://dlf5hb6ffj6fa" path="res://Assets/Plataformas/ASSTES_PLATAFORMA_BaseColor.png" id="3_h0yqn"]
+[ext_resource type="Texture2D" uid="uid://cqi2xqmpmhq36" path="res://Assets/Plataformas/ASSTES_PLATAFORMA_Normal.png" id="4_xmr4i"]
+[ext_resource type="Texture2D" uid="uid://b6tx3nisx17o0" path="res://Assets/Plataformas/ASSTES_PLATAFORMA_OcclusionRoughnessMetallic.png" id="5_p46g5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtxff"]
-size = Vector3(8, 0.0635343, 15.099731)
+size = Vector3(8, 1.459, 15.1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_xwwj2"]
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_d7vv1"]
+albedo_texture = ExtResource("3_h0yqn")
+orm_texture = ExtResource("5_p46g5")
+normal_enabled = true
+normal_texture = ExtResource("4_xmr4i")
 
 [node name="Plataforma_movil" type="AnimatableBody3D"]
 script = ExtResource("1_xwwj2")
 tiempo_espera = 0.2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.738397, 0)
 shape = SubResource("BoxShape3D_vtxff")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, 0, 0, 0.05, 0, 0, 0, 15, 0, 0, 0)
-mesh = SubResource("BoxMesh_xwwj2")
+transform = Transform3D(1.545, 0, 0, 0, 1.975, 0, 0, 0, 2.88, -1.9425793, -0.6666621, -3.0457482)
+mesh = ExtResource("2_40jdl")
+surface_material_override/0 = SubResource("ORMMaterial3D_d7vv1")

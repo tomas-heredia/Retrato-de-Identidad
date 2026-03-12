@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d4bhxsemjpy3o"
+path="res://.godot/imported/jarron_roto.obj-de6b8d493951ea558983424381b6aecb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/jarron_roto.obj-de6b8d493951ea558983424381b6aecb.mesh"]
+
+source_file="res://Assets/Interactuables/jarron_roto.obj"
+dest_files=["res://.godot/imported/jarron_roto.obj-de6b8d493951ea558983424381b6aecb.mesh", "res://.godot/imported/jarron_roto.obj-de6b8d493951ea558983424381b6aecb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

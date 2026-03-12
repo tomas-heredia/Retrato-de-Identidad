@@ -1,15 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4huqejfcb8y1"]
+[gd_scene load_steps=5 format=3 uid="uid://d4huqejfcb8y1"]
 
 [ext_resource type="Script" uid="uid://6215kax7xrii" path="res://scripts/plataforma_temporal.gd" id="1_8mu8l"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mu8l"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_8mu8l"]
-resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_8mu8l")
+[ext_resource type="ArrayMesh" uid="uid://chalxju8gmjuw" path="res://Assets/Plataformas/NUBES_rect.obj" id="2_tue5l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8mu8l"]
-size = Vector3(4.0431013, 0.27006584, 3.9393528)
+size = Vector3(4.0431013, 1.3199579, 3.9393528)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_14iul"]
 size = Vector3(3.918213, 0.22015381, 3.7490234)
@@ -19,10 +14,11 @@ gravity_scale = 0.0
 script = ExtResource("1_8mu8l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.0431013, 0, 0, 0, 0.27006584, 0, 0, 0, 3.9393528, 0, 0, 0)
-mesh = SubResource("BoxMesh_8mu8l")
+transform = Transform3D(0.8115999, 0, 0, 0, 0.4, 0, 0, 0, 1.695, 0.33806336, -0.18732002, 0)
+mesh = ExtResource("2_tue5l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.52494603, 0)
 shape = SubResource("BoxShape3D_8mu8l")
 
 [node name="Area3D" type="Area3D" parent="."]
