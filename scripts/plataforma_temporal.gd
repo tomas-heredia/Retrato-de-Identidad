@@ -34,7 +34,7 @@ func _on_ruptura_timer_timeout() -> void:
 
 
 func _on_reconstruccion_timer_timeout() -> void:
-	mesh.get_active_material(0).albedo_color = Color(1, 1, 1)
+	mesh.get_active_material(0).albedo_color = Color(0.998, 0.695, 1.0, 0.831)
 	collision.set_deferred("disabled", false)
 	collision_trigger.set_deferred("disabled", false)
 	self.show()
