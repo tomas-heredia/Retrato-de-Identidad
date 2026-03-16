@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://632f5vl4od21" path="res://Scenes/Objetos/recolectable.tscn" id="15_3628d"]
 [ext_resource type="PackedScene" uid="uid://bex2cf07o254b" path="res://Scenes/areas/area_muerte.tscn" id="16_3628d"]
 [ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="16_irw6p"]
-[ext_resource type="AudioStream" uid="uid://c12s0h17x1q5s" path="res://Assets/Musica/Ambiente/LOOP NIVEL 1 .mp3" id="18_31phq"]
+[ext_resource type="AudioStream" uid="uid://fapufv6eloxy" path="res://Assets/Musica/Ambiente/Level 1 Guaracha.mp3" id="18_31phq"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xgxfi"]
 

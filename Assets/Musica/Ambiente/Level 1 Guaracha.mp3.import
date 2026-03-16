@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fapufv6eloxy"
+path="res://.godot/imported/Level 1 Guaracha.mp3-b70ca440b0513d10aeb6b7911ddef297.mp3str"
+
+[deps]
+
+source_file="res://Assets/Musica/Ambiente/Level 1 Guaracha.mp3"
+dest_files=["res://.godot/imported/Level 1 Guaracha.mp3-b70ca440b0513d10aeb6b7911ddef297.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
