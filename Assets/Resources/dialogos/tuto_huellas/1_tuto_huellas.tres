@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_off03")
-texto = "Recolecta las huellas de luz…"
+texto = "Recolecta todas las huellas de luz..."
 metadata/_custom_type_script = "uid://cscq2a61ppime"
