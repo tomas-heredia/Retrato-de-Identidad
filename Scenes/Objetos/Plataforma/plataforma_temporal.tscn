@@ -5,6 +5,15 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tue5l"]
 albedo_color = Color(0.9137255, 0.54509807, 0.6392157, 0.83137256)
+emission_energy_multiplier = 3.04
+clearcoat_enabled = true
+clearcoat_roughness = 1.0
+heightmap_scale = -2.467
+refraction_scale = -1.0
+grow_amount = 0.177
+proximity_fade_distance = 0.01
+distance_fade_mode = 1
+distance_fade_max_distance = 0.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8mu8l"]
 size = Vector3(4.0431013, 1.3199579, 3.9393528)
@@ -13,11 +22,12 @@ size = Vector3(4.0431013, 1.3199579, 3.9393528)
 size = Vector3(3.918213, 0.22015381, 3.7490234)
 
 [node name="plataforma_temporal" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009907484, 0, 0)
 gravity_scale = 0.0
 script = ExtResource("1_8mu8l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.8115999, 0, 0, 0, 0.4, 0, 0, 0, 1.695, 0.33806336, -0.18732002, 0)
+transform = Transform3D(0.8115999, 0, 0, 0, 0.4, 0, 0, 0, 1.695, 0.33420408, -0.17663148, 0.0037593842)
 mesh = ExtResource("2_tue5l")
 surface_material_override/0 = SubResource("StandardMaterial3D_tue5l")
 
