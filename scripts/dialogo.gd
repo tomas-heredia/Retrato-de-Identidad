@@ -7,11 +7,13 @@ extends Control
 
 @onready var label_nombre = $Caja/Nombre/Label
 
+
 @export var nombre:= "Tomás"
 @export var textos: Array[Resource] = []
 var full_text := "Este texto es demasiado largo y \ncontiene palabras como \ndesoxirribonucleico que deben \najustarse antes de mostrarse."
 @onready var animation_player = $AnimationPlayer
 @export var text_speed := 0.02
+@export var imagen : Texture2D
 var cant_dialogos := 0
 var dialogo_actual := 0
 var saltable := false
@@ -21,8 +23,13 @@ var stop_text := false
 func _ready():
 	hide()
 	text_box.text = ""
-
 func iniciar_dialogo():
+	if not is_node_ready():
+		await ready
+	var fondo_node = $Imagen
+	
+	if imagen:
+		fondo_node.texture = imagen
 	show()
 	Global.interactuando = true
 	cant_dialogos = textos.size()
