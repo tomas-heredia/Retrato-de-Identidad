@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_50ako")
-texto = " Veo que ya reconociste tu cuerpo para moverte. \\nPero, por si lo olvidas, puedes usar las flechas para desplazarte."
+texto = " Veo que ya reconociste tu cuerpo para moverte. \\nPero, por si lo olvidas, puedes usar el Stick Izquierdo \\ny usa A para saltar."
 metadata/_custom_type_script = "uid://cscq2a61ppime"
