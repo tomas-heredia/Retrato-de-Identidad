@@ -23,3 +23,4 @@ func _on_body_entered(objeto):
 func recolectado():
 	self.hide()
 	$CollisionShape3D.disabled = true
+	Mensajero.recolectable.emit()
