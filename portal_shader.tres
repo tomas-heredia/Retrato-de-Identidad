@@ -305,7 +305,7 @@ void fragment() {
 "
 modes/cull = 2
 flags/unshaded = true
-nodes/fragment/0/position = Vector2(1100, 140)
+nodes/fragment/0/position = Vector2(1540, 120)
 nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_dcpa1")
 nodes/fragment/2/position = Vector2(-440, -20)
 nodes/fragment/3/node = SubResource("VisualShaderNodeUVPolarCoord_y2d7c")

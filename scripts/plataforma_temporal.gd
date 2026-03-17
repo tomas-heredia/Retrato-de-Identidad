@@ -21,7 +21,7 @@ func _ready() -> void:
 func _on_area_3d_body_entered(objeto: Node3D) -> void:
 	if objeto.is_in_group("Player"):
 		collision_trigger.set_deferred("disabled", true)
-		mesh.get_active_material(0).albedo_color = Color(1, 0, 0)
+ 		mesh.get_active_material(0).albedo_color = Color(1, 0, 0)
 		timer_des.start()
 		
 
