@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf7uix066j50v"]
+[gd_scene load_steps=5 format=3 uid="uid://bf7uix066j50v"]
 
 [ext_resource type="Script" uid="uid://74ldqxiob8d0" path="res://scripts/a_hub.gd" id="1_pyqqt"]
+[ext_resource type="PackedScene" uid="uid://d3mpk23uimuur" path="res://portaleffect.tscn" id="2_20jlc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_72sgd"]
 radius = 0.3382049
@@ -11,16 +12,22 @@ radius = 0.3382049
 script = ExtResource("1_pyqqt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4.05, 0, 0, 0, 4.05, 0, 0, 0, 4.05, 0, 0, -1.0764226)
 shape = SubResource("SphereShape3D_72sgd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
 mesh = SubResource("SphereMesh_pyqqt")
 
 [node name="Label3D" type="Label3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8213444, 0)
+visible = false
 text = "A Hub
 "
 font_size = 132
+
+[node name="portaleffect" parent="." instance=ExtResource("2_20jlc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34266496, 0, 0.65348566)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

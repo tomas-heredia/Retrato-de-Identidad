@@ -32,7 +32,7 @@ default_input_values = [0, Vector4(0, 0, 0, 0), 1, Vector4(1, 1, 1, 1), 2, Vecto
 op_type = 3
 
 [sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_t7m7e"]
-constant = Color(0.90654814, 0.8990221, 0.970607, 1)
+constant = Color(5.3975854, 5.3591747, 5.743275, 1)
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_6nuka"]
 expanded_output_ports = [0]
@@ -194,7 +194,7 @@ void fragment() {
 
 
 // ColorConstant:17
-	vec4 n_out17p0 = vec4(0.906548, 0.899022, 0.970607, 1.000000);
+	vec4 n_out17p0 = vec4(5.397585, 5.359175, 5.743275, 1.000000);
 
 
 	vec2 n_out11p0;
