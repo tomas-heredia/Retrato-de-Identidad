@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cmlsgq6qwxwg7"]
+[gd_scene load_steps=39 format=3 uid="uid://cmlsgq6qwxwg7"]
 
 [ext_resource type="Texture2D" uid="uid://efqhbrp5clue" path="res://Assets/kenney_prototype_textures/PNG/Dark/texture_03.png" id="1_kh06x"]
 [ext_resource type="PackedScene" uid="uid://4e0341w7ch0y" path="res://Assets/modulares/paredes área recta/recta1.glb" id="2_007yc"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://uj2qkpxnbgln" path="res://Scenes/Objetos/pico.tscn" id="10_72f8c"]
 [ext_resource type="PackedScene" uid="uid://d4huqejfcb8y1" path="res://Scenes/Objetos/Plataforma/plataforma_temporal.tscn" id="12_d5vjr"]
 [ext_resource type="Texture2D" uid="uid://c4u8bq8daou7a" path="res://Assets/kenney_prototype_textures/PNG/Red/texture_02.png" id="13_x486h"]
+[ext_resource type="Texture2D" uid="uid://ccxrl1tyqrlw3" path="res://HDRI/backdrop.png" id="14_gyswp"]
 [ext_resource type="Texture2D" uid="uid://cj81hio3gdvq4" path="res://Assets/kenney_prototype_textures/PNG/Orange/texture_04.png" id="14_o0gk4"]
 [ext_resource type="Texture2D" uid="uid://csy5yky4ygiap" path="res://Assets/kenney_prototype_textures/PNG/Green/texture_04.png" id="15_ht42e"]
 [ext_resource type="PackedScene" uid="uid://bf7uix066j50v" path="res://Scenes/Objetos/a_hub.tscn" id="15_x486h"]
@@ -84,6 +85,36 @@ viewport_path = NodePath("ZONA PARQUE AVELLANEDA")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_fv0ta"]
 viewport_path = NodePath("ZONA FINAL")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x486h"]
+panorama = ExtResource("14_gyswp")
+
+[sub_resource type="Sky" id="Sky_6a1ua"]
+sky_material = SubResource("PanoramaSkyMaterial_x486h")
+
+[sub_resource type="Environment" id="Environment_o0gk4"]
+background_mode = 2
+sky = SubResource("Sky_6a1ua")
+sky_rotation = Vector3(0, 2.2514746, 0)
+ssr_enabled = true
+ssao_enabled = true
+ssao_power = 2.1213226
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 1.39
+fog_mode = 1
+fog_light_color = Color(0.7431104, 0.46831453, 0.39967826, 1)
+fog_light_energy = 1.12
+fog_sun_scatter = 0.2
+fog_density = 0.1434
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0137
+volumetric_fog_albedo = Color(0.5277099, 0.6099374, 0.9225204, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 2.04
+volumetric_fog_length = 86.58
 
 [node name="Node3D" type="Node3D"]
 
@@ -2054,3 +2085,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -519
 
 [node name="plataforma_temporal24" parent="." instance=ExtResource("12_d5vjr")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -524.0823, 67.04194, 315.43884)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o0gk4")
