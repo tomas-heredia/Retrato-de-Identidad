@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://632f5vl4od21"]
+[gd_scene load_steps=24 format=4 uid="uid://632f5vl4od21"]
 
 [ext_resource type="Script" uid="uid://dad547fj8tad0" path="res://scripts/recolectable.gd" id="1_ewtld"]
 [ext_resource type="Shader" uid="uid://csfgsmwuugey8" path="res://Assets/llamitasshader/llamita.tres" id="2_i8hft"]
@@ -53,20 +53,24 @@ shadow_mesh = SubResource("ArrayMesh_enk7j")
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_47e1t"]
 gradient = SubResource("Gradient_ylata")
-fill_from = Vector2(0.42735043, 0)
-fill_to = Vector2(0.41880342, 0.9444444)
+use_hdr = true
+fill_from = Vector2(0.3888889, 0.36324787)
+fill_to = Vector2(0.4017094, 0.6367521)
 
 [sub_resource type="Gradient" id="Gradient_agrf4"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 1.3387823, 1.9640148, 1)
+offsets = PackedFloat32Array(0.0027777778, 0.28333333, 0.54444444, 0.98888886)
+colors = PackedColorArray(0, 0, 0, 0, 1.4384645e-05, 0.75193834, 0.90077144, 0.46666667, 0.33309233, 1.1137717, 1.2178624, 0.8039216, 3.2480416, 9.308311, 7.7932444, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_tkafl"]
 gradient = SubResource("Gradient_agrf4")
+use_hdr = true
 
 [sub_resource type="Gradient" id="Gradient_jql48"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0drxt"]
 gradient = SubResource("Gradient_jql48")
-fill_from = Vector2(0.5, 0.26923078)
+use_hdr = true
+fill_from = Vector2(0.41452992, 0.2905983)
 fill_to = Vector2(0.43589744, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tiwot"]
@@ -87,49 +91,64 @@ height = 1.14
 radial_segments = 32
 rings = 16
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8hft"]
-render_priority = 1
-transparency = 1
-shading_mode = 0
-albedo_color = Color(0.69432855, 1.1340102, 1.6796505, 1)
-grow = true
-grow_amount = 0.02
-stencil_mode = 3
-stencil_flags = 1
-stencil_compare = 5
-metadata/_stencil_owned = true
+[sub_resource type="Gradient" id="Gradient_i8hft"]
+offsets = PackedFloat32Array(0, 0.61388886, 0.96666664)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 1.0745345e-06, 1.0745345e-06, 1.0745345e-06, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e35w6"]
-next_pass = SubResource("StandardMaterial3D_i8hft")
-albedo_color = Color(0.8756085, 0.8778922, 0.87194055, 1)
-emission_enabled = true
-emission = Color(0, 1, 1, 1)
-emission_energy_multiplier = 0.62
-stencil_mode = 1
-stencil_flags = 2
-stencil_color = Color(0.69432855, 1.1340102, 1.6796505, 1)
-stencil_outline_thickness = 0.02
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e35w6"]
+gradient = SubResource("Gradient_i8hft")
+fill_from = Vector2(0.44444445, 0.982906)
+fill_to = Vector2(0.45726496, 0.11965812)
+
+[sub_resource type="Gradient" id="Gradient_tkafl"]
+offsets = PackedFloat32Array(0, 0.7083333, 0.8972222)
+colors = PackedColorArray(0, 0, 0, 0.50980395, 0, 0.51183325, 0.83, 1, 0, 0.4288333, 0.83, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jql48"]
+gradient = SubResource("Gradient_tkafl")
+use_hdr = true
+
+[sub_resource type="Gradient" id="Gradient_1b2rs"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ylata"]
+gradient = SubResource("Gradient_1b2rs")
+fill_from = Vector2(0.35897437, 0.1923077)
+fill_to = Vector2(0.45726496, 0.7008547)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0drxt"]
+render_priority = 0
+shader = ExtResource("2_i8hft")
+shader_parameter/speed = Vector2(0, 1)
+shader_parameter/Scale = Vector2(1, 1)
+shader_parameter/texturabase = ExtResource("4_1b2rs")
+shader_parameter/speed2 = Vector2(0, 1)
+shader_parameter/Scale2 = Vector2(1, 1)
+shader_parameter/texturabase2 = ExtResource("3_i8hft")
+shader_parameter/texturaagregad = SubResource("GradientTexture2D_ylata")
+shader_parameter/Substractinfo = SubResource("GradientTexture2D_e35w6")
+shader_parameter/color = SubResource("GradientTexture1D_jql48")
 
 [node name="Recolectable" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.568453, 0)
 script = ExtResource("1_ewtld")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0683446, 0)
 shape = SubResource("SphereShape3D_sijuh")
 
 [node name="gota" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005360484, -0.568453, -0.052542776)
+transform = Transform3D(2.275, 0, 0, 0, 2.275, 0, 0, 0, 2.275, 0.005360484, -0.568453, -0.052542776)
 
 [node name="Cylinder" type="MeshInstance3D" parent="gota"]
-transform = Transform3D(73.14353, 0, 0, 0, -1.0153738e-05, 99.99999, 0, -85.17572, -1.1920929e-05, -0.04166198, 0.19909728, -0.002204746)
+transform = Transform3D(73.143524, 0, 0, 0, -1.0153737e-05, 99.99998, 0, -85.17571, -1.1920928e-05, -0.041661978, 0.5283287, -0.002204746)
 mesh = SubResource("ArrayMesh_1hleh")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_tiwot")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="gota"]
-transform = Transform3D(0.18260221, 0, 0, 0, 0.13879189, -1.7763568e-15, 0, 0, 0.17523064, -0.033631813, 0.0706542, 0.0008411892)
+transform = Transform3D(0.18260212, 0, 0, 0, 0.19416313, -2.4675645e-15, 0, 0, 0.24341553, -0.033631798, 0.44102538, 0.0008411892)
 mesh = SubResource("SphereMesh_i8hft")
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_e35w6")
+surface_material_override/0 = SubResource("ShaderMaterial_0drxt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
