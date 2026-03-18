@@ -5,6 +5,9 @@ var SF_ON := preload("res://Assets/UI/Title_scene/SFX ON.PNG.png")
 var SF_OFF := preload("res://Assets/UI/Title_scene/SFX OFF.png")
 var MUSIC_ON := preload("res://Assets/UI/Title_scene/MUSIC-ON.PNG.png")
 var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
+@onready var volver: Button = $Volver
+
+@onready var no: Button = $Confirmacion/No
 
 @onready var sfx = $SFX
 @onready var music = $Music
@@ -16,19 +19,24 @@ func _ready() -> void:
 	hide()
 
 
-
+func desplegar():
+	show()
+	volver.grab_focus()
 
 
 
 func _on_volver_pressed() -> void:
 	hide()
+	volver.release_focus()
 	pausado = !pausado
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	get_tree().paused = false
 
 
 func _on_reiniciar_pressed() -> void:
+	
 	confirmacion.show()
+	no.grab_focus()
 	label.text = "¿Reiniciar partida?"
 	reiniciar = true
 	for boton in [$Volver, $Reiniciar, $"Menu Principal"]:
@@ -55,6 +63,7 @@ func _on_si_pressed() -> void:
 func _on_no_pressed() -> void:
 	confirmacion.hide()
 	reiniciar = false
+	volver.grab_focus()
 	for boton in [$Volver, $Reiniciar, $"Menu Principal"]:
 		boton.disabled = false
 

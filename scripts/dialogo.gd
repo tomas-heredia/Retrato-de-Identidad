@@ -66,6 +66,7 @@ func show_text(text: String) -> void:
 
  
 func _show_next_dialogo():
+	if stop_text: return
 	if dialogo_actual < cant_dialogos:
 		stop_text = true  # detener cualquier texto anterior
 		# detengo el timer y emito timeout, asi el bucle for en show_text continua. como stop_text es true, deberia hacer break
@@ -75,13 +76,17 @@ func _show_next_dialogo():
 		#espero un frame por las dudas (probar si es necesario o no)
 		await get_tree().process_frame
 
-		text_box.text = ""
-		show_text(textos[dialogo_actual].texto)
-		dialogo_actual += 1
-		print(dialogo_actual)
-		espera.start()
-		saltable = false
-		omitir.hide()
+		if dialogo_actual < textos.size():
+			text_box.text = ""
+			show_text(textos[dialogo_actual].texto)
+			dialogo_actual += 1 # Avanzamos el contador DESPUÉS de pedir el texto
+			
+			espera.start()
+			saltable = false
+			omitir.hide()
+	else:
+		# Si ya no hay más diálogos, cerramos
+		fin_fialogo()
 	
 
 func _on_espera_timeout():
