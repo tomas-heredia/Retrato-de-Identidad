@@ -21,4 +21,4 @@ func _input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		menu_pausa.pausado = !menu_pausa.pausado
 		get_tree().paused = true
-		menu_pausa.show()
+		menu_pausa.desplegar()

@@ -11,6 +11,9 @@ var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
 @onready var confirmacion: Control = $Confirmacion
 @onready var jugar: Button = $Jugar
 @onready var controles_display: Control = $Controles_display
+@onready var nuevo_juego: Button = $Nuevo_juego
+@onready var volver_controles: Button = $Controles_display/Volver
+@onready var no_confirmar: Button = $Confirmacion/No
 
 
 
@@ -19,8 +22,16 @@ func _ready() -> void:
 	confirmacion.hide()
 	controles_display.hide()
 	if !Guardado.existe_guardado():
+		nuevo_juego.grab_focus()
 		jugar.disabled =true
+	else:
+		jugar.grab_focus()
 
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event.is_action_pressed("Interact"): # o la acción que quieras
+		#var focused = get_viewport().gui_get_focus_owner()
+		#if focused and focused is Button:
+			#focused.press()
 
 func _on_jugar_pressed():
 	
@@ -29,6 +40,7 @@ func _on_jugar_pressed():
 
 func _on_controles_pressed() -> void:
 	controles_display.show()
+	volver_controles.grab_focus()
 
 func _on_creditos_pressed():
 	pass # Replace with function body.
@@ -55,6 +67,7 @@ func _on_salir_pressed():
 func _on_nuevo_juego_pressed() -> void:
 	if Guardado.existe_guardado():
 		confirmacion.show()
+		no_confirmar.grab_focus()
 		for boton in [$Jugar, $Nuevo_juego, $Controles, $Creditos, $SFX, $Music, $Salir]:
 			boton.disabled = true
 
@@ -74,7 +87,13 @@ func _on_no_pressed() -> void:
 			boton.disabled = false
 	if !Guardado.existe_guardado():
 		jugar.disabled =true
+	else:
+		jugar.grab_focus()
 
 
 func _on_volver_pressed() -> void:
 	controles_display.hide()
+	if !Guardado.existe_guardado():
+		nuevo_juego.grab_focus()
+	else:
+		jugar.grab_focus()
