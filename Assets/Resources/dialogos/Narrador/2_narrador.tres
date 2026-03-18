@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_1kjcl")
-texto = "Si no recuerdas cómo hacerlo... \\nMueve el mouse."
+texto = "Veo que ya reconociste tu cuerpo para moverte, por si lo olvidas puedes usar el Stick izquierdo o la cruceta y A para saltar."
 metadata/_custom_type_script = "uid://cscq2a61ppime"

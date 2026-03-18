@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_o3030")
-texto = "Ah… por fin despiertas."
+texto = "introduccion1"
 metadata/_custom_type_script = "uid://cscq2a61ppime"

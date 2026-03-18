@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_b4n8q")
-texto = "He sentido tu llegada. \\nSoy tu guía espiritual."
+texto = "introduccion2"
 metadata/_custom_type_script = "uid://cscq2a61ppime"
