@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var RigidBody_relacionados: Array[RigidBody3D] = []
+@export var RigidBody_relacionados: Array[AnimatableBody3D] = []
 @onready var animation_player = $cuerpo/AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.

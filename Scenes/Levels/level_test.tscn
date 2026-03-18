@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=46 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://dk5cqwte2ndc2" path="res://Scenes/controlables/camara_libre.tscn" id="31_sqhsv"]
 [ext_resource type="PackedScene" uid="uid://du78uqo2vml1n" path="res://Scenes/Objetos/objeto_memoria.tscn" id="31_wd2py"]
 [ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="32_k0c0j"]
+[ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="32_sqhsv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -174,8 +175,9 @@ modelo = ExtResource("7_0m88k")
 [node name="Recolectable" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49114, 2.2609, 4.90184)
 
-[node name="Recolectable3" parent="." instance=ExtResource("6_1bsl4")]
+[node name="Recolectable3" parent="." node_paths=PackedStringArray("RigidBody_relacionados") instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 4.90184)
+RigidBody_relacionados = [NodePath("../Plataforma_invisible")]
 
 [node name="Recolectable4" parent="." instance=ExtResource("6_1bsl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.236865, 2.2609, 7.273715)
@@ -275,5 +277,8 @@ velocidad = 5
 [node name="Objeto_memoria" parent="." instance=ExtResource("31_wd2py")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.163885, 0.75, -1.9802848)
 pensamiento = "hola"
+
+[node name="Plataforma_invisible" parent="." instance=ExtResource("32_sqhsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.77861, 3.0469213, 15.293128)
 
 [editable path="AreaMuerte"]

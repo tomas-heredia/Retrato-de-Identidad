@@ -7,9 +7,8 @@ size = Vector3(0.9902344, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_befcq"]
 
-[node name="Plataforma_invisible" type="RigidBody3D" groups=["plataforma_invisible"]]
+[node name="Plataforma_invisible" type="AnimatableBody3D" groups=["plataforma_invisible"]]
 collision_layer = 3
-gravity_scale = 0.0
 script = ExtResource("1_bxq74")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
