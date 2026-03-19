@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4qksvh17i1o5"]
+[gd_scene load_steps=9 format=3 uid="uid://b4qksvh17i1o5"]
 
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_y2mc5"]
 [ext_resource type="Script" uid="uid://bjc87ieew5mut" path="res://scripts/vasija.gd" id="2_a4skr"]
 [ext_resource type="ArrayMesh" uid="uid://dlgsfie4m80gy" path="res://Assets/Interactuables/jarron_sano.obj" id="3_hwiaq"]
 [ext_resource type="ArrayMesh" uid="uid://d4bhxsemjpy3o" path="res://Assets/Interactuables/jarron_roto.obj" id="3_re546"]
+[ext_resource type="Texture2D" uid="uid://dvekrc8dkedc8" path="res://Assets/casseteras/precolombina/precolombina_BaseColor.png" id="5_ddps7"]
+[ext_resource type="Texture2D" uid="uid://oa4gjijch5c5" path="res://Assets/casseteras/precolombina/precolombina_Normal.png" id="6_qg7v7"]
+[ext_resource type="Texture2D" uid="uid://lkbkcv2b6vgs" path="res://Assets/casseteras/precolombina/precolombina_OcclusionRoughnessMetallic.png" id="7_iyt5g"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_g127v"]
+albedo_texture = ExtResource("5_ddps7")
+orm_texture = ExtResource("7_iyt5g")
+normal_enabled = true
+normal_texture = ExtResource("6_qg7v7")
 
 [node name="Vasija" instance=ExtResource("1_y2mc5")]
 script = ExtResource("2_a4skr")
@@ -13,3 +22,4 @@ modelo = ExtResource("3_hwiaq")
 [node name="Cuerpo" parent="." index="1"]
 transform = Transform3D(-0.24272822, 0, 2.0355792, 0, 2.05, 0, -2.0355792, 0, -0.24272822, 0, 1, 0)
 mesh = ExtResource("3_hwiaq")
+surface_material_override/0 = SubResource("ORMMaterial3D_g127v")

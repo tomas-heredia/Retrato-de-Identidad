@@ -1,0 +1,14 @@
+# Blender 5.0.1 MTL File: 'None'
+# www.blender.org
+
+newmtl tripo_mat_1479f1fe
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/ferna/Desktop/Hey yo Studio/IDENTIDAD/PROPS/yisus/tripo_convert_1479f1fe-595f-4726-b221-0604c06eb685.fbm/tripo_node_2b30e866-75f4-4f9f-bc91-b9bfaf3d5258_BaseColor.jpg
+map_Ns C:/Users/ferna/Desktop/Hey yo Studio/IDENTIDAD/PROPS/yisus/tripo_convert_1479f1fe-595f-4726-b221-0604c06eb685.fbm/jesusstatue3dmodel:lp_roughness.JPEG
+map_refl C:/Users/ferna/Desktop/Hey yo Studio/IDENTIDAD/PROPS/yisus/tripo_convert_1479f1fe-595f-4726-b221-0604c06eb685.fbm/jesusstatue3dmodel:lp_metallic.JPEG
+map_Bump -bm 1.000000 C:/Users/ferna/Desktop/Hey yo Studio/IDENTIDAD/PROPS/yisus/tripo_convert_1479f1fe-595f-4726-b221-0604c06eb685.fbm/tripo_node_2b30e866-75f4-4f9f-bc91-b9bfaf3d5258_Normal_Bake.jpg
