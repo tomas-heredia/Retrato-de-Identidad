@@ -19,7 +19,9 @@ var default_data : Dictionary= {
 	"level_1": Vector3.ZERO,
 	"level_2": Vector3.ZERO,
 	"level_3": Vector3.ZERO
-}
+	},
+	"valor_musica" : 100,
+	"valor_efectos" : 100
 
 #NOTAAA!!!! siempre que agregues algo al defalut data, agregrarlo en la func sobreescribir
 }
@@ -65,5 +67,9 @@ func existe_guardado():
 		return false
 
 func sobreescribir():
+	var musica = game_data.valor_musica
+	var efectos = game_data.valor_efectos
 	game_data = default_data
+	game_data.valor_musica = musica
+	game_data.valor_efectos = efectos
 	save_game()

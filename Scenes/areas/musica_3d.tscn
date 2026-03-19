@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://0wydwlsbsv2c"]
+
+[ext_resource type="AudioStream" uid="uid://csxbhhvte7m7e" path="res://Assets/Musica/Musica Diegetica/LOOP cuadro  NIVEL 1 .mp3" id="1_bxaj7"]
+[ext_resource type="Script" uid="uid://dy77blt677bt2" path="res://scripts/musica_3d.gd" id="2_hpxhe"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bxaj7"]
+radius = 1.4720984
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_bxaj7")
+unit_size = 0.7
+autoplay = true
+bus = &"Musica"
+script = ExtResource("2_hpxhe")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_bxaj7")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

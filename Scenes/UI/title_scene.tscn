@@ -253,6 +253,7 @@ text = "Volver"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7cwwf")
 autoplay = true
+bus = &"Musica"
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Nuevo_juego" to="." method="_on_nuevo_juego_pressed"]
