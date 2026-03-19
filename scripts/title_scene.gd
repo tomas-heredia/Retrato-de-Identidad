@@ -14,11 +14,28 @@ var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
 @onready var nuevo_juego: Button = $Nuevo_juego
 @onready var volver_controles: Button = $Controles_display/Volver
 @onready var no_confirmar: Button = $Confirmacion/No
+var bus_musica = AudioServer.get_bus_index("Musica")
+var bus_efectos = AudioServer.get_bus_index("Efectos")
 
 
 
 func _ready() -> void:
 	Guardado.load_game()
+	
+	if Guardado.game_data.valor_musica == 0:
+		AudioServer.set_bus_mute(bus_efectos, true)
+		music.icon = MUSIC_OFF
+	else:
+		AudioServer.set_bus_mute(bus_efectos, false)
+		music.icon = MUSIC_ON
+	
+	if Guardado.game_data.valor_efectos == 0:
+		AudioServer.set_bus_mute(bus_musica, true)
+		sfx.icon = SF_OFF
+	else:
+		AudioServer.set_bus_mute(bus_musica, false)
+		sfx.icon = SF_ON
+	
 	confirmacion.hide()
 	controles_display.hide()
 	if !Guardado.existe_guardado():
@@ -34,7 +51,7 @@ func _ready() -> void:
 			#focused.press()
 
 func _on_jugar_pressed():
-	
+	Guardado.save_game()
 	ManejoNiveles.cambiar(Guardado.game_data.level_actual)
 
 
@@ -48,15 +65,24 @@ func _on_creditos_pressed():
 
 func _on_sfx_pressed():
 	if (sfx.icon == SF_ON):
+		AudioServer.set_bus_mute(bus_efectos, true)
+		Guardado.game_data.valor_efectos = 0
+		
 		sfx.icon = SF_OFF
 	else:
+		AudioServer.set_bus_mute(bus_efectos, false)
+		Guardado.game_data.valor_efectos = 100
 		sfx.icon = SF_ON
 
 
 func _on_music_pressed():
 	if (music.icon == MUSIC_ON):
+		AudioServer.set_bus_mute(bus_musica, true)
+		Guardado.game_data.valor_musica = 0
 		music.icon = MUSIC_OFF
 	else:
+		AudioServer.set_bus_mute(bus_musica, false)
+		Guardado.game_data.valor_musica = 100
 		music.icon = MUSIC_ON
 
 

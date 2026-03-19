@@ -16,7 +16,8 @@ var Dialogo = load("res://Scenes/UI/dialogo.tscn")
 @onready var level_1_marker: Marker3D = $Level1_marker
 @onready var player: CharacterBody3D = $Player
 @onready var portal_lv_1: MeshInstance3D = $Portal_LV1
-
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
