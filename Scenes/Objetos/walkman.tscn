@@ -35,4 +35,4 @@ bus = &"Efectos"
 
 [node name="Musica" type="AudioStreamPlayer3D" parent="." index="10"]
 max_distance = 20.0
-bus = &"Musica"
+bus = &"Efectos"

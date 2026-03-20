@@ -8,7 +8,7 @@ var indice_cancion := 0
 var listo := false
 var en_walkman = false
 @export var canciones: Array[AudioStream]
-
+var bus_musica = AudioServer.get_bus_index("Musica")
 func _ready():
 	super._ready()
 	efecto_boton.stream = efecto
@@ -45,13 +45,13 @@ func mas_interacciones():
 func _process(delta: float) -> void:
 	if en_walkman:
 		if Input.is_action_just_pressed("salir_walkman") and listo:
-			
+			AudioServer.set_bus_mute(bus_musica, false)
 			Cambio_label.hide()
 			Salir_label.hide()
 			musica.stop()
 			precionarE()
 		if Input.is_action_just_pressed("Interact") :
-			
+			AudioServer.set_bus_mute(bus_musica, true)
 			tocar_musica()
 			mas_interacciones()
 
