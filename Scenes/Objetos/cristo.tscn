@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://erqudcwfx0dt"]
+[gd_scene load_steps=12 format=3 uid="uid://erqudcwfx0dt"]
 
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_06ewu"]
 [ext_resource type="Script" uid="uid://8xxdcoc4ldgr" path="res://scripts/cristo.gd" id="2_cnt71"]
@@ -6,13 +6,11 @@
 [ext_resource type="ArrayMesh" uid="uid://cexv3du32gyyr" path="res://Assets/Props/achilata.obj" id="3_wi48e"]
 [ext_resource type="Texture2D" uid="uid://drno6odjahlm1" path="res://Assets/modulares/texturas/yisus_lp__BaseColor.png" id="4_wi48e"]
 [ext_resource type="Texture2D" uid="uid://prltjr3wg8x6" path="res://Assets/modulares/texturas/yisus_lp_Normal.png" id="5_ihfju"]
-[ext_resource type="Texture2D" uid="uid://623ik06i2dgv" path="res://Assets/modulares/texturas/yisus_lp__OcclusionRoughnessMetallic.png" id="6_cljgb"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_pq08i"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfnvd"]
 albedo_texture = ExtResource("4_wi48e")
-orm_texture = ExtResource("6_cljgb")
 normal_enabled = true
-normal_scale = -0.85
+normal_scale = -1.0
 normal_texture = ExtResource("5_ihfju")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tubc4"]
@@ -74,9 +72,12 @@ script = ExtResource("2_cnt71")
 achilata = ExtResource("3_wi48e")
 
 [node name="Cuerpo" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, -0.22004586, -0.18617511)
+transform = Transform3D(0.03739363, 0, -0.9993006, 0, 2.1, 0, 0.9993006, 0, 0.03739363, -0.21038437, -0.21398216, 0.2682197)
 mesh = ExtResource("3_dfnvd")
-surface_material_override/0 = SubResource("ORMMaterial3D_pq08i")
+surface_material_override/0 = SubResource("StandardMaterial3D_dfnvd")
+
+[node name="Contorno" parent="Cuerpo" index="0"]
+layers = 0
 
 [node name="Pensamiento" type="Area3D" parent="." index="7"]
 
@@ -87,9 +88,5 @@ shape = SubResource("SphereShape3D_tubc4")
 libraries = {
 &"": SubResource("AnimationLibrary_tubc4")
 }
-
-[node name="Achilata" type="MeshInstance3D" parent="." index="8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05089712, 0, 1.5162476)
-mesh = ExtResource("3_wi48e")
 
 [connection signal="body_entered" from="Pensamiento" to="." method="_on_pensamiento_body_entered"]

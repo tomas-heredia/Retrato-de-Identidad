@@ -60,9 +60,13 @@ _data = {
 script = ExtResource("2_g3e2h")
 
 [node name="Cuerpo" parent="." index="1"]
-transform = Transform3D(2.535, 0, 0, 0, 3.047, 0, 0, 0, 2.535, 0, 0, 0)
+transform = Transform3D(3.457, 0, 0, 0, 4.1549997, 0, 0, 0, 3.457, 0, 0, 0)
 mesh = ExtResource("3_jn6qh")
 surface_material_override/0 = SubResource("ORMMaterial3D_spq8j")
+
+[node name="Contorno" parent="Cuerpo" index="0"]
+layers = 0
+mesh = ExtResource("3_jn6qh")
 
 [node name="Limon" type="RigidBody3D" parent="Cuerpo" index="1"]
 transform = Transform3D(-0.05008279, 0, 0.33123517, 0, 0.335, 0, -0.33123517, 0, -0.05008279, 0, 0.5087333, 0.12002846)
@@ -72,7 +76,7 @@ gravity_scale = 0.0
 shape = SubResource("SphereShape3D_fvpl5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Cuerpo/Limon" index="1"]
-transform = Transform3D(2.335, 0, 0, 0, 2.335, 0, 0, 0, 2.335, 0, 0, 0)
+transform = Transform3D(2.335, 0, -8.940697e-08, 0, 2.335, 0, 8.940697e-08, 0, 2.335, 0.79362166, 0, 0.023136184)
 mesh = ExtResource("4_h2qtq")
 surface_material_override/0 = SubResource("StandardMaterial3D_e2ir6")
 
