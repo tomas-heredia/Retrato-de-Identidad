@@ -43,6 +43,7 @@ var _snapped_to_stairs_last_frame := false
 var _last_frame_was_on_floor = -INF
 
 func _ready():
+	Mensajero.connect("Reaparecer",reaparecer)
 	invulnerable_timer.wait_time = invulnerabilidad_time
 	BarraVida.max_value = max_vida
 	actualizar_barra()
@@ -243,7 +244,9 @@ func recibir_daño(valor: int):
 		vida -= valor
 		if vida == 0:
 			velocity = Vector3.ZERO
-			position = Global.ultimoCheckPoint
+			Global.interactuando = true
+			Mensajero.Muerte.emit()
+			#position = Global.ultimoCheckPoint
 			vida = 100
 
 func activar_invulnerabilidad():
@@ -254,3 +257,7 @@ func activar_invulnerabilidad():
 
 func _on_invulnerable_timer_timeout() -> void:
 	es_invulnerable = false
+
+func reaparecer():
+	position = Global.ultimoCheckPoint
+	Global.interactuando = false
