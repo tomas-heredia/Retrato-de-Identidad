@@ -19,3 +19,9 @@ signal recolectable()
 
 @warning_ignore("unused_signal")
 signal fadeOut()
+
+@warning_ignore("unused_signal")
+signal Muerte()
+
+@warning_ignore("unused_signal")
+signal Reaparecer()
