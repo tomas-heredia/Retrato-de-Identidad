@@ -1,16 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://cyrjen31hrp1b"]
+[gd_scene load_steps=15 format=3 uid="uid://cyrjen31hrp1b"]
 
 [ext_resource type="Script" uid="uid://dwfr5181wng0r" path="res://scripts/title_scene.gd" id="1_5imdy"]
 [ext_resource type="Texture2D" uid="uid://b1igy8ijuf4pu" path="res://Assets/UI/Title_scene/Background.PNG.png" id="1_q4bju"]
-[ext_resource type="Texture2D" uid="uid://bij2pc2uq251e" path="res://Assets/UI/Title_scene/TEXTO RETRATO DE IDENTIDAD.PNG.png" id="2_5imdy"]
-[ext_resource type="FontFile" uid="uid://cf5jcsqg12w2k" path="res://Assets/UI/Title_scene/TrajanPro3SemiBold.ttf" id="3_1johb"]
-[ext_resource type="Texture2D" uid="uid://bpdii7gh2v35d" path="res://Assets/UI/Title_scene/Button UI 2 10.png" id="4_2l6vb"]
+[ext_resource type="Texture2D" uid="uid://caoc084pv6l2d" path="res://Assets/UI/Title_scene/elogo portada.png" id="3_7cwwf"]
+[ext_resource type="FontFile" uid="uid://7jf61sjd1ojt" path="res://Assets/UI/Title_scene/DoubleBass-Regular-trial.ttf" id="4_7cwwf"]
+[ext_resource type="Texture2D" uid="uid://do0knnequ4xgi" path="res://Assets/UI/Title_scene/boton.png" id="5_5w1ek"]
 [ext_resource type="Texture2D" uid="uid://cx0q3q62qrlwt" path="res://Assets/UI/Title_scene/SFX ON.PNG.png" id="5_7cwwf"]
 [ext_resource type="Texture2D" uid="uid://cs373nctqyj8b" path="res://Assets/UI/Title_scene/MUSIC-ON.PNG.png" id="6_5w1ek"]
 [ext_resource type="Texture2D" uid="uid://rin8h7ejb7x3" path="res://Assets/UI/Title_scene/Exit.PNG.png" id="7_aj5gn"]
-[ext_resource type="Texture2D" uid="uid://cnut7ygtyv36f" path="res://Assets/UI/Dialogo/shadedDark12.png" id="9_1johb"]
+[ext_resource type="Texture2D" uid="uid://bgeebs1r4xmfn" path="res://Assets/UI/Confirmacion/fondosalirdemenu.reiniciar.png" id="9_7cwwf"]
 [ext_resource type="Texture2D" uid="uid://csph0d4ios5fg" path="res://Assets/UI/UI_controles/ui_controles.png" id="10_2l6vb"]
+[ext_resource type="Texture2D" uid="uid://b7e8navs2juvi" path="res://Assets/UI/Confirmacion/ecirculo.png" id="10_5w1ek"]
 [ext_resource type="AudioStream" uid="uid://dla62ib58433i" path="res://Assets/Musica/Musica Ambiental/Menu loop.mp3" id="11_7cwwf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aj5gn"]
+texture = ExtResource("10_5w1ek")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5w1ek"]
+texture = ExtResource("10_5w1ek")
 
 [node name="TitleScene" type="Control"]
 layout_mode = 3
@@ -35,11 +42,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.381
 anchor_bottom = 0.344
-offset_left = 139.0
-offset_top = 148.0
-offset_right = 138.47998
-offset_bottom = 147.47998
-texture = ExtResource("2_5imdy")
+offset_left = 136.0
+offset_top = 91.0
+offset_right = 135.47998
+offset_bottom = 270.47998
+texture = ExtResource("3_7cwwf")
 
 [node name="Jugar" type="Button" parent="."]
 layout_mode = 0
@@ -52,13 +59,15 @@ focus_neighbor_right = NodePath("../SFX")
 focus_neighbor_bottom = NodePath("../Nuevo_juego")
 focus_next = NodePath("../SFX")
 focus_previous = NodePath("../Nuevo_juego")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Continuar"
-icon = ExtResource("4_2l6vb")
+icon = ExtResource("5_5w1ek")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
 [node name="Nuevo_juego" type="Button" parent="."]
 layout_mode = 0
@@ -71,13 +80,15 @@ focus_neighbor_right = NodePath("../SFX")
 focus_neighbor_bottom = NodePath("../Controles")
 focus_next = NodePath("../Jugar")
 focus_previous = NodePath("../Controles")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Nuevo Juego"
-icon = ExtResource("4_2l6vb")
+icon = ExtResource("5_5w1ek")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
 [node name="Controles" type="Button" parent="."]
 layout_mode = 0
@@ -90,13 +101,15 @@ focus_neighbor_right = NodePath("../SFX")
 focus_neighbor_bottom = NodePath("../Creditos")
 focus_next = NodePath("../Nuevo_juego")
 focus_previous = NodePath("../Creditos")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Controles"
-icon = ExtResource("4_2l6vb")
+icon = ExtResource("5_5w1ek")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
 [node name="Creditos" type="Button" parent="."]
 layout_mode = 0
@@ -109,13 +122,15 @@ focus_neighbor_right = NodePath("../SFX")
 focus_neighbor_bottom = NodePath("../Jugar")
 focus_next = NodePath("../Controles")
 focus_previous = NodePath("../Jugar")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_1johb")
+theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Creditos"
-icon = ExtResource("4_2l6vb")
+icon = ExtResource("5_5w1ek")
 flat = true
 icon_alignment = 1
+expand_icon = true
 
 [node name="SFX" type="Button" parent="."]
 layout_mode = 0
@@ -178,7 +193,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("9_1johb")
+texture = ExtResource("9_7cwwf")
 
 [node name="Label" type="Label" parent="Confirmacion"]
 layout_mode = 1
@@ -190,38 +205,52 @@ offset_top = 51.0
 offset_right = 222.0
 offset_bottom = 120.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.50681525, 0.7578948, 0.99457794, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 50
 text = "¿Reiniciar partida?"
 
 [node name="Si" type="Button" parent="Confirmacion"]
 layout_mode = 0
-offset_left = 154.0
-offset_top = 224.0
-offset_right = 322.0
-offset_bottom = 305.0
+offset_left = 158.0
+offset_top = 169.0
+offset_right = 343.0
+offset_bottom = 355.0
 focus_neighbor_left = NodePath("../No")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../No")
 focus_neighbor_bottom = NodePath(".")
 focus_next = NodePath("../No")
 focus_previous = NodePath("../No")
+theme_override_colors/font_color = Color(0.50681525, 0.7578948, 0.99457794, 1)
+theme_override_colors/font_focus_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_aj5gn")
 text = "Si"
+flat = true
+icon_alignment = 1
 
 [node name="No" type="Button" parent="Confirmacion"]
 layout_mode = 0
 offset_left = 559.0
-offset_top = 224.0
-offset_right = 727.0
-offset_bottom = 305.0
+offset_top = 169.0
+offset_right = 744.0
+offset_bottom = 355.0
 focus_neighbor_left = NodePath("../Si")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath("../Si")
 focus_neighbor_bottom = NodePath(".")
 focus_next = NodePath("../Si")
 focus_previous = NodePath("../Si")
+theme_override_colors/font_color = Color(0.50681525, 0.7578948, 0.99457794, 1)
+theme_override_colors/font_focus_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_5w1ek")
 text = "No"
+flat = true
+icon_alignment = 1
 
 [node name="Controles_display" type="Control" parent="."]
 visible = false
@@ -247,6 +276,7 @@ offset_left = 1721.0
 offset_top = 973.0
 offset_right = 1882.0
 offset_bottom = 1050.0
+theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 50
 text = "Volver"
 
@@ -262,6 +292,10 @@ bus = &"Musica"
 [connection signal="pressed" from="SFX" to="." method="_on_sfx_pressed"]
 [connection signal="pressed" from="Music" to="." method="_on_music_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="focus_entered" from="Confirmacion/Si" to="." method="_on_si_focus_entered"]
+[connection signal="focus_exited" from="Confirmacion/Si" to="." method="_on_si_focus_exited"]
 [connection signal="pressed" from="Confirmacion/Si" to="." method="_on_si_pressed"]
+[connection signal="focus_entered" from="Confirmacion/No" to="." method="_on_no_focus_entered"]
+[connection signal="focus_exited" from="Confirmacion/No" to="." method="_on_no_focus_exited"]
 [connection signal="pressed" from="Confirmacion/No" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="Controles_display/Volver" to="." method="_on_volver_pressed"]
