@@ -17,7 +17,9 @@ var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
 var bus_musica = AudioServer.get_bus_index("Musica")
 var bus_efectos = AudioServer.get_bus_index("Efectos")
 
-
+@onready var focus_icon = preload("res://Assets/UI/Confirmacion/ecirculo.png")
+@onready var si_icnono = $Confirmacion/Si
+@onready var no_icon = $Confirmacion/No
 
 func _ready() -> void:
 	Guardado.load_game()
@@ -123,3 +125,19 @@ func _on_volver_pressed() -> void:
 		nuevo_juego.grab_focus()
 	else:
 		jugar.grab_focus()
+
+
+#func _on_si_focus_entered() -> void:
+	#si_icnono.icon = focus_icon
+#
+#
+#func _on_si_focus_exited() -> void:
+	#si_icnono.icon = null
+#
+#
+#func _on_no_focus_entered() -> void:
+	#no_icon.icon = focus_icon
+#
+#
+#func _on_no_focus_exited() -> void:
+	#no_icon.icon = null
