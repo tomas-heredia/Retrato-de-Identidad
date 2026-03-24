@@ -285,6 +285,169 @@ stream = ExtResource("11_7cwwf")
 autoplay = true
 bus = &"Musica"
 
+[node name="Creditos_display" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Creditos_display"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_7cwwf")
+
+[node name="Volver" type="Button" parent="Creditos_display"]
+layout_mode = 0
+offset_left = 1523.0
+offset_top = 910.0
+offset_right = 1863.0
+offset_bottom = 1071.0
+theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+icon = ExtResource("5_5w1ek")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="BoxContainer" type="ScrollContainer" parent="Creditos_display"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 649.0
+offset_top = 282.0
+offset_right = -584.0
+offset_bottom = -100.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Creditos_display/BoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 70
+text = "GAME DESIGNERS"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Esteban Matias Garcia
+
+Vanessa Paviolo
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 70
+text = "ARTE Y DESIGN"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Elisa Monti
+
+Fernando Capovilla
+"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 70
+text = "SONIDO"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Martin Santagada
+"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 70
+text = "PROGRAMACIÓN"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Ing. Tomás Heredia
+"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 70
+text = "PRODUCCIÓN"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Mariana Barcellone
+"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 70
+text = "CON COLABORACIÓN DE:"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 50
+text = "Mechanical Maze
+
+Gustavo Molina
+
+Facundo Mariani
+
+Lucas Esposto
+
+Nuclear Team"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Creditos_display"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.0
+offset_top = 74.0
+offset_right = 238.0
+offset_bottom = 145.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_font_sizes/font_size = 90
+text = "CREDITOS"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Nuevo_juego" to="." method="_on_nuevo_juego_pressed"]
 [connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]
@@ -299,3 +462,4 @@ bus = &"Musica"
 [connection signal="focus_exited" from="Confirmacion/No" to="." method="_on_no_focus_exited"]
 [connection signal="pressed" from="Confirmacion/No" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="Controles_display/Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Creditos_display/Volver" to="." method="_on_volver_pressed"]
