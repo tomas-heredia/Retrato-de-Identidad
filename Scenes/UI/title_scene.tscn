@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyrjen31hrp1b"]
+[gd_scene load_steps=17 format=3 uid="uid://cyrjen31hrp1b"]
 
 [ext_resource type="Script" uid="uid://dwfr5181wng0r" path="res://scripts/title_scene.gd" id="1_5imdy"]
 [ext_resource type="Texture2D" uid="uid://b1igy8ijuf4pu" path="res://Assets/UI/Title_scene/Background.PNG.png" id="1_q4bju"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://csph0d4ios5fg" path="res://Assets/UI/UI_controles/ui_controles.png" id="10_2l6vb"]
 [ext_resource type="Texture2D" uid="uid://b7e8navs2juvi" path="res://Assets/UI/Confirmacion/ecirculo.png" id="10_5w1ek"]
 [ext_resource type="AudioStream" uid="uid://dla62ib58433i" path="res://Assets/Musica/Musica Ambiental/Menu loop.mp3" id="11_7cwwf"]
+[ext_resource type="FontFile" uid="uid://dc4pf3m414dun" path="res://Assets/UI/Title_scene/Cocogoose-Pro-Bold-trial.ttf" id="13_on1w0"]
+[ext_resource type="FontFile" uid="uid://5ki1ihjllmaf" path="res://Assets/UI/Title_scene/Cocogoose-Pro-Regular-trial.ttf" id="14_wfmt3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aj5gn"]
 texture = ExtResource("10_5w1ek")
@@ -323,10 +325,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 649.0
+offset_left = 526.0
 offset_top = 282.0
-offset_right = -584.0
+offset_right = -471.0
 offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Creditos_display/BoxContainer"]
 layout_mode = 2
@@ -334,14 +338,14 @@ theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 70
-text = "GAME DESIGNERS"
+text = "DISEÑO LÙDICO"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("14_wfmt3")
 theme_override_font_sizes/font_size = 50
 text = "Esteban Matias Garcia
 
@@ -351,14 +355,14 @@ horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 70
-text = "ARTE Y DESIGN"
+text = "ARTE Y DISEÑO"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("14_wfmt3")
 theme_override_font_sizes/font_size = 50
 text = "Elisa Monti
 
@@ -368,14 +372,14 @@ horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 70
 text = "SONIDO"
 horizontal_alignment = 1
 
 [node name="Label6" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("14_wfmt3")
 theme_override_font_sizes/font_size = 50
 text = "Martin Santagada
 "
@@ -383,14 +387,14 @@ horizontal_alignment = 1
 
 [node name="Label7" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 70
 text = "PROGRAMACIÓN"
 horizontal_alignment = 1
 
 [node name="Label8" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("14_wfmt3")
 theme_override_font_sizes/font_size = 50
 text = "Ing. Tomás Heredia
 "
@@ -398,14 +402,14 @@ horizontal_alignment = 1
 
 [node name="Label9" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 70
 text = "PRODUCCIÓN"
 horizontal_alignment = 1
 
 [node name="Label10" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("14_wfmt3")
 theme_override_font_sizes/font_size = 50
 text = "Mariana Barcellone
 "
@@ -413,14 +417,14 @@ horizontal_alignment = 1
 
 [node name="Label11" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 70
 text = "CON COLABORACIÓN DE:"
 horizontal_alignment = 1
 
 [node name="Label12" type="Label" parent="Creditos_display/BoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("14_wfmt3")
 theme_override_font_sizes/font_size = 50
 text = "Mechanical Maze
 
@@ -443,7 +447,7 @@ offset_top = 74.0
 offset_right = 238.0
 offset_bottom = 145.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("4_7cwwf")
+theme_override_fonts/font = ExtResource("13_on1w0")
 theme_override_font_sizes/font_size = 90
 text = "CREDITOS"
 horizontal_alignment = 1
