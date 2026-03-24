@@ -4,6 +4,8 @@ var SF_ON := preload("res://Assets/UI/Title_scene/SFX ON.PNG.png")
 var SF_OFF := preload("res://Assets/UI/Title_scene/SFX OFF.png")
 var MUSIC_ON := preload("res://Assets/UI/Title_scene/MUSIC-ON.PNG.png")
 var MUSIC_OFF := preload("res://Assets/UI/Title_scene/MUSIC-OFF.PNG.png")
+@onready var creditos_display: Control = $Creditos_display
+@onready var volver_creditos: Button = $Creditos_display/Volver
 
 @onready var sfx = $SFX
 @onready var music = $Music
@@ -33,7 +35,7 @@ func _ready() -> void:
 	else:
 		AudioServer.set_bus_mute(bus_musica, false)
 		sfx.icon = SF_ON
-	
+	creditos_display.hide()
 	confirmacion.hide()
 	controles_display.hide()
 	if !Guardado.existe_guardado():
@@ -58,7 +60,8 @@ func _on_controles_pressed() -> void:
 	volver_controles.grab_focus()
 
 func _on_creditos_pressed():
-	pass # Replace with function body.
+	creditos_display.show()
+	volver_creditos.grab_focus()
 
 
 func _on_sfx_pressed():
@@ -117,6 +120,7 @@ func _on_no_pressed() -> void:
 
 func _on_volver_pressed() -> void:
 	controles_display.hide()
+	creditos_display.hide()
 	if !Guardado.existe_guardado():
 		nuevo_juego.grab_focus()
 	else:

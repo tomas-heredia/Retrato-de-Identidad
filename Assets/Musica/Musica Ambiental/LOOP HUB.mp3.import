@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://73endj7800sw"
+path="res://.godot/imported/LOOP HUB.mp3-b1f3ef92ffafb03e2ee15e519c7b9d17.mp3str"
+
+[deps]
+
+source_file="res://Assets/Musica/Musica Ambiental/LOOP HUB.mp3"
+dest_files=["res://.godot/imported/LOOP HUB.mp3-b1f3ef92ffafb03e2ee15e519c7b9d17.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
