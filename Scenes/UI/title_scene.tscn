@@ -63,6 +63,7 @@ focus_next = NodePath("../SFX")
 focus_previous = NodePath("../Nuevo_juego")
 theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
 theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
 theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Continuar"
@@ -84,6 +85,8 @@ focus_next = NodePath("../Jugar")
 focus_previous = NodePath("../Controles")
 theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
 theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
 theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Nuevo Juego"
@@ -105,6 +108,8 @@ focus_next = NodePath("../Nuevo_juego")
 focus_previous = NodePath("../Creditos")
 theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
 theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
 theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Controles"
@@ -126,6 +131,8 @@ focus_next = NodePath("../Controles")
 focus_previous = NodePath("../Jugar")
 theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
 theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
 theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 40
 text = "Creditos"
@@ -255,7 +262,6 @@ flat = true
 icon_alignment = 1
 
 [node name="Controles_display" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -274,13 +280,21 @@ texture = ExtResource("10_2l6vb")
 
 [node name="Volver" type="Button" parent="Controles_display"]
 layout_mode = 0
-offset_left = 1721.0
-offset_top = 973.0
-offset_right = 1882.0
-offset_bottom = 1050.0
+offset_left = 1620.0
+offset_top = 965.0
+offset_right = 1904.3636
+offset_bottom = 1101.0
+theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
+theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
 theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 50
 text = "Volver"
+icon = ExtResource("5_5w1ek")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7cwwf")
@@ -288,6 +302,7 @@ autoplay = true
 bus = &"Musica"
 
 [node name="Creditos_display" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -312,6 +327,8 @@ offset_right = 1863.0
 offset_bottom = 1071.0
 theme_override_colors/font_color = Color(0.9489129, 0.42664492, 0.1888076, 1)
 theme_override_colors/font_focus_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.018188467, 0.35983709, 0.60174704, 1)
 theme_override_fonts/font = ExtResource("4_7cwwf")
 theme_override_font_sizes/font_size = 50
 text = "Volver"
