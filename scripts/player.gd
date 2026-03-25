@@ -56,6 +56,8 @@ func _ready():
 func _physics_process(delta):
 	if !Global.interactuando:
 		movement(delta)
+	else:
+		animation.travel("idle")
 
 
 func movement(delta):
