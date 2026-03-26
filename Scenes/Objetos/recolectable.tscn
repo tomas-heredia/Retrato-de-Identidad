@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://632f5vl4od21"]
+[gd_scene load_steps=14 format=4 uid="uid://632f5vl4od21"]
 
 [ext_resource type="Script" uid="uid://dad547fj8tad0" path="res://scripts/recolectable.gd" id="1_ewtld"]
 [ext_resource type="Shader" uid="uid://csfgsmwuugey8" path="res://llamitashader/llamita.tres" id="2_mtgvp"]
+[ext_resource type="Texture2D" uid="uid://ddgqvriqok5dc" path="res://Assets/Arboles/texturas/T_Noise_HU85k.png" id="3_i8hft"]
+[ext_resource type="Texture2D" uid="uid://bqtg1o3oc70qg" path="res://Assets/Arboles/texturas/T_FirePanningCyl45.png" id="4_e35w6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_sijuh"]
 size = Vector3(0.5, 0.5, 0.5)
@@ -117,8 +119,10 @@ render_priority = 0
 shader = ExtResource("2_mtgvp")
 shader_parameter/speed = Vector2(0, 0)
 shader_parameter/Scale = Vector2(1, 1)
+shader_parameter/texturabase = ExtResource("3_i8hft")
 shader_parameter/speed2 = Vector2(0, 0)
 shader_parameter/Scale2 = Vector2(1, 1)
+shader_parameter/texturabase2 = ExtResource("4_e35w6")
 
 [node name="Recolectable" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.568453, 0)
