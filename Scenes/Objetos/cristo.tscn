@@ -1,10 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://erqudcwfx0dt"]
+[gd_scene load_steps=11 format=3 uid="uid://erqudcwfx0dt"]
 
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_06ewu"]
 [ext_resource type="Script" uid="uid://8xxdcoc4ldgr" path="res://scripts/cristo.gd" id="2_cnt71"]
+[ext_resource type="ArrayMesh" uid="uid://fxom4m34ktk8" path="res://Assets/Props/Yisus.obj" id="3_dfnvd"]
+[ext_resource type="Texture2D" uid="uid://drno6odjahlm1" path="res://Assets/modulares/texturas/yisus_lp__BaseColor.png" id="4_wi48e"]
+[ext_resource type="Texture2D" uid="uid://prltjr3wg8x6" path="res://Assets/modulares/texturas/yisus_lp_Normal.png" id="5_ihfju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ygpvv"]
+albedo_texture = ExtResource("4_wi48e")
+normal_enabled = true
+normal_scale = -1.0
+normal_texture = ExtResource("5_ihfju")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tubc4"]
-radius = 5.013027
+radius = 2.1517882
 
 [sub_resource type="Animation" id="Animation_cnt71"]
 resource_name = "Cambio"
@@ -61,10 +70,23 @@ _data = {
 script = ExtResource("2_cnt71")
 achilata = null
 
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Cuerpo" parent="." index="1"]
+transform = Transform3D(0.04940758, 0, -0.9987787, 0, 2.1, 0, 0.9987787, 0, 0.04940758, -1.0346798, 1, 0)
+
+[node name="Contorno" parent="Cuerpo" index="0"]
+transform = Transform3D(1.433219, 0, -0.07147514, 0, 0.5960001, 0, 0.07147514, 0, 1.433219, -0.085399, -0.85151017, -1.0713574)
+layers = 0
+mesh = ExtResource("3_dfnvd")
+surface_material_override/0 = SubResource("StandardMaterial3D_ygpvv")
+
 [node name="Pensamiento" type="Area3D" parent="." index="7"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pensamiento" index="0"]
 shape = SubResource("SphereShape3D_tubc4")
+debug_fill = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pensamiento" index="1"]
 libraries = {
