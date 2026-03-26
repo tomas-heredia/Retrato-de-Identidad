@@ -100,40 +100,40 @@ gravity = 45.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.099663, 1.2097108, 1.4449265)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("4_osb8y")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
 
 [node name="Pensamiento 2" parent="." instance=ExtResource("1_6lndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.184654, 1.2984086, 2.4159265)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("5_qynpa")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
 
 [node name="Pensamiento 6" parent="." instance=ExtResource("1_6lndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.888817, 1.3355709, -0.49398828)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("6_qynpa")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
 
 [node name="Pensamiento 7" parent="." instance=ExtResource("1_6lndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.895935, 1.0896375, 1.2623091)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("7_mmjjj")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
 
 [node name="Pensamiento 8" parent="." instance=ExtResource("1_6lndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.279816, 1.2714065, 2.7280421)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("8_hjmqp")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
 
 [node name="Pensamiento 9" parent="." instance=ExtResource("1_6lndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.97594, 0.9716989, -0.8472941)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("9_f48tx")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
 
 [node name="Pensamiento 1" parent="." instance=ExtResource("1_6lndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1524622, 0.40692848, 2.4159265)
 nombre = "Tukui"
 textos = Array[Resource]([ExtResource("2_2g5y2")])
-imagen = ExtResource("3_2g5y2")
+rostro_img = ExtResource("3_2g5y2")
