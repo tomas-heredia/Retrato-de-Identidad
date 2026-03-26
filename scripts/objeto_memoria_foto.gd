@@ -15,7 +15,7 @@ func _ready():
 
 
 func _on_body_entered(objeto):
-	if objeto.is_in_group("Player"):
+	if objeto.is_in_group("Player") and textos != []:
 		var dialogo = Dialogo.instantiate()
 		dialogo.imagen = imagen
 		dialogo.nombre = nombre
