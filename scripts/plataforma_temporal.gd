@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends AnimatableBody3D
 
 @export var ruptura_timer :int = 1
 @export var reconstruccion_timer : int = 3

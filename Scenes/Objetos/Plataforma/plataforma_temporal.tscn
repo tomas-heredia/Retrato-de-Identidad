@@ -12,8 +12,7 @@ size = Vector3(4.0431013, 1.3199579, 3.9393528)
 [sub_resource type="BoxShape3D" id="BoxShape3D_14iul"]
 size = Vector3(3.918213, 0.22015381, 3.7490234)
 
-[node name="plataforma_temporal" type="RigidBody3D"]
-gravity_scale = 0.0
+[node name="plataforma_temporal" type="AnimatableBody3D"]
 script = ExtResource("1_8mu8l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
