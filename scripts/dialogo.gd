@@ -4,6 +4,7 @@ extends Control
 @onready var espera = $Espera
 @onready var omitir = $Caja/Omitir
 @onready var espera_letra = $Espera_letra
+@onready var rostro: TextureRect = $Caja/Rostro
 
 @onready var label_nombre = $Caja/Nombre/Label
 
@@ -12,6 +13,7 @@ extends Control
 @export var textos: Array[Resource] = []
 var full_text := "Este texto es demasiado largo y \ncontiene palabras como \ndesoxirribonucleico que deben \najustarse antes de mostrarse."
 @onready var animation_player = $AnimationPlayer
+@export var rostro_img : Texture
 @export var text_speed := 0.02
 @export var imagen : Texture2D
 var cant_dialogos := 0
@@ -23,6 +25,8 @@ var stop_text := false
 func _ready():
 	hide()
 	text_box.text = ""
+	if rostro_img != null :
+		rostro.texture = rostro_img
 func iniciar_dialogo():
 	if not is_node_ready():
 		await ready
