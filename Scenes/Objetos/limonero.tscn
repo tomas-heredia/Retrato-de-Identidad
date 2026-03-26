@@ -8,6 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bvpfhms8phvp5" path="res://Assets/modulares/texturas/arbollimon_DefaultMaterial_Normal.jpg" id="6_spq8j"]
 [ext_resource type="Texture2D" uid="uid://2ajudfuxxcig" path="res://Assets/modulares/texturas/arbollimon_DefaultMaterial_OcclusionRoughnessMetallic.jpg" id="7_e2ir6"]
 
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_us74y"]
+albedo_texture = ExtResource("5_22qqo")
+orm_texture = ExtResource("7_e2ir6")
+normal_enabled = true
+normal_texture = ExtResource("6_spq8j")
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_fvpl5"]
 radius = 0.2
 
@@ -50,17 +56,17 @@ _data = {
 &"sacudida": SubResource("Animation_fvpl5")
 }
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_us74y"]
-albedo_texture = ExtResource("5_22qqo")
-orm_texture = ExtResource("7_e2ir6")
-normal_enabled = true
-normal_texture = ExtResource("6_spq8j")
-
 [node name="Limonero" instance=ExtResource("1_fvpl5")]
 script = ExtResource("2_g3e2h")
+modelo = ExtResource("4_r7h31")
+
+[node name="Cuerpo" parent="." index="1"]
+transform = Transform3D(3.375, 0, 0, 0, 3.375, 0, 0, 0, 3.375, 0.08650568, 0.07767582, 0.23346907)
+mesh = ExtResource("4_r7h31")
+surface_material_override/0 = SubResource("ORMMaterial3D_us74y")
 
 [node name="Limon" type="RigidBody3D" parent="Cuerpo" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.4761905, 0, 0, 0, 1, 0, 0.35070586, 0.71403563)
+transform = Transform3D(0.365, 0, 0, 0, 0.365, 0, 0, 0, 0.365, 0, 0.51230836, 0.075394794)
 gravity_scale = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cuerpo/Limon" index="0"]
@@ -75,16 +81,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_25lsj")
 libraries = {
 &"": SubResource("AnimationLibrary_jn6qh")
 }
-
-[node name="Arbolimon" type="MeshInstance3D" parent="." index="8"]
-transform = Transform3D(3.375, 0, 0, 0, 3.375, 0, 0, 0, 3.375, 0.08650568, 0.07767582, 0.23346907)
-mesh = ExtResource("4_r7h31")
-surface_material_override/0 = SubResource("ORMMaterial3D_us74y")
-
-[node name="Arbolimon2" type="MeshInstance3D" parent="." index="9"]
-transform = Transform3D(3.375, 0, 0, 0, 3.375, 0, 0, 0, 3.375, 0.08650568, 0.07767582, 0.23346907)
-layers = 0
-mesh = ExtResource("4_r7h31")
-surface_material_override/0 = SubResource("ORMMaterial3D_us74y")
 
 [connection signal="animation_finished" from="animacion" to="." method="_on_animacion_animation_finished"]

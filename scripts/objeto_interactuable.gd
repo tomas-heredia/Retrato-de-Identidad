@@ -1,7 +1,7 @@
 extends StaticBody3D
 class_name objeto_interactuable
 @export var Texto := ""
-
+@export var no_base :=true
 @export var modelo : Mesh
 @export var efecto : AudioStream
 @onready var label_3d = $Label3D
@@ -30,7 +30,6 @@ func _unhandled_input(event):
 	
 	if interactuable:
 		if  event.is_action_pressed("Interact") and ! Global.interactuando:
-			
 			audio_player.play()
 			interaccion_label.hide()
 			Global.interactuando = true
@@ -38,6 +37,8 @@ func _unhandled_input(event):
 			Mensajero.Cambio_Camara.emit(camera_3d)
 			
 			cambio()
+			if ! no_base :
+				interactuado = true
 		else:
 			if event.is_action_pressed("Interact") and  Global.interactuando and interactuado:
 				
@@ -75,7 +76,7 @@ func set_mesh_dinamico(new_mesh: Mesh):
 
 func cambio():
 	
-	pass
+	return false
 
 func mas_interacciones():
 	pass
