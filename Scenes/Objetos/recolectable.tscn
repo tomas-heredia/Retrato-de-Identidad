@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://632f5vl4od21"]
+[gd_scene load_steps=27 format=4 uid="uid://632f5vl4od21"]
 
 [ext_resource type="Script" uid="uid://dad547fj8tad0" path="res://scripts/recolectable.gd" id="1_ewtld"]
 [ext_resource type="Shader" uid="uid://csfgsmwuugey8" path="res://llamitashader/llamita.tres" id="2_mtgvp"]
@@ -6,6 +6,40 @@
 [ext_resource type="Texture2D" uid="uid://bqtg1o3oc70qg" path="res://Assets/Arboles/texturas/T_FirePanningCyl45.png" id="4_e35w6"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_i8hft"]
+
+[sub_resource type="Gradient" id="Gradient_i8hft"]
+offsets = PackedFloat32Array(0, 0.49166667, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e35w6"]
+gradient = SubResource("Gradient_i8hft")
+fill_to = Vector2(0.008547009, 0.47863248)
+
+[sub_resource type="Gradient" id="Gradient_1b2rs"]
+colors = PackedColorArray(0, 0, 0, 1, 0.46138594, 0.9193523, 1.9417582, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ylata"]
+gradient = SubResource("Gradient_1b2rs")
+
+[sub_resource type="Gradient" id="Gradient_47e1t"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_agrf4"]
+gradient = SubResource("Gradient_47e1t")
+fill_from = Vector2(0.012820513, 0.21367522)
+fill_to = Vector2(0.43589744, 0.96581197)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tkafl"]
+render_priority = 0
+shader = ExtResource("2_mtgvp")
+shader_parameter/speed = Vector2(0, 1)
+shader_parameter/Scale = Vector2(1, 1)
+shader_parameter/texturabase = ExtResource("4_e35w6")
+shader_parameter/speed2 = Vector2(0, 0)
+shader_parameter/Scale2 = Vector2(1, 1)
+shader_parameter/texturabase2 = ExtResource("3_i8hft")
+shader_parameter/texturaagregad = SubResource("GradientTexture2D_agrf4")
+shader_parameter/Substractinfo = SubResource("GradientTexture2D_e35w6")
+shader_parameter/color = SubResource("GradientTexture1D_ylata")
 
 [sub_resource type="Animation" id="Animation_mtgvp"]
 length = 0.001
@@ -69,9 +103,6 @@ _data = {
 &"flotar": SubResource("Animation_ewtld")
 }
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_sijuh"]
-radius = 1.28877
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2vcv"]
 resource_name = "Material.001"
 vertex_color_use_as_albedo = true
@@ -121,11 +152,12 @@ fill_from = Vector2(0.47863248, 0)
 fill_to = Vector2(0.34615386, 1)
 
 [sub_resource type="Gradient" id="Gradient_ylata"]
-offsets = PackedFloat32Array(0, 0.13055556, 0.73333335, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0, 0.833927, 1.0650004, 1, 0.9321634, 1.7957009, 1.8916494, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.27222222, 0.4722222, 0.73333335, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0.833927, 1.0650004, 1, 0.45655975, 0.6003311, 1.1263115, 1, 0.9321634, 1.7957009, 1.8916494, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_47e1t"]
 gradient = SubResource("Gradient_ylata")
+use_hdr = true
 
 [sub_resource type="Gradient" id="Gradient_agrf4"]
 
@@ -147,29 +179,33 @@ shader_parameter/texturaagregad = SubResource("GradientTexture2D_tkafl")
 shader_parameter/Substractinfo = SubResource("GradientTexture2D_1b2rs")
 shader_parameter/color = SubResource("GradientTexture2D_47e1t")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_sijuh"]
+radius = 1.28877
+
 [node name="Recolectable" type="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.568453, 0)
 script = ExtResource("1_ewtld")
 
+[node name="gota" type="Node3D" parent="."]
+transform = Transform3D(2.396, 0, 0, 0, 2.396, 0, 0, 0, 2.396, 0.07051933, -0.45766842, -0.046872795)
+
 [node name="cuerpo" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, 0)
 mesh = SubResource("SphereMesh_i8hft")
+surface_material_override/0 = SubResource("ShaderMaterial_tkafl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="cuerpo"]
 libraries = {
 &"": SubResource("AnimationLibrary_hphgo")
 }
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_sijuh")
-
-[node name="gota" type="Node3D" parent="."]
-transform = Transform3D(2.396, 0, 0, 0, 2.396, 0, 0, 0, 2.396, 0.07051933, -0.45766842, -0.046872795)
-
-[node name="Cylinder" type="MeshInstance3D" parent="gota"]
-transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.017029617, 0.2097413, -0.0022047462)
+[node name="Cylinder" type="MeshInstance3D" parent="cuerpo"]
+transform = Transform3D(435.63635, 0, 0, 0, -5.19319e-05, 435.63632, 0, -435.63632, -5.19319e-05, 0.05402976, 0.36200482, -0.0021002442)
 mesh = SubResource("ArrayMesh_8pqms")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("ShaderMaterial_hphgo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_sijuh")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
