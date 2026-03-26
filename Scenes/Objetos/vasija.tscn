@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4qksvh17i1o5"]
+[gd_scene load_steps=10 format=3 uid="uid://b4qksvh17i1o5"]
 
 [ext_resource type="PackedScene" uid="uid://blbaceevpc4a0" path="res://Scenes/Objetos/objeto_interactuable.tscn" id="1_y2mc5"]
 [ext_resource type="Script" uid="uid://bjc87ieew5mut" path="res://scripts/vasija.gd" id="2_a4skr"]
 [ext_resource type="ArrayMesh" uid="uid://dlgsfie4m80gy" path="res://Assets/Interactuables/jarron_sano.obj" id="3_hwiaq"]
 [ext_resource type="ArrayMesh" uid="uid://d4bhxsemjpy3o" path="res://Assets/Interactuables/jarron_roto.obj" id="3_re546"]
+[ext_resource type="Texture2D" uid="uid://bebpgj1o75yff" path="res://Assets/modulares/texturas/claytoysculpture3_BaseColor.jpg" id="5_qg7v7"]
+[ext_resource type="Texture2D" uid="uid://bgqi4ky7bf6mi" path="res://Assets/modulares/texturas/claytoysculpture3dmodel_metallic.JPEG" id="6_iyt5g"]
+[ext_resource type="Texture2D" uid="uid://bnur07d74hwbc" path="res://Assets/modulares/texturas/claytoysculpture3_Normal_Bake.jpg" id="7_g127v"]
+[ext_resource type="Texture2D" uid="uid://xp5imwgdvuks" path="res://Assets/modulares/texturas/claytoysculpture3dmodel_roughness.JPEG" id="8_y4ef4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5j3k"]
+albedo_texture = ExtResource("5_qg7v7")
+metallic = 1.0
+metallic_texture = ExtResource("6_iyt5g")
+roughness_texture = ExtResource("8_y4ef4")
+normal_enabled = true
+normal_texture = ExtResource("7_g127v")
 
 [node name="Vasija" instance=ExtResource("1_y2mc5")]
 script = ExtResource("2_a4skr")
@@ -13,3 +25,4 @@ modelo = ExtResource("3_hwiaq")
 [node name="Cuerpo" parent="." index="1"]
 transform = Transform3D(-0.24272822, 0, 2.0355792, 0, 2.05, 0, -2.0355792, 0, -0.24272822, 0, 1, 0)
 mesh = ExtResource("3_hwiaq")
+surface_material_override/0 = SubResource("StandardMaterial3D_p5j3k")

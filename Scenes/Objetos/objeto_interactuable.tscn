@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://blbaceevpc4a0"]
 
 [ext_resource type="Script" uid="uid://dlpux2wxadi4i" path="res://scripts/objeto_interactuable.gd" id="1_vqob3"]
-[ext_resource type="BoxMesh" uid="uid://d13uv7vxkmel4" path="res://Assets/Materiales/Contornos/objeto_interactuable.tres" id="2_dvvhj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q5ah2"]
-size = Vector3(1, 2.1, 1)
+size = Vector3(1, 1.6378906, 1)
+
+[sub_resource type="PointMesh" id="PointMesh_vqob3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_dvvhj"]
-radius = 2.69051
+radius = 1.519909
 
 [node name="objeto_interactuable" type="StaticBody3D" groups=["Objeto"]]
 script = ExtResource("1_vqob3")
@@ -18,7 +19,7 @@ shape = SubResource("BoxShape3D_q5ah2")
 
 [node name="Cuerpo" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2.1, 0, 0, 0, 1, 0, 1, 0)
-mesh = ExtResource("2_dvvhj")
+mesh = SubResource("PointMesh_vqob3")
 skeleton = NodePath("../..")
 
 [node name="Contorno" type="MeshInstance3D" parent="Cuerpo"]
