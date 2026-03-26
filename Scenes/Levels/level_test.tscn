@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=45 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -93,8 +93,6 @@ albedo_texture = ExtResource("18_hwde3")
 orm_texture = ExtResource("20_m1fqf")
 normal_enabled = true
 normal_texture = ExtResource("19_btpkh")
-
-[sub_resource type="BoxMesh" id="BoxMesh_d1w1t"]
 
 [node name="Level_test" type="Node3D"]
 script = ExtResource("1_fmmsx")
@@ -267,7 +265,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.50246, 0.54999995, -17.21
 
 [node name="Limonero" parent="." instance=ExtResource("31_4udkj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.469322, 0.54999995, -14.744665)
-modelo = SubResource("BoxMesh_d1w1t")
 
 [node name="Plataforma_movil" parent="." instance=ExtResource("32_k0c0j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.274059, 0.525, 12.833072)

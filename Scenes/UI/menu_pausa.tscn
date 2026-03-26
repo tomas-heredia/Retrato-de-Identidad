@@ -109,6 +109,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Confirmacion" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

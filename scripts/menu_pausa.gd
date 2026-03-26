@@ -18,19 +18,22 @@ var pausado := false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
-	if Guardado.game_data.valor_musica == 0:
-		AudioServer.set_bus_mute(bus_efectos, true)
-		music.icon = MUSIC_OFF
-	else:
-		AudioServer.set_bus_mute(bus_efectos, false)
-		music.icon = MUSIC_ON
-	
-	if Guardado.game_data.valor_efectos == 0:
-		AudioServer.set_bus_mute(bus_musica, true)
-		sfx.icon = SF_OFF
-	else:
-		AudioServer.set_bus_mute(bus_musica, false)
-		sfx.icon = SF_ON
+	confirmacion.hide()
+	print(get_tree().current_scene.name)
+	if get_tree().current_scene.name != "Level_test":
+		if Guardado.game_data.valor_musica == 0:
+			AudioServer.set_bus_mute(bus_efectos, true)
+			music.icon = MUSIC_OFF
+		else:
+			AudioServer.set_bus_mute(bus_efectos, false)
+			music.icon = MUSIC_ON
+		
+		if Guardado.game_data.valor_efectos == 0:
+			AudioServer.set_bus_mute(bus_musica, true)
+			sfx.icon = SF_OFF
+		else:
+			AudioServer.set_bus_mute(bus_musica, false)
+			sfx.icon = SF_ON
 
 
 func desplegar():
