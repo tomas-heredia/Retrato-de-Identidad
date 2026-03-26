@@ -136,6 +136,7 @@ offset_right = 298.0
 offset_bottom = 134.0
 grow_vertical = 2
 texture = ExtResource("3_wcd53")
+expand_mode = 1
 
 [node name="text_box" type="Label" parent="Caja"]
 layout_mode = 1

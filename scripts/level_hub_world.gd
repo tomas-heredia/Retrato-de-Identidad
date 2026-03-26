@@ -1,4 +1,5 @@
 extends Node3D
+var imagen = preload("res://Assets/UI/Barra_vida/avatar.png")
 
 var Dialogo = load("res://Scenes/UI/dialogo.tscn")
 @export var nombre:= "Narrador"
@@ -30,6 +31,7 @@ func _ready():
 		var dialogo = Dialogo.instantiate()
 		dialogo.nombre = nombre
 		dialogo.textos = textos
+		dialogo.rostro_img = imagen
 		add_child(dialogo)
 		dialogo.iniciar_dialogo()
 
