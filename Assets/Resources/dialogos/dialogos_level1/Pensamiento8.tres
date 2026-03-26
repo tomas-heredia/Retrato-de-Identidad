@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://dd8e1170mqhn8"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_72q30"]
+
+[resource]
+script = ExtResource("1_72q30")
+texto = "No todo lo que piso es seguro… pero sigo avanzando"
+metadata/_custom_type_script = "uid://cscq2a61ppime"

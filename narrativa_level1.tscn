@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=3 uid="uid://1bfvny4dyltr"]
+
+[ext_resource type="PackedScene" uid="uid://pfqpoh7ij12y" path="res://Scenes/areas/dispara_dialogo.tscn" id="1_6lndl"]
+[ext_resource type="Resource" uid="uid://mqwxi012lsk2" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento1.tres" id="2_2g5y2"]
+[ext_resource type="Texture2D" uid="uid://cwsvhchj1jmjy" path="res://Assets/UI/Barra_vida/avatar.png" id="3_2g5y2"]
+[ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="3_5t1gc"]
+[ext_resource type="Resource" uid="uid://duvup33gvs4hd" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento3.tres" id="4_osb8y"]
+[ext_resource type="Resource" uid="uid://b084vjiqugl5n" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento2.tres" id="5_qynpa"]
+[ext_resource type="Resource" uid="uid://cio6ih2qubais" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento6.tres" id="6_qynpa"]
+[ext_resource type="Resource" uid="uid://bsdww1qtqp65q" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento7.tres" id="7_mmjjj"]
+[ext_resource type="Resource" uid="uid://dd8e1170mqhn8" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento8.tres" id="8_hjmqp"]
+[ext_resource type="Resource" uid="uid://cgyvddapxrdll" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento9.tres" id="9_f48tx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lndl"]
+albedo_color = Color(0.77254903, 0.43529412, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2g5y2"]
+material = SubResource("StandardMaterial3D_6lndl")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Pensamiento 1 [Inicio]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5058732, 1, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 1 [Inicio]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24005151, 0.6437063, 0.07575464)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 1")
+
+[node name="Pensamiento 2  [Pinchos]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.459974, 1.2122283, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 2  [Pinchos]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49910736, 0.62243915, -0.17920756)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 2")
+
+[node name="Pensamiento 3 [Bowl]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.30248, 1.2441761, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 3 [Bowl]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.105724335, 0.4457147, -0.421983)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 3")
+
+[node name="Pensamiento 6  [Coliseo]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.39387, 1.2122283, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 6  [Coliseo]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18790817, 0.5277035, 0.39951825)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 6")
+
+[node name="Pensamiento 7  [Corneta]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.3535, 1.2592034, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 7  [Corneta]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18790436, 0.50512266, 0.39951825)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 7")
+
+[node name="Pensamiento 8  [Antes escaleras algodon]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.48698, 1.2122283, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 8  [Antes escaleras algodon]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14757538, 0.5154059, 0.39951825)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 8")
+
+[node name="Pensamiento 9  [Fotografia]" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.73888, 1.2122283, 1.9928589)
+use_collision = true
+size = Vector3(3.5922852, 0.030761719, 4.3392334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pensamiento 9  [Fotografia]"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18790436, 0.4913242, 0.39951825)
+mesh = SubResource("BoxMesh_2g5y2")
+skeleton = NodePath("../../Pensamiento 9")
+
+[node name="Player" parent="." instance=ExtResource("3_5t1gc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.1505308, 0.88424635, 1.9211342)
+SPEED = 10.0
+Max_SPEED = 12
+JUMP_VELOCITY = 20
+gravity = 45.0
+
+[node name="Pensamiento 3" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.099663, 1.2097108, 1.4449265)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("4_osb8y")])
+imagen = ExtResource("3_2g5y2")
+
+[node name="Pensamiento 2" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.184654, 1.2984086, 2.4159265)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("5_qynpa")])
+imagen = ExtResource("3_2g5y2")
+
+[node name="Pensamiento 6" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.888817, 1.3355709, -0.49398828)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("6_qynpa")])
+imagen = ExtResource("3_2g5y2")
+
+[node name="Pensamiento 7" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.895935, 1.0896375, 1.2623091)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("7_mmjjj")])
+imagen = ExtResource("3_2g5y2")
+
+[node name="Pensamiento 8" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.279816, 1.2714065, 2.7280421)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("8_hjmqp")])
+imagen = ExtResource("3_2g5y2")
+
+[node name="Pensamiento 9" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.97594, 0.9716989, -0.8472941)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("9_f48tx")])
+imagen = ExtResource("3_2g5y2")
+
+[node name="Pensamiento 1" parent="." instance=ExtResource("1_6lndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1524622, 0.40692848, 2.4159265)
+nombre = "Tukui"
+textos = Array[Resource]([ExtResource("2_2g5y2")])
+imagen = ExtResource("3_2g5y2")
