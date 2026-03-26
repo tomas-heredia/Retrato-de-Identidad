@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="texto_npc" load_steps=2 format=3 uid="uid://cio6ih2qubais"]
+
+[ext_resource type="Script" uid="uid://cscq2a61ppime" path="res://scripts/Recurso_dialogo.gd" id="1_ni5mo"]
+
+[resource]
+script = ExtResource("1_ni5mo")
+texto = "Es igual al ring improvisado de aquellas guerras se almohadas… y a las batallas de rap donde jurábamos que éramos leyenda."
+metadata/_custom_type_script = "uid://cscq2a61ppime"
