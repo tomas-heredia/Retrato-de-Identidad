@@ -298,6 +298,7 @@ expand_icon = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7cwwf")
+volume_db = -20.0
 autoplay = true
 bus = &"Musica"
 

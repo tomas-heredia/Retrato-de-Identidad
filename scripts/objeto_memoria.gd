@@ -5,8 +5,8 @@ extends Area3D
 @export var pensamiento: String
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	animation_player.play("flotar")
-	
+	#animation_player.play("flotar")
+	pass
 
 
 

@@ -9,7 +9,7 @@ var Dialogo = load("res://Scenes/UI/dialogo.tscn")
 var interactuable: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	contorno.hide()
+	#contorno.hide()
 	necesaria()
 
 func necesaria():
