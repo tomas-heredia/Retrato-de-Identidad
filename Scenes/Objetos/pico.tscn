@@ -1,16 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://uj2qkpxnbgln"]
+[gd_scene load_steps=5 format=3 uid="uid://uj2qkpxnbgln"]
 
 [ext_resource type="Script" uid="uid://be8fvamnlq5jc" path="res://scripts/pico.gd" id="1_rp4uq"]
-[ext_resource type="ArrayMesh" uid="uid://chylys0b173lh" path="res://Assets/Arboles/Mesh/pinchos.obj" id="2_vrk50"]
-[ext_resource type="Texture2D" uid="uid://3w1qno3i3xvw" path="res://Assets/Arboles/Mesh/pinchos_Material_BaseColor.png" id="3_jo2lg"]
-[ext_resource type="Texture2D" uid="uid://dpgav1elt5ped" path="res://Assets/Arboles/Mesh/pinchos_Material_Normal.png" id="4_8e72s"]
-[ext_resource type="Texture2D" uid="uid://nbekcma2nnlw" path="res://Assets/Arboles/Mesh/pinchos_Material_OcclusionRoughnessMetallic.png" id="5_6cur7"]
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_oojyo"]
-albedo_texture = ExtResource("3_jo2lg")
-orm_texture = ExtResource("5_6cur7")
-bent_normal_enabled = true
-bent_normal_texture = ExtResource("4_8e72s")
+[sub_resource type="PrismMesh" id="PrismMesh_kbcuc"]
+size = Vector3(0.565, 0.5, 0.535)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rp4uq"]
 size = Vector3(0.565, 0.5, 0.535)
@@ -23,9 +16,7 @@ gravity_scale = 0.0
 script = ExtResource("1_rp4uq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.0113778, -0.051359106, 0, 0.14760959, 1.0457124, -0.13377301, 0.006555768, 0.0464431, 3.012031, -0.024625003, -0.29828292, -0.043243498)
-mesh = ExtResource("2_vrk50")
-surface_material_override/0 = SubResource("ORMMaterial3D_oojyo")
+mesh = SubResource("PrismMesh_kbcuc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_rp4uq")
