@@ -37,7 +37,7 @@ func _ready():
 
 	else:
 		player.position = level_1_marker.position
-		guia_dialogo.disabled = true
+		#guia_dialogo.disabled = true
 		dispara_dialogo.usado()
 		dispara_dialogo_2.usado()
 		
