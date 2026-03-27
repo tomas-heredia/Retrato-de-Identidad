@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf7uix066j50v"]
+[gd_scene load_steps=6 format=3 uid="uid://bf7uix066j50v"]
 
 [ext_resource type="Script" uid="uid://74ldqxiob8d0" path="res://scripts/a_hub.gd" id="1_pyqqt"]
 [ext_resource type="Texture2D" uid="uid://bgeebs1r4xmfn" path="res://Assets/UI/Confirmacion/fondosalirdemenu.reiniciar.png" id="2_20jlc"]
+[ext_resource type="PackedScene" uid="uid://bq7wnt4usxlod" path="res://Assets/Props/Sm_DONA.fbx" id="3_6p15r"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_72sgd"]
 radius = 0.3382049
@@ -9,17 +10,21 @@ radius = 0.3382049
 [sub_resource type="SphereMesh" id="SphereMesh_pyqqt"]
 
 [node name="a_hub" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.61936e-05, 0.0041154623, 0)
 script = ExtResource("1_pyqqt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4.709, 0, 0, 0, 4.709, 0, 0, 0, 4.709, 0, 0, -0.53501606)
 shape = SubResource("SphereShape3D_72sgd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
 mesh = SubResource("SphereMesh_pyqqt")
 
 [node name="Label3D" type="Label3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8213444, 0)
+visible = false
 text = "A Hub
 "
 font_size = 132
@@ -56,5 +61,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "GRACIAS POR JUGAR"
+
+[node name="Sm_DONA" parent="." instance=ExtResource("3_6p15r")]
+transform = Transform3D(0.076, 0, 0, 0, 0.0005995478, -0.075997636, 0, 0.075997636, 0.0005995478, 0.00012898445, -0.0041154623, -0.08751202)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

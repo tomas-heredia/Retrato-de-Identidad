@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=3 uid="uid://xlsjdq83cc1m"]
+
+[ext_resource type="Shader" uid="uid://cmj4lecx3ke4q" path="res://portal_shader.tres" id="1_dwwib"]
+[ext_resource type="Texture2D" uid="uid://cd1id8tv7gexf" path="res://Assets/Arboles/texturas/T_flare8_vfx.png" id="2_r7xnl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r7xnl"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_dwwib")
+shader_parameter/Portal_Color_ring = Color(0.641157, 0.47933117, 1.0187511, 1)
+shader_parameter/Portal_Color = Color(0, 0.28219017, 0.6509403, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_pk50r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwwib"]
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.7304241, 0.71640176, 0.9140606, 1)
+albedo_texture = ExtResource("2_r7xnl")
+use_particle_trails = true
+
+[sub_resource type="Curve" id="Curve_pk50r"]
+_data = [Vector2(0.009433962, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_74omt"]
+_data = [Vector2(0, 0.024590135), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_pcdkq"]
+_limits = [-2.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_r7xnl"]
+curve_x = SubResource("Curve_pk50r")
+curve_y = SubResource("Curve_74omt")
+curve_z = SubResource("Curve_pcdkq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r7xnl"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 1.1
+emission_ring_cone_angle = 90.0
+orbit_velocity_min = 0.2000001
+orbit_velocity_max = 0.2000001
+orbit_velocity_curve = SubResource("CurveXYZTexture_r7xnl")
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 0.19999775
+radial_accel_max = 0.49999776
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_pk50r"]
+size = 0.2
+
+[node name="portaleffect" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.4630232, -0.053211033, -0.54943895)
+material_override = SubResource("ShaderMaterial_r7xnl")
+mesh = SubResource("QuadMesh_pk50r")
+
+[node name="Shine" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44356358, 0, -0.11910832)
+material_override = SubResource("StandardMaterial3D_dwwib")
+amount = 150
+trail_enabled = true
+trail_lifetime = 0.67
+process_material = SubResource("ParticleProcessMaterial_r7xnl")
+draw_pass_1 = SubResource("RibbonTrailMesh_pk50r")

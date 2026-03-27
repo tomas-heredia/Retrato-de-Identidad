@@ -24,5 +24,6 @@ modelo = ExtResource("3_hwiaq")
 
 [node name="Cuerpo" parent="." index="1"]
 transform = Transform3D(-0.24272822, 0, 2.0355792, 0, 2.05, 0, -2.0355792, 0, -0.24272822, 0, 1, 0)
+layers = 2
 mesh = ExtResource("3_hwiaq")
 surface_material_override/0 = SubResource("StandardMaterial3D_p5j3k")
