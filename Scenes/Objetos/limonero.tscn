@@ -20,6 +20,12 @@ radius = 0.2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25lsj"]
 albedo_color = Color(0.9990441, 0.7598882, 0.32292593, 1)
 
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_us74y"]
+albedo_texture = ExtResource("5_22qqo")
+orm_texture = ExtResource("7_e2ir6")
+normal_enabled = true
+normal_texture = ExtResource("6_spq8j")
+
 [sub_resource type="Animation" id="Animation_g3e2h"]
 length = 0.001
 tracks/0/type = "value"
@@ -76,6 +82,12 @@ shape = SubResource("SphereShape3D_fvpl5")
 transform = Transform3D(-0.4483188, 0, 2.7942634, 0, 2.8299997, 0, -2.7942634, 0, -0.4483188, 0, 0, 0)
 mesh = ExtResource("3_5gpej")
 surface_material_override/0 = SubResource("StandardMaterial3D_25lsj")
+
+[node name="Arbolimon" type="MeshInstance3D" parent="Cuerpo" index="2"]
+transform = Transform3D(3.375, 0, 0, 0, 1.6071429, 0, 0, 0, 3.375, 0.08650568, -0.439202, 0.23346907)
+mesh = ExtResource("4_r7h31")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ORMMaterial3D_us74y")
 
 [node name="animacion" type="AnimationPlayer" parent="." index="7"]
 libraries = {
