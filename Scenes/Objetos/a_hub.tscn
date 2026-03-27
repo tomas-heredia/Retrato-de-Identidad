@@ -63,6 +63,6 @@ theme_override_font_sizes/font_size = 100
 text = "GRACIAS POR JUGAR"
 
 [node name="Sm_DONA" parent="." instance=ExtResource("3_6p15r")]
-transform = Transform3D(0.076, 0, 0, 0, 0.0005995478, -0.075997636, 0, 0.075997636, 0.0005995478, 0.00012898445, -0.0041154623, -0.08751202)
+transform = Transform3D(0.004243749, -0.07587907, -0.0005986124, 2.2099588e-12, 0.0005995477, -0.07599763, 0.07588142, 0.004243618, 3.347804e-05, 0.00012898445, -0.0041154623, -0.08751202)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

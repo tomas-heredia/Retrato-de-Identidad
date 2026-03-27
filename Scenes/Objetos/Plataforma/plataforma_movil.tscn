@@ -13,6 +13,7 @@ size = Vector3(8, 1.459, 15.1)
 albedo_texture = ExtResource("3_h0yqn")
 orm_texture = ExtResource("5_p46g5")
 normal_enabled = true
+normal_scale = 0.38
 normal_texture = ExtResource("4_xmr4i")
 
 [node name="Plataforma_movil" type="AnimatableBody3D"]

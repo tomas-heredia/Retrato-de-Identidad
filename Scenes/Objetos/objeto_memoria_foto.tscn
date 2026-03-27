@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwyvgwtolve3a"]
+[gd_scene load_steps=8 format=3 uid="uid://bwyvgwtolve3a"]
 
 [ext_resource type="Script" uid="uid://dc5oofgsf1x8c" path="res://scripts/objeto_memoria_foto.gd" id="1_ksp1p"]
+[ext_resource type="PackedScene" uid="uid://vgg1cxk1x0er" path="res://Assets/memoria/camarafoto.glb" id="2_0yc4d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0yc4d"]
 size = Vector3(0.5, 0.5, 0.5)
@@ -74,6 +75,7 @@ radius = 1.28877
 script = ExtResource("1_ksp1p")
 
 [node name="cuerpo" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("BoxMesh_0yc4d")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="cuerpo"]
@@ -83,5 +85,8 @@ libraries = {
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_gnru1")
+
+[node name="camarafoto" parent="." instance=ExtResource("2_0yc4d")]
+transform = Transform3D(0.79, 0, 0, 0, 0.79, 0, 0, 0, 0.79, -0.3789227, 1.1920929e-07, -0.16007113)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
