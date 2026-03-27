@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://2t7876y24x50"]
+[gd_scene load_steps=48 format=4 uid="uid://2t7876y24x50"]
 
 [ext_resource type="Script" uid="uid://3sgsip0s5xkl" path="res://scripts/level_test.gd" id="1_fmmsx"]
 [ext_resource type="PackedScene" uid="uid://u1m0kcl66o30" path="res://Scenes/player.tscn" id="1_vflva"]
@@ -32,6 +32,9 @@
 [ext_resource type="PackedScene" uid="uid://du78uqo2vml1n" path="res://Scenes/Objetos/objeto_memoria.tscn" id="31_wd2py"]
 [ext_resource type="PackedScene" uid="uid://b5ls4ahcpp7wq" path="res://Scenes/Objetos/Plataforma/plataforma_movil.tscn" id="32_k0c0j"]
 [ext_resource type="PackedScene" uid="uid://dkg78rx2e0t2l" path="res://Scenes/Objetos/Plataforma/plataforma_invisible.tscn" id="32_sqhsv"]
+[ext_resource type="PackedScene" uid="uid://bwyvgwtolve3a" path="res://Scenes/Objetos/objeto_memoria_foto.tscn" id="33_wd2py"]
+[ext_resource type="Resource" uid="uid://cgyvddapxrdll" path="res://Assets/Resources/dialogos/dialogos_level1/Pensamiento9.tres" id="34_xao4l"]
+[ext_resource type="Texture2D" uid="uid://ch3enepsot7mf" path="res://Assets/UI/Fotografia.png" id="35_k7omw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkmes"]
 
@@ -277,5 +280,11 @@ pensamiento = "hola"
 
 [node name="Plataforma_invisible" parent="." instance=ExtResource("32_sqhsv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.77861, 3.0469213, 15.293128)
+
+[node name="objeto_memoria_foto" parent="." instance=ExtResource("33_wd2py")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065584183, 0, -3.6873627)
+nombre = "Tukuy"
+textos = Array[Resource]([ExtResource("34_xao4l")])
+imagen = ExtResource("35_k7omw")
 
 [editable path="AreaMuerte"]
